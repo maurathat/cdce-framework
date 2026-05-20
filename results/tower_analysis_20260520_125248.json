@@ -1,0 +1,2678 @@
+{
+  "tower_distribution": {
+    "2000": {
+      "R": {
+        "count": 5,
+        "pct": 13.9
+      },
+      "C": {
+        "count": 12,
+        "pct": 33.3
+      },
+      "H": {
+        "count": 10,
+        "pct": 27.8
+      },
+      "O": {
+        "count": 9,
+        "pct": 25.0
+      }
+    },
+    "1000": {
+      "R": {
+        "count": 10,
+        "pct": 27.8
+      },
+      "C": {
+        "count": 6,
+        "pct": 16.7
+      },
+      "H": {
+        "count": 12,
+        "pct": 33.3
+      },
+      "O": {
+        "count": 8,
+        "pct": 22.2
+      }
+    },
+    "500": {
+      "R": {
+        "count": 8,
+        "pct": 22.2
+      },
+      "C": {
+        "count": 10,
+        "pct": 27.8
+      },
+      "H": {
+        "count": 14,
+        "pct": 38.9
+      },
+      "O": {
+        "count": 4,
+        "pct": 11.1
+      }
+    },
+    "250": {
+      "R": {
+        "count": 9,
+        "pct": 25.0
+      },
+      "C": {
+        "count": 12,
+        "pct": 33.3
+      },
+      "H": {
+        "count": 14,
+        "pct": 38.9
+      },
+      "O": {
+        "count": 1,
+        "pct": 2.8
+      }
+    },
+    "125": {
+      "R": {
+        "count": 15,
+        "pct": 41.7
+      },
+      "C": {
+        "count": 11,
+        "pct": 30.6
+      },
+      "H": {
+        "count": 9,
+        "pct": 25.0
+      },
+      "O": {
+        "count": 1,
+        "pct": 2.8
+      }
+    }
+  },
+  "per_model_descent": {
+    "claude": {
+      "levels": [
+        "C",
+        "H",
+        "H",
+        "H",
+        "C"
+      ],
+      "signature": "C->H->C"
+    },
+    "gemini_flash": {
+      "levels": [
+        "C",
+        "C",
+        "R",
+        "R",
+        "R"
+      ],
+      "signature": "C->R"
+    },
+    "gpt4o": {
+      "levels": [
+        "H",
+        "H",
+        "H",
+        "H",
+        "C"
+      ],
+      "signature": "H->C"
+    },
+    "haiku": {
+      "levels": [
+        "H",
+        "H",
+        "H",
+        "H",
+        "C"
+      ],
+      "signature": "H->C"
+    }
+  },
+  "e8_comparisons": [
+    {
+      "model": "claude",
+      "task_id": "opt_routing",
+      "budget": 2000,
+      "operator_count": 4,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8660254037844388,
+      "nearest_root_idx": 76,
+      "root_type": "integer",
+      "verbs": [
+        "compress",
+        "convert",
+        "total",
+        "try"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "opt_routing",
+      "budget": 2000,
+      "operator_count": 6,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7499999999999998,
+      "nearest_root_idx": 180,
+      "root_type": "half-integer",
+      "verbs": [
+        "add",
+        "compress",
+        "swap",
+        "test",
+        "total",
+        "verify"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "opt_routing",
+      "budget": 2000,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9999999999999998,
+      "nearest_root_idx": 64,
+      "root_type": "integer",
+      "verbs": [
+        "minimize",
+        "total"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "opt_routing",
+      "budget": 2000,
+      "operator_count": 4,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 84,
+      "root_type": "integer",
+      "verbs": [
+        "find",
+        "select",
+        "then",
+        "total"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "opt_portfolio",
+      "budget": 2000,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9999999999999998,
+      "nearest_root_idx": 4,
+      "root_type": "integer",
+      "verbs": [
+        "rank",
+        "total"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "opt_portfolio",
+      "budget": 2000,
+      "operator_count": 7,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.7844645405527361,
+      "nearest_root_idx": 20,
+      "root_type": "integer",
+      "verbs": [
+        "add",
+        "calculate",
+        "compress",
+        "minimize",
+        "score",
+        "swap",
+        "total"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "opt_portfolio",
+      "budget": 2000,
+      "operator_count": 7,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.9128709291752768,
+      "nearest_root_idx": 64,
+      "root_type": "integer",
+      "verbs": [
+        "allocate",
+        "calculate",
+        "combine",
+        "compute",
+        "minimize",
+        "rank",
+        "total"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "opt_portfolio",
+      "budget": 2000,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9999999999999998,
+      "nearest_root_idx": 64,
+      "root_type": "integer",
+      "verbs": [
+        "combine",
+        "minimize"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "opt_schedule",
+      "budget": 2000,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 60,
+      "root_type": "integer",
+      "verbs": [
+        "total"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "opt_schedule",
+      "budget": 2000,
+      "operator_count": 3,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.816496580927726,
+      "nearest_root_idx": 40,
+      "root_type": "integer",
+      "verbs": [
+        "compress",
+        "split",
+        "total"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "opt_schedule",
+      "budget": 2000,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9999999999999998,
+      "nearest_root_idx": 56,
+      "root_type": "integer",
+      "verbs": [
+        "assign",
+        "total"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "opt_schedule",
+      "budget": 2000,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "identify"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "pred_math",
+      "budget": 2000,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "pattern"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "pred_math",
+      "budget": 2000,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "pattern",
+        "rule"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "pred_math",
+      "budget": 2000,
+      "operator_count": 3,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9486832980505137,
+      "nearest_root_idx": 108,
+      "root_type": "integer",
+      "verbs": [
+        "calculate",
+        "pattern",
+        "sequence"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "pred_math",
+      "budget": 2000,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "rule"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "pred_music",
+      "budget": 2000,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "pattern",
+        "sequence"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "pred_music",
+      "budget": 2000,
+      "operator_count": 4,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "given",
+        "pattern",
+        "repeat",
+        "sequence"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "pred_music",
+      "budget": 2000,
+      "operator_count": 3,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "pattern",
+        "repeat",
+        "sequence"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "pred_music",
+      "budget": 2000,
+      "operator_count": 5,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8574929257125441,
+      "nearest_root_idx": 68,
+      "root_type": "integer",
+      "verbs": [
+        "given",
+        "pattern",
+        "repeat",
+        "sequence",
+        "total"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "pred_code",
+      "budget": 2000,
+      "operator_count": 7,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.8528028654224417,
+      "nearest_root_idx": 68,
+      "root_type": "integer",
+      "verbs": [
+        "add",
+        "because",
+        "pattern",
+        "place",
+        "sum",
+        "total",
+        "transform"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "pred_code",
+      "budget": 2000,
+      "operator_count": 6,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.944911182523068,
+      "nearest_root_idx": 60,
+      "root_type": "integer",
+      "verbs": [
+        "accumulate",
+        "compress",
+        "pattern",
+        "sum",
+        "total",
+        "transform"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "pred_code",
+      "budget": 2000,
+      "operator_count": 7,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.7844645405527361,
+      "nearest_root_idx": 60,
+      "root_type": "integer",
+      "verbs": [
+        "accumulate",
+        "compute",
+        "convert",
+        "given",
+        "pattern",
+        "sum",
+        "transform"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "pred_code",
+      "budget": 2000,
+      "operator_count": 3,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.816496580927726,
+      "nearest_root_idx": 60,
+      "root_type": "integer",
+      "verbs": [
+        "pattern",
+        "sum",
+        "transform"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "trans_nl_code",
+      "budget": 2000,
+      "operator_count": 4,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 112,
+      "root_type": "half-integer",
+      "verbs": [
+        "average",
+        "enumerate",
+        "sum",
+        "test"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "trans_nl_code",
+      "budget": 2000,
+      "operator_count": 7,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.9128709291752768,
+      "nearest_root_idx": 64,
+      "root_type": "integer",
+      "verbs": [
+        "accumulate",
+        "average",
+        "divide",
+        "enumerate",
+        "sum",
+        "test",
+        "total"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "trans_nl_code",
+      "budget": 2000,
+      "operator_count": 5,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8017837257372731,
+      "nearest_root_idx": 52,
+      "root_type": "integer",
+      "verbs": [
+        "enumerate",
+        "iterate",
+        "minimize",
+        "sum",
+        "test"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "trans_nl_code",
+      "budget": 2000,
+      "operator_count": 8,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.9045340337332908,
+      "nearest_root_idx": 64,
+      "root_type": "integer",
+      "verbs": [
+        "add",
+        "average",
+        "calculate",
+        "divide",
+        "iterate",
+        "sum",
+        "test",
+        "total"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "trans_lang_lang",
+      "budget": 2000,
+      "operator_count": 3,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9486832980505137,
+      "nearest_root_idx": 96,
+      "root_type": "integer",
+      "verbs": [
+        "assign",
+        "else",
+        "if"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "trans_lang_lang",
+      "budget": 2000,
+      "operator_count": 5,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8528028654224417,
+      "nearest_root_idx": 96,
+      "root_type": "integer",
+      "verbs": [
+        "assign",
+        "else",
+        "if",
+        "merge",
+        "recurse"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "trans_lang_lang",
+      "budget": 2000,
+      "operator_count": 7,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.8249579113843053,
+      "nearest_root_idx": 145,
+      "root_type": "half-integer",
+      "verbs": [
+        "assign",
+        "check",
+        "combine",
+        "given",
+        "if",
+        "iterate",
+        "transform"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "trans_lang_lang",
+      "budget": 2000,
+      "operator_count": 3,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9486832980505137,
+      "nearest_root_idx": 96,
+      "root_type": "integer",
+      "verbs": [
+        "assign",
+        "else",
+        "if"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "trans_math_nl",
+      "budget": 2000,
+      "operator_count": 5,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8017837257372731,
+      "nearest_root_idx": 56,
+      "root_type": "integer",
+      "verbs": [
+        "add",
+        "measure",
+        "move",
+        "sum",
+        "total"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "trans_math_nl",
+      "budget": 2000,
+      "operator_count": 10,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.8660254037844388,
+      "nearest_root_idx": 68,
+      "root_type": "integer",
+      "verbs": [
+        "accumulate",
+        "add",
+        "because",
+        "compress",
+        "if",
+        "measure",
+        "merge",
+        "move",
+        "sum",
+        "total"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "trans_math_nl",
+      "budget": 2000,
+      "operator_count": 7,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.8528028654224417,
+      "nearest_root_idx": 4,
+      "root_type": "integer",
+      "verbs": [
+        "add",
+        "combine",
+        "compress",
+        "evaluate",
+        "if",
+        "measure",
+        "total"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "opt_routing",
+      "budget": 1000,
+      "operator_count": 6,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8660254037844388,
+      "nearest_root_idx": 121,
+      "root_type": "half-integer",
+      "verbs": [
+        "add",
+        "check",
+        "compress",
+        "identify",
+        "total",
+        "try"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "opt_routing",
+      "budget": 1000,
+      "operator_count": 6,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7499999999999999,
+      "nearest_root_idx": 117,
+      "root_type": "half-integer",
+      "verbs": [
+        "check",
+        "compress",
+        "identify",
+        "place",
+        "test",
+        "total"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "opt_routing",
+      "budget": 1000,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9999999999999998,
+      "nearest_root_idx": 60,
+      "root_type": "integer",
+      "verbs": [
+        "compress",
+        "total"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "opt_routing",
+      "budget": 1000,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 60,
+      "root_type": "integer",
+      "verbs": [
+        "total"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "opt_portfolio",
+      "budget": 1000,
+      "operator_count": 8,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.816496580927726,
+      "nearest_root_idx": 92,
+      "root_type": "integer",
+      "verbs": [
+        "add",
+        "compress",
+        "given",
+        "minimize",
+        "pick",
+        "rank",
+        "swap",
+        "total"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "opt_portfolio",
+      "budget": 1000,
+      "operator_count": 8,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.7905694150420948,
+      "nearest_root_idx": 80,
+      "root_type": "integer",
+      "verbs": [
+        "add",
+        "allocate",
+        "check",
+        "compute",
+        "iterate",
+        "minimize",
+        "optimize",
+        "total"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "opt_portfolio",
+      "budget": 1000,
+      "operator_count": 3,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.816496580927726,
+      "nearest_root_idx": 64,
+      "root_type": "integer",
+      "verbs": [
+        "assess",
+        "minimize",
+        "total"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "opt_schedule",
+      "budget": 1000,
+      "operator_count": 4,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 0,
+      "root_type": "integer",
+      "verbs": [
+        "check",
+        "isolate",
+        "move",
+        "total"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "opt_schedule",
+      "budget": 1000,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 60,
+      "root_type": "integer",
+      "verbs": [
+        "total"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "opt_schedule",
+      "budget": 1000,
+      "operator_count": 5,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8017837257372731,
+      "nearest_root_idx": 64,
+      "root_type": "integer",
+      "verbs": [
+        "assign",
+        "identify",
+        "minimize",
+        "optimize",
+        "total"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "opt_schedule",
+      "budget": 1000,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "identify"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "pred_math",
+      "budget": 1000,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "rule"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "pred_math",
+      "budget": 1000,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "pattern",
+        "rule"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "pred_math",
+      "budget": 1000,
+      "operator_count": 3,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9486832980505137,
+      "nearest_root_idx": 108,
+      "root_type": "integer",
+      "verbs": [
+        "calculate",
+        "observe",
+        "sequence"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "pred_math",
+      "budget": 1000,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "observe",
+        "pattern"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "pred_music",
+      "budget": 1000,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "pattern"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "pred_music",
+      "budget": 1000,
+      "operator_count": 4,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "given",
+        "pattern",
+        "repeat",
+        "sequence"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "pred_music",
+      "budget": 1000,
+      "operator_count": 3,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "pattern",
+        "repeat",
+        "sequence"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "pred_music",
+      "budget": 1000,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "pattern"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "pred_code",
+      "budget": 1000,
+      "operator_count": 8,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.8838834764831843,
+      "nearest_root_idx": 68,
+      "root_type": "integer",
+      "verbs": [
+        "accumulate",
+        "add",
+        "pattern",
+        "place",
+        "since",
+        "sum",
+        "total",
+        "transform"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "pred_code",
+      "budget": 1000,
+      "operator_count": 6,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.944911182523068,
+      "nearest_root_idx": 60,
+      "root_type": "integer",
+      "verbs": [
+        "accumulate",
+        "convert",
+        "pattern",
+        "sum",
+        "total",
+        "transform"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "pred_code",
+      "budget": 1000,
+      "operator_count": 9,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.9258200997725514,
+      "nearest_root_idx": 64,
+      "root_type": "integer",
+      "verbs": [
+        "accumulate",
+        "add",
+        "calculate",
+        "compute",
+        "iterate",
+        "pattern",
+        "sum",
+        "total",
+        "transform"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "trans_nl_code",
+      "budget": 1000,
+      "operator_count": 4,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 112,
+      "root_type": "half-integer",
+      "verbs": [
+        "average",
+        "enumerate",
+        "sum",
+        "test"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "trans_nl_code",
+      "budget": 1000,
+      "operator_count": 6,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8944271909999159,
+      "nearest_root_idx": 64,
+      "root_type": "integer",
+      "verbs": [
+        "average",
+        "divide",
+        "enumerate",
+        "sum",
+        "test",
+        "total"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "trans_nl_code",
+      "budget": 1000,
+      "operator_count": 9,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.9258200997725514,
+      "nearest_root_idx": 64,
+      "root_type": "integer",
+      "verbs": [
+        "accumulate",
+        "average",
+        "combine",
+        "compute",
+        "enumerate",
+        "given",
+        "minimize",
+        "sum",
+        "test"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "trans_lang_lang",
+      "budget": 1000,
+      "operator_count": 6,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.816496580927726,
+      "nearest_root_idx": 96,
+      "root_type": "integer",
+      "verbs": [
+        "assign",
+        "check",
+        "else",
+        "if",
+        "iterate",
+        "recurse"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "trans_lang_lang",
+      "budget": 1000,
+      "operator_count": 6,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.816496580927726,
+      "nearest_root_idx": 96,
+      "root_type": "integer",
+      "verbs": [
+        "assign",
+        "check",
+        "else",
+        "if",
+        "merge",
+        "recurse"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "trans_lang_lang",
+      "budget": 1000,
+      "operator_count": 8,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.894427190999916,
+      "nearest_root_idx": 112,
+      "root_type": "half-integer",
+      "verbs": [
+        "assign",
+        "check",
+        "convert",
+        "else",
+        "if",
+        "iterate",
+        "merge",
+        "minimize"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "trans_lang_lang",
+      "budget": 1000,
+      "operator_count": 5,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.9428090415820632,
+      "nearest_root_idx": 104,
+      "root_type": "integer",
+      "verbs": [
+        "convert",
+        "else",
+        "if",
+        "iterate",
+        "translate"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "trans_math_nl",
+      "budget": 1000,
+      "operator_count": 6,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7499999999999998,
+      "nearest_root_idx": 112,
+      "root_type": "half-integer",
+      "verbs": [
+        "add",
+        "break",
+        "if",
+        "measure",
+        "sum",
+        "total"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "trans_math_nl",
+      "budget": 1000,
+      "operator_count": 7,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.9258200997725514,
+      "nearest_root_idx": 4,
+      "root_type": "integer",
+      "verbs": [
+        "accumulate",
+        "check",
+        "compress",
+        "measure",
+        "merge",
+        "sum",
+        "total"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "trans_math_nl",
+      "budget": 1000,
+      "operator_count": 7,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.9128709291752768,
+      "nearest_root_idx": 4,
+      "root_type": "integer",
+      "verbs": [
+        "check",
+        "combine",
+        "compress",
+        "if",
+        "measure",
+        "sum",
+        "total"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "trans_math_nl",
+      "budget": 1000,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 44,
+      "root_type": "integer",
+      "verbs": [
+        "calculate"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "opt_routing",
+      "budget": 500,
+      "operator_count": 6,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7499999999999998,
+      "nearest_root_idx": 80,
+      "root_type": "integer",
+      "verbs": [
+        "add",
+        "check",
+        "find",
+        "then",
+        "total",
+        "try"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "opt_routing",
+      "budget": 500,
+      "operator_count": 4,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 180,
+      "root_type": "half-integer",
+      "verbs": [
+        "calculate",
+        "compress",
+        "test",
+        "total"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "opt_routing",
+      "budget": 500,
+      "operator_count": 4,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 149,
+      "root_type": "half-integer",
+      "verbs": [
+        "compress",
+        "pattern",
+        "select",
+        "total"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "opt_portfolio",
+      "budget": 500,
+      "operator_count": 5,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7905694150420948,
+      "nearest_root_idx": 180,
+      "root_type": "half-integer",
+      "verbs": [
+        "add",
+        "compress",
+        "rank",
+        "swap",
+        "total"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "opt_portfolio",
+      "budget": 500,
+      "operator_count": 3,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.816496580927726,
+      "nearest_root_idx": 56,
+      "root_type": "integer",
+      "verbs": [
+        "allocate",
+        "minimize",
+        "total"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "opt_portfolio",
+      "budget": 500,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9999999999999998,
+      "nearest_root_idx": 64,
+      "root_type": "integer",
+      "verbs": [
+        "minimize",
+        "total"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "opt_schedule",
+      "budget": 500,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9999999999999998,
+      "nearest_root_idx": 36,
+      "root_type": "integer",
+      "verbs": [
+        "isolate",
+        "move"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "opt_schedule",
+      "budget": 500,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 60,
+      "root_type": "integer",
+      "verbs": [
+        "total"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "opt_schedule",
+      "budget": 500,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 60,
+      "root_type": "integer",
+      "verbs": [
+        "total"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "opt_schedule",
+      "budget": 500,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "identify",
+        "if"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "pred_math",
+      "budget": 500,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "pattern",
+        "rule"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "pred_math",
+      "budget": 500,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "pattern",
+        "rule"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "pred_math",
+      "budget": 500,
+      "operator_count": 4,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8660254037844388,
+      "nearest_root_idx": 108,
+      "root_type": "integer",
+      "verbs": [
+        "calculate",
+        "compress",
+        "pattern",
+        "sequence"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "pred_math",
+      "budget": 500,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "rule"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "pred_music",
+      "budget": 500,
+      "operator_count": 3,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "pattern",
+        "repeat",
+        "sequence"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "pred_music",
+      "budget": 500,
+      "operator_count": 4,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "given",
+        "pattern",
+        "repeat",
+        "sequence"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "pred_music",
+      "budget": 500,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "pattern",
+        "repeat"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "pred_music",
+      "budget": 500,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "pattern"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "pred_code",
+      "budget": 500,
+      "operator_count": 6,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8944271909999159,
+      "nearest_root_idx": 68,
+      "root_type": "integer",
+      "verbs": [
+        "because",
+        "pattern",
+        "place",
+        "sum",
+        "total",
+        "transform"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "pred_code",
+      "budget": 500,
+      "operator_count": 5,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8017837257372731,
+      "nearest_root_idx": 68,
+      "root_type": "integer",
+      "verbs": [
+        "accumulate",
+        "compute",
+        "pattern",
+        "sum",
+        "transform"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "pred_code",
+      "budget": 500,
+      "operator_count": 9,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.7717436331412897,
+      "nearest_root_idx": 112,
+      "root_type": "half-integer",
+      "verbs": [
+        "add",
+        "compute",
+        "convert",
+        "given",
+        "iterate",
+        "pattern",
+        "sum",
+        "total",
+        "transform"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "pred_code",
+      "budget": 500,
+      "operator_count": 3,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.816496580927726,
+      "nearest_root_idx": 108,
+      "root_type": "integer",
+      "verbs": [
+        "calculate",
+        "pattern",
+        "sum"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "trans_nl_code",
+      "budget": 500,
+      "operator_count": 4,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 112,
+      "root_type": "half-integer",
+      "verbs": [
+        "average",
+        "enumerate",
+        "sum",
+        "test"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "trans_nl_code",
+      "budget": 500,
+      "operator_count": 6,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.816496580927726,
+      "nearest_root_idx": 64,
+      "root_type": "integer",
+      "verbs": [
+        "accumulate",
+        "divide",
+        "enumerate",
+        "sum",
+        "test",
+        "total"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "trans_nl_code",
+      "budget": 500,
+      "operator_count": 8,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.9045340337332908,
+      "nearest_root_idx": 64,
+      "root_type": "integer",
+      "verbs": [
+        "average",
+        "calculate",
+        "compute",
+        "divide",
+        "enumerate",
+        "sum",
+        "test",
+        "total"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "trans_lang_lang",
+      "budget": 500,
+      "operator_count": 6,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7499999999999998,
+      "nearest_root_idx": 96,
+      "root_type": "integer",
+      "verbs": [
+        "assign",
+        "check",
+        "compress",
+        "else",
+        "if",
+        "iterate"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "trans_lang_lang",
+      "budget": 500,
+      "operator_count": 8,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.8838834764831843,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "assign",
+        "check",
+        "else",
+        "if",
+        "iterate",
+        "merge",
+        "recurse",
+        "test"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "trans_lang_lang",
+      "budget": 500,
+      "operator_count": 6,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7499999999999998,
+      "nearest_root_idx": 56,
+      "root_type": "integer",
+      "verbs": [
+        "assign",
+        "check",
+        "convert",
+        "integrate",
+        "iterate",
+        "merge"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "trans_math_nl",
+      "budget": 500,
+      "operator_count": 5,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.9428090415820632,
+      "nearest_root_idx": 4,
+      "root_type": "integer",
+      "verbs": [
+        "check",
+        "if",
+        "measure",
+        "sum",
+        "total"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "trans_math_nl",
+      "budget": 500,
+      "operator_count": 7,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.7844645405527361,
+      "nearest_root_idx": 68,
+      "root_type": "integer",
+      "verbs": [
+        "accumulate",
+        "add",
+        "check",
+        "compress",
+        "if",
+        "merge",
+        "total"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "trans_math_nl",
+      "budget": 500,
+      "operator_count": 6,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8944271909999159,
+      "nearest_root_idx": 4,
+      "root_type": "integer",
+      "verbs": [
+        "check",
+        "compress",
+        "if",
+        "measure",
+        "sum",
+        "total"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "trans_math_nl",
+      "budget": 500,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9999999999999998,
+      "nearest_root_idx": 108,
+      "root_type": "integer",
+      "verbs": [
+        "calculate",
+        "identify"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "opt_routing",
+      "budget": 250,
+      "operator_count": 3,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.816496580927726,
+      "nearest_root_idx": 64,
+      "root_type": "integer",
+      "verbs": [
+        "add",
+        "total",
+        "verify"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "opt_routing",
+      "budget": 250,
+      "operator_count": 4,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 16,
+      "root_type": "integer",
+      "verbs": [
+        "calculate",
+        "compress",
+        "identify",
+        "test"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "opt_routing",
+      "budget": 250,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9999999999999998,
+      "nearest_root_idx": 88,
+      "root_type": "integer",
+      "verbs": [
+        "choose",
+        "compress"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "opt_portfolio",
+      "budget": 250,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9999999999999998,
+      "nearest_root_idx": 16,
+      "root_type": "integer",
+      "verbs": [
+        "compress",
+        "test"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "opt_portfolio",
+      "budget": 250,
+      "operator_count": 3,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.816496580927726,
+      "nearest_root_idx": 96,
+      "root_type": "integer",
+      "verbs": [
+        "allocate",
+        "given",
+        "minimize"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "opt_portfolio",
+      "budget": 250,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 44,
+      "root_type": "integer",
+      "verbs": [
+        "minimize"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "opt_schedule",
+      "budget": 250,
+      "operator_count": 5,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8017837257372731,
+      "nearest_root_idx": 12,
+      "root_type": "integer",
+      "verbs": [
+        "check",
+        "isolate",
+        "move",
+        "swap",
+        "then"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "opt_schedule",
+      "budget": 250,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9999999999999998,
+      "nearest_root_idx": 100,
+      "root_type": "integer",
+      "verbs": [
+        "compress",
+        "minimize"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "opt_schedule",
+      "budget": 250,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9999999999999998,
+      "nearest_root_idx": 28,
+      "root_type": "integer",
+      "verbs": [
+        "isolate",
+        "total"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "pred_math",
+      "budget": 250,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "pattern",
+        "rule"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "pred_math",
+      "budget": 250,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "pattern",
+        "rule"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "pred_math",
+      "budget": 250,
+      "operator_count": 3,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9486832980505137,
+      "nearest_root_idx": 108,
+      "root_type": "integer",
+      "verbs": [
+        "add",
+        "pattern",
+        "sequence"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "pred_math",
+      "budget": 250,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "pattern"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "pred_music",
+      "budget": 250,
+      "operator_count": 4,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8944271909999157,
+      "nearest_root_idx": 68,
+      "root_type": "integer",
+      "verbs": [
+        "pattern",
+        "repeat",
+        "sequence",
+        "total"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "pred_music",
+      "budget": 250,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9999999999999998,
+      "nearest_root_idx": 68,
+      "root_type": "integer",
+      "verbs": [
+        "pattern",
+        "sum"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "pred_music",
+      "budget": 250,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "pattern",
+        "repeat"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "pred_music",
+      "budget": 250,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "pattern"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "pred_code",
+      "budget": 250,
+      "operator_count": 5,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7905694150420948,
+      "nearest_root_idx": 112,
+      "root_type": "half-integer",
+      "verbs": [
+        "add",
+        "pattern",
+        "place",
+        "sum",
+        "transform"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "pred_code",
+      "budget": 250,
+      "operator_count": 5,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8528028654224417,
+      "nearest_root_idx": 68,
+      "root_type": "integer",
+      "verbs": [
+        "accumulate",
+        "pattern",
+        "sum",
+        "total",
+        "transform"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "pred_code",
+      "budget": 250,
+      "operator_count": 8,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.8838834764831843,
+      "nearest_root_idx": 60,
+      "root_type": "integer",
+      "verbs": [
+        "accumulate",
+        "compress",
+        "iterate",
+        "minimize",
+        "pattern",
+        "sum",
+        "total",
+        "transform"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "pred_code",
+      "budget": 250,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9999999999999998,
+      "nearest_root_idx": 68,
+      "root_type": "integer",
+      "verbs": [
+        "pattern",
+        "sum"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "trans_nl_code",
+      "budget": 250,
+      "operator_count": 5,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8017837257372731,
+      "nearest_root_idx": 64,
+      "root_type": "integer",
+      "verbs": [
+        "average",
+        "divide",
+        "enumerate",
+        "sum",
+        "test"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "trans_nl_code",
+      "budget": 250,
+      "operator_count": 6,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.816496580927726,
+      "nearest_root_idx": 64,
+      "root_type": "integer",
+      "verbs": [
+        "accumulate",
+        "divide",
+        "enumerate",
+        "sum",
+        "test",
+        "total"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "trans_nl_code",
+      "budget": 250,
+      "operator_count": 5,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8017837257372731,
+      "nearest_root_idx": 64,
+      "root_type": "integer",
+      "verbs": [
+        "average",
+        "compute",
+        "enumerate",
+        "sum",
+        "test"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "trans_nl_code",
+      "budget": 250,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 76,
+      "root_type": "integer",
+      "verbs": [
+        "find"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "trans_lang_lang",
+      "budget": 250,
+      "operator_count": 6,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7499999999999998,
+      "nearest_root_idx": 160,
+      "root_type": "half-integer",
+      "verbs": [
+        "assign",
+        "check",
+        "else",
+        "if",
+        "iterate",
+        "merge"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "trans_lang_lang",
+      "budget": 250,
+      "operator_count": 6,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.816496580927726,
+      "nearest_root_idx": 68,
+      "root_type": "integer",
+      "verbs": [
+        "assign",
+        "else",
+        "if",
+        "iterate",
+        "merge",
+        "recurse"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "trans_lang_lang",
+      "budget": 250,
+      "operator_count": 5,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8017837257372731,
+      "nearest_root_idx": 104,
+      "root_type": "integer",
+      "verbs": [
+        "assign",
+        "combine",
+        "else",
+        "if",
+        "reduce"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "trans_math_nl",
+      "budget": 250,
+      "operator_count": 4,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8660254037844388,
+      "nearest_root_idx": 4,
+      "root_type": "integer",
+      "verbs": [
+        "if",
+        "measure",
+        "sum",
+        "total"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "trans_math_nl",
+      "budget": 250,
+      "operator_count": 5,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8017837257372731,
+      "nearest_root_idx": 60,
+      "root_type": "integer",
+      "verbs": [
+        "add",
+        "compress",
+        "measure",
+        "merge",
+        "total"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "trans_math_nl",
+      "budget": 250,
+      "operator_count": 4,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 157,
+      "root_type": "half-integer",
+      "verbs": [
+        "compress",
+        "if",
+        "measure",
+        "total"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "trans_math_nl",
+      "budget": 250,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "identify"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "opt_routing",
+      "budget": 125,
+      "operator_count": 4,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 112,
+      "root_type": "half-integer",
+      "verbs": [
+        "add",
+        "find",
+        "total",
+        "verify"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "opt_routing",
+      "budget": 125,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9999999999999998,
+      "nearest_root_idx": 16,
+      "root_type": "integer",
+      "verbs": [
+        "compress",
+        "test"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "opt_routing",
+      "budget": 125,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 60,
+      "root_type": "integer",
+      "verbs": [
+        "total"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "opt_portfolio",
+      "budget": 125,
+      "operator_count": 3,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.816496580927726,
+      "nearest_root_idx": 52,
+      "root_type": "integer",
+      "verbs": [
+        "combine",
+        "find",
+        "test"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "opt_portfolio",
+      "budget": 125,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9999999999999998,
+      "nearest_root_idx": 56,
+      "root_type": "integer",
+      "verbs": [
+        "allocate",
+        "total"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "opt_schedule",
+      "budget": 125,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 0,
+      "root_type": "integer",
+      "verbs": [
+        "isolate"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "pred_math",
+      "budget": 125,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "rule"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "pred_math",
+      "budget": 125,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "pattern",
+        "rule"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "pred_math",
+      "budget": 125,
+      "operator_count": 4,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "given",
+        "pattern",
+        "rule",
+        "sequence"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "pred_music",
+      "budget": 125,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "pattern",
+        "repeat"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "pred_music",
+      "budget": 125,
+      "operator_count": 3,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9486832980505137,
+      "nearest_root_idx": 68,
+      "root_type": "integer",
+      "verbs": [
+        "pattern",
+        "repeat",
+        "sum"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "pred_music",
+      "budget": 125,
+      "operator_count": 3,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9486832980505137,
+      "nearest_root_idx": 108,
+      "root_type": "integer",
+      "verbs": [
+        "optimize",
+        "pattern",
+        "repeat"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "pred_music",
+      "budget": 125,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "pattern"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "pred_code",
+      "budget": 125,
+      "operator_count": 4,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 125,
+      "root_type": "half-integer",
+      "verbs": [
+        "add",
+        "pattern",
+        "sum",
+        "transform"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "pred_code",
+      "budget": 125,
+      "operator_count": 5,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8528028654224417,
+      "nearest_root_idx": 68,
+      "root_type": "integer",
+      "verbs": [
+        "accumulate",
+        "pattern",
+        "sum",
+        "total",
+        "transform"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "pred_code",
+      "budget": 125,
+      "operator_count": 6,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7499999999999998,
+      "nearest_root_idx": 56,
+      "root_type": "integer",
+      "verbs": [
+        "calculate",
+        "pattern",
+        "place",
+        "sum",
+        "total",
+        "transform"
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "pred_code",
+      "budget": 125,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9999999999999998,
+      "nearest_root_idx": 68,
+      "root_type": "integer",
+      "verbs": [
+        "pattern",
+        "sum"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "trans_nl_code",
+      "budget": 125,
+      "operator_count": 5,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8017837257372731,
+      "nearest_root_idx": 64,
+      "root_type": "integer",
+      "verbs": [
+        "average",
+        "divide",
+        "enumerate",
+        "sum",
+        "test"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "trans_nl_code",
+      "budget": 125,
+      "operator_count": 5,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8017837257372731,
+      "nearest_root_idx": 4,
+      "root_type": "integer",
+      "verbs": [
+        "average",
+        "enumerate",
+        "sum",
+        "test",
+        "total"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "trans_nl_code",
+      "budget": 125,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9999999999999998,
+      "nearest_root_idx": 8,
+      "root_type": "integer",
+      "verbs": [
+        "enumerate",
+        "test"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "trans_lang_lang",
+      "budget": 125,
+      "operator_count": 4,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 84,
+      "root_type": "integer",
+      "verbs": [
+        "assign",
+        "iterate",
+        "merge",
+        "recurse"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "trans_lang_lang",
+      "budget": 125,
+      "operator_count": 7,
+      "tower_level": "O",
+      "cosine_to_nearest_e8": 0.7844645405527361,
+      "nearest_root_idx": 24,
+      "root_type": "integer",
+      "verbs": [
+        "assign",
+        "check",
+        "else",
+        "if",
+        "iterate",
+        "merge",
+        "recurse"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "trans_lang_lang",
+      "budget": 125,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9999999999999998,
+      "nearest_root_idx": 88,
+      "root_type": "integer",
+      "verbs": [
+        "assign",
+        "reduce"
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "trans_math_nl",
+      "budget": 125,
+      "operator_count": 2,
+      "tower_level": "C",
+      "cosine_to_nearest_e8": 0.9999999999999998,
+      "nearest_root_idx": 20,
+      "root_type": "integer",
+      "verbs": [
+        "add",
+        "measure"
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "trans_math_nl",
+      "budget": 125,
+      "operator_count": 4,
+      "tower_level": "H",
+      "cosine_to_nearest_e8": 0.8660254037844388,
+      "nearest_root_idx": 20,
+      "root_type": "integer",
+      "verbs": [
+        "add",
+        "check",
+        "measure",
+        "total"
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "trans_math_nl",
+      "budget": 125,
+      "operator_count": 1,
+      "tower_level": "R",
+      "cosine_to_nearest_e8": 0.7071067811865475,
+      "nearest_root_idx": 0,
+      "root_type": "integer",
+      "verbs": [
+        "measure"
+      ]
+    }
+  ],
+  "summary": {
+    "total_comparisons": 158,
+    "mean_cosine": 0.8155,
+    "max_cosine": 1.0,
+    "by_tower_level": {
+      "C": {
+        "count": 51,
+        "mean_cosine": 0.8723,
+        "max_cosine": 1.0
+      },
+      "H": {
+        "count": 59,
+        "mean_cosine": 0.7948,
+        "max_cosine": 0.9449
+      },
+      "O": {
+        "count": 23,
+        "mean_cosine": 0.8602,
+        "max_cosine": 0.9258
+      },
+      "R": {
+        "count": 25,
+        "mean_cosine": 0.7071,
+        "max_cosine": 0.7071
+      }
+    },
+    "integer_root_pct": 88.6
+  }
+}

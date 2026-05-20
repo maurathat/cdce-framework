@@ -6,6 +6,12 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 def main():
     quick_mode = "--quick" in sys.argv
     decompress_mode = "--decompress" in sys.argv
+    tower_mode = "--tower" in sys.argv
+
+    if tower_mode:
+        from src.tower import run_tower_analysis
+        run_tower_analysis()
+        return
 
     if decompress_mode:
         from src.decompress import run_decompression_test
