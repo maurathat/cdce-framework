@@ -1,0 +1,38 @@
+{
+  "content_hash": "be66f2bbfd241ab2cfca",
+  "model": "gemini_flash",
+  "task_id": "trans_lang_lang",
+  "task_family": "translation",
+  "generation": 20,
+  "budget_at_creation": 1000,
+  "strategy_text": "The goal is to convert the Python `flatten_nested` function to equivalent JavaScript, maintaining exact behavior under strict token constraints.\n\n**Reasoning & Steps:**\n\n1.  **Function Signature &",
+  "timestamp": 1779266873.529377,
+  "operator_count": 1,
+  "reuse_ratio": 0.0,
+  "unique_verbs": [
+    "convert"
+  ],
+  "lineage": [
+    "9366b5846af4640b04b5",
+    "85696297422e5b59434f",
+    "d50ab2b3288efafdd717",
+    "1f40d9627612c89e26bf",
+    "bc82d873f4fa5d7cfa02",
+    "7bac522aa2afacaa9cf2",
+    "d74a1123cdccd09f797b",
+    "4649ddbc72aa32aada08",
+    "b9ce10ab9213fee940c8",
+    "606b67219306ced7d8a3",
+    "0996e9fa82d6fbe3a85a",
+    "0a3eed532838a15c3a14",
+    "3cc3b3573843a54e82a7",
+    "bb7f11cf57af061fca47",
+    "711ffbd3c6dddecf0272",
+    "03c20a9799ede8f8c97c",
+    "54fbdfd1932fc426c3fe",
+    "cde307e28d36cb59c555",
+    "98cb5e3029bfadf106cd"
+  ],
+  "times_retrieved": 0,
+  "last_retrieved": 0.0
+}

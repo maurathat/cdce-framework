@@ -1,0 +1,42 @@
+{
+  "content_hash": "b7c5f5d960df65dd48d1",
+  "model": "haiku",
+  "task_id": "trans_math_nl",
+  "task_family": "translation",
+  "generation": 20,
+  "budget_at_creation": 250,
+  "strategy_text": "# Divergence: Compressed Explanation\n\n## One Sentence\nDivergence tells you if a vector field is spreading out or caving in at a point.\n\n## The Math (Direct)\n- **\u2202Fx/\u2202x** = Is the field getting stronger/weaker going right?\n- **\u2202Fy/\u2202y** = Is the field getting stronger/weaker going up?\n- **\u2202Fz/\u2202z** = Is the field getting stronger/weaker going forward?\n- **Add them** = Total spreading in all directions\n\n## Physical Picture\n**Faucet running into a sink:**\n- At the faucet opening: water shoots outward everywhere \u2192 **positive divergence** (source)\n- In the drain: water converges inward \u2192 **negative divergence** (sink)\n- In flat, steady flow: nothing changes \u2192 **zero divergence**\n\n## Why It Works\nEach partial derivative measures how the field *changes* along one axis. If Fx increases rightward, the field is spreading right (positive). If Fy decreases upward, it's collaps",
+  "timestamp": 1779265471.398252,
+  "operator_count": 5,
+  "reuse_ratio": 0.2857142857142857,
+  "unique_verbs": [
+    "add",
+    "compress",
+    "if",
+    "measure",
+    "total"
+  ],
+  "lineage": [
+    "a445035ac061b8f99af5",
+    "1ab44de55c4557d30277",
+    "d4719aba66d151643891",
+    "be3bb305341100b38d68",
+    "3a30e2697867565ffcae",
+    "1888847ad00dd800c369",
+    "3d692982b74a523edf52",
+    "fc3f6dd7315ec1453cd1",
+    "5cc6d4dfdf0a51c0ad0f",
+    "ed0e0b541f4332a6dbc9",
+    "f2777a278e2473661497",
+    "5a7ad811a7fc390831db",
+    "e3b0c44298fc1c149afb",
+    "e3b0c44298fc1c149afb",
+    "e3b0c44298fc1c149afb",
+    "e3b0c44298fc1c149afb",
+    "e3b0c44298fc1c149afb",
+    "c27f961d1ab3cdf6bffe",
+    "805aa7194d87a0f066b9"
+  ],
+  "times_retrieved": 0,
+  "last_retrieved": 0.0
+}

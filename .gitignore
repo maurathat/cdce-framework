@@ -1,0 +1,23 @@
+# API keys
+.env
+
+# Full memory store (samples included separately)
+memory/*.json
+!memory/samples/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo

@@ -1,0 +1,30 @@
+{
+  "content_hash": "b356f02850487bbb33b7",
+  "model": "gpt4",
+  "task_id": "pred_math",
+  "task_family": "prediction",
+  "generation": 10,
+  "budget_at_creation": 250,
+  "strategy_text": "To identify the pattern and predict the next values, follow these steps:\n\n1. **Find Differences:**\n   \\[\n   6 - 2 = 4, \\quad 14 - 6 = 8, \\quad 30 - 14 = 16, \\quad 62 - 30 = 32\n   \\]\n\n2. **Recognize Powers of 2:**\n   \\[\n   4 = 2^2, \\quad 8 = 2^3, \\quad 16 = 2^4, \\quad 32 = 2^5\n   \\]\n\n3. **Formulate Rule for Sequence:**\n   \\[\n   a_n = a_{n-1} + 2^{n+1}\n   \\]\n\n4. **Compute Next Differences:**\n   \\[\n   \\text{Next: } 2^6 = 64, \\quad 2^7 = 128, \\quad 2^8 = 256\n   \\]\n\n5. **Predict Next Values:**\n   \\[\n   62 + 64 = 126, \\quad 126 + 128 = 254, \\quad 254 + 256 = ",
+  "timestamp": 1779262655.85618,
+  "operator_count": 3,
+  "reuse_ratio": 0.0,
+  "unique_verbs": [
+    "identify",
+    "pattern",
+    "rule"
+  ],
+  "lineage": [
+    "ec82e3d05cfeed86ecbb",
+    "7be78c9445d131f099f5",
+    "77e5c73302935a6b7eed",
+    "ca3212b78992dd77b60e",
+    "637d0276ffca89bcf759",
+    "5790e5f841a4fca24244",
+    "7752b70f089506704b83",
+    "4fedb49aea6a1540c9fe",
+    "06ac6860b2cca30ec2f3"
+  ],
+  "times_retrieved": 0,
+  "last_retrieved": 0.0
+}

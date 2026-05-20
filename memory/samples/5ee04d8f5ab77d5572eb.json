@@ -1,0 +1,39 @@
+{
+  "content_hash": "5ee04d8f5ab77d5572eb",
+  "model": "haiku",
+  "task_id": "pred_math",
+  "task_family": "prediction",
+  "generation": 20,
+  "budget_at_creation": 500,
+  "strategy_text": "**DIFFERENCES**\n6-2=4, 14-6=8, 30-14=16, 62-30=32\n\nPattern: 4, 8, 16, 32 = powers of 2\n\n**RULE**\na\u2099 = 2^(n+1) - 2\n\n**NEXT THREE VALUES**\n\na\u2086 = 2\u2077 - 2 = 126\na\u2087 = 2\u2078 - 2 = 254\na\u2088 = 2\u2079 - 2 = 510",
+  "timestamp": 1779265982.6527638,
+  "operator_count": 2,
+  "reuse_ratio": 0.0,
+  "unique_verbs": [
+    "pattern",
+    "rule"
+  ],
+  "lineage": [
+    "a445035ac061b8f99af5",
+    "1ab44de55c4557d30277",
+    "d4719aba66d151643891",
+    "be3bb305341100b38d68",
+    "3a30e2697867565ffcae",
+    "1888847ad00dd800c369",
+    "3d692982b74a523edf52",
+    "fc3f6dd7315ec1453cd1",
+    "5cc6d4dfdf0a51c0ad0f",
+    "ed0e0b541f4332a6dbc9",
+    "f2777a278e2473661497",
+    "5a7ad811a7fc390831db",
+    "e3b0c44298fc1c149afb",
+    "e3b0c44298fc1c149afb",
+    "78e42a4d59bbe17a2675",
+    "955d37bea7777dd3ea4f",
+    "f4fa41dd5dbd80e10ff7",
+    "99837ff5af259c33490a",
+    "73ba507d678497964478"
+  ],
+  "times_retrieved": 0,
+  "last_retrieved": 0.0
+}

@@ -1,0 +1,24 @@
+{
+  "content_hash": "eb949eaeeb9e9fb09d64",
+  "model": "claude",
+  "task_id": "pred_math",
+  "task_family": "prediction",
+  "generation": 5,
+  "budget_at_creation": 500,
+  "strategy_text": "**Differences:** 6-2=4, 14-6=8, 30-14=16, 62-30=32\nPattern: 4, 8, 16, 32 = 2\u00b2, 2\u00b3, 2\u2074, 2\u2075 (doubling)\n\n**Rule derivation:** If differences = 2^(n+1), then:\na\u2099 = 2 + sum(2\u00b2, 2\u00b3, ..., 2^(n+1)) = 2 + (4+8+...+2^(n+1))\n\nUsing geometric series: sum = 2^(n+2) - 4\nTherefore: a\u2099 = 2 + 2^(n+2) - 4 = 2^(n+2) - 2\n\n**Verification:**\n- n=1: 2\u00b3-2=6 \u2713\n- n=2: 2\u2074-2=14 \u2713  \n- n=3: 2\u2075-2=30 \u2713\n- n=4: 2\u2076-2=62 \u2713\n\n**Rule: a\u2099 = 2^(n+2) - 2**\n\n**Next 3 values:**\n- n=5: 2\u2077-2 = 126\n- n=6: 2\u2078-2 = 254\n- n=7: 2\u2079-2 = 510\n\n**Answer: 126, 254, 510**",
+  "timestamp": 1779261980.793486,
+  "operator_count": 2,
+  "reuse_ratio": 0.0,
+  "unique_verbs": [
+    "if",
+    "sum"
+  ],
+  "lineage": [
+    "ec82e3d05cfeed86ecbb",
+    "7be78c9445d131f099f5",
+    "77e5c73302935a6b7eed",
+    "d0bbdde195307f1a513b"
+  ],
+  "times_retrieved": 0,
+  "last_retrieved": 0.0
+}

@@ -1,0 +1,31 @@
+{
+  "content_hash": "ed0e0b541f4332a6dbc9",
+  "model": "gpt4",
+  "task_id": "opt_routing",
+  "task_family": "optimization",
+  "generation": 10,
+  "budget_at_creation": 250,
+  "strategy_text": "To find the shortest route, we will use a compressed Nearest Neighbor strategy. Focus on essential moves only.\n\n**Steps:**\n\n1. **Start at Depot:**\n   - Nearest: **A (10 miles)**\n\n2. **A:**\n   - Nearest: **C (8 miles)**\n\n3. **C:**\n   - Nearest: **D (7 miles)**\n\n4. **D:**\n   - Nearest: **E (6 miles)**\n\n5. **E:**\n   - Nearest: **F (8 miles)**\n\n6. **F:**\n   - Nearest: **B (16 miles)**\n\n7. **Back to Depot from B:**\n   - **15 miles**\n\n**Final Route:**\n- Depot \u2192 A \u2192 C \u2192 D \u2192 E \u2192 F \u2192 B \u2192 Depot\n\n**Total Distance:**\n- 10 + 8 + 7 + 6 + 8 + 16 + 15 = **70 miles**\n\nEach stop visited once. Route efficiently minimizes travel.",
+  "timestamp": 1779262635.0153332,
+  "operator_count": 4,
+  "reuse_ratio": 0.0,
+  "unique_verbs": [
+    "compress",
+    "find",
+    "minimize",
+    "move"
+  ],
+  "lineage": [
+    "a445035ac061b8f99af5",
+    "1ab44de55c4557d30277",
+    "d4719aba66d151643891",
+    "be3bb305341100b38d68",
+    "3a30e2697867565ffcae",
+    "1888847ad00dd800c369",
+    "3d692982b74a523edf52",
+    "fc3f6dd7315ec1453cd1",
+    "5cc6d4dfdf0a51c0ad0f"
+  ],
+  "times_retrieved": 0,
+  "last_retrieved": 0.0
+}

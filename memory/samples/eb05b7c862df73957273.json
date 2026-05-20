@@ -1,0 +1,31 @@
+{
+  "content_hash": "eb05b7c862df73957273",
+  "model": "gpt4",
+  "task_id": "trans_nl_code",
+  "task_family": "translation",
+  "generation": 10,
+  "budget_at_creation": 250,
+  "strategy_text": "To solve the problem efficiently under strict token constraints, we focus on minimizing operations and utilizing Python's concise syntax.\n\n### Strategy\nUse a single list comprehension with the walrus operator to calculate the cumulative average efficiently.\n\n### Function\n```python\ndef cumulative_avg(lst):\n    s = 0\n    return [(s := s + x) / (i + 1) for i, x in enumerate(lst)]\n\n# Test\nprint(cumulative_avg([4, 8, 6, 2, 10]))\n```\n\n### Explanation\n1. **`s = 0`**: Initialize a sum accumulator.\n2. **List Comprehension**:\n   - **`(s := s + x)`**: Increment `s` using the walrus operator.\n   - **`enumerate(lst)`**: Provides index `i` and current element `x` in one pass.\n   - **`/ (i + 1)`**: Calculate the average up to the current index.\n3. **Return**: Produces a list of cumulative averages.\n\n### Output Verification\n- Using `[4, 8, 6, 2, 10]`, the computation is:\n  - 4 /",
+  "timestamp": 1779262678.8182578,
+  "operator_count": 4,
+  "reuse_ratio": 0.33333333333333337,
+  "unique_verbs": [
+    "average",
+    "calculate",
+    "sum",
+    "test"
+  ],
+  "lineage": [
+    "1e42e467a3fdcf781e19",
+    "baeba4cea85582a923a7",
+    "82ace9a0c02b7f176db4",
+    "df51bd94961210dfa650",
+    "16f2bf7c2adb20444c95",
+    "8f6522d070d36ffc04b8",
+    "09dd4d0a6ae0c2efa153",
+    "41917b1ea62b21251662",
+    "02ca91ae85236e5b3b75"
+  ],
+  "times_retrieved": 0,
+  "last_retrieved": 0.0
+}

@@ -1,0 +1,40 @@
+{
+  "content_hash": "3396557d1f8717383ebc",
+  "model": "gemini_flash",
+  "task_id": "pred_code",
+  "task_family": "prediction",
+  "generation": 20,
+  "budget_at_creation": 1000,
+  "strategy_text": "**Reasoning:**\nThe pattern generates a cumulative sum (prefix sum). Each output element is the sum of all input elements up to its position.\n\n**Function:**\n\n```python\ndef transform",
+  "timestamp": 1779266842.914433,
+  "operator_count": 3,
+  "reuse_ratio": 0.4,
+  "unique_verbs": [
+    "pattern",
+    "sum",
+    "transform"
+  ],
+  "lineage": [
+    "ef222e5f1582a810d709",
+    "0c56982d7ad3fb52cde2",
+    "ce57d7b67296571037f5",
+    "a10f8a36c671d9a96f69",
+    "95efffe36d5063491554",
+    "c4fb16c72843bae0c1d1",
+    "23ffb591745cd5282225",
+    "fc8bc0b2c83d27ddc86b",
+    "6cfe51bca7494f8b8254",
+    "d2ef8eff58b0744342fb",
+    "7a9ddead05e9106e8460",
+    "9ba820daa303e3c482e3",
+    "d16f8153f74feb7e84ce",
+    "31f4a2f122d8341e4ce0",
+    "6750019965abb145633e",
+    "3490466ece245f43aacf",
+    "47b689717dd8e339f90e",
+    "06319409443ee941ce6f",
+    "95db9283e8d4ae160398"
+  ],
+  "times_retrieved": 0,
+  "last_retrieved": 0.0
+}

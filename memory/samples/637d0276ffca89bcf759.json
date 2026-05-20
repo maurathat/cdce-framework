@@ -1,0 +1,24 @@
+{
+  "content_hash": "637d0276ffca89bcf759",
+  "model": "gpt4",
+  "task_id": "pred_math",
+  "task_family": "prediction",
+  "generation": 5,
+  "budget_at_creation": 1000,
+  "strategy_text": "**Recognize the Pattern:**\n\nDifferences:  \n6-2=4, 14-6=8, 30-14=16, 62-30=32  \nPattern: 4, 8, 16, 32 (doubles)\n\n**Formula Derivation:**\n\nNotice series growth matches powers of 2 subtracting 2:  \n\\[ a_n = 2^{(n+1)} - 2 \\]\n\n**Verification:**\n\n- \\( a_1 = 2^2 - 2 = 2 \\) \u2713  \n- \\( a_2 = 2^3 - 2 = 6 \\) \u2713  \n- \\( a_3 = 2^4 - 2 = 14 \\) \u2713  \n- \\( a_4 = 2^5 - 2 = 30 \\) \u2713  \n- \\( a_5 = 2^6 - 2 = 62 \\) \u2713  \n\n**Next Values:**\n\n- \\( n = 6: \\) \\( 2^7 - 2 = 126 \\)  \n- \\( n = 7: \\) \\( 2^8 - 2 = 254 \\)  \n- \\( n = 8: \\) \\( 2^9 - 2 = 510 \\)  \n\n**Rule:** \\( a_n = 2^{(n+1)} - 2 \\)  \n**Next Values:** 126, 254, 510",
+  "timestamp": 1779261890.7466822,
+  "operator_count": 2,
+  "reuse_ratio": 0.0,
+  "unique_verbs": [
+    "notice",
+    "subtract"
+  ],
+  "lineage": [
+    "ec82e3d05cfeed86ecbb",
+    "7be78c9445d131f099f5",
+    "77e5c73302935a6b7eed",
+    "ca3212b78992dd77b60e"
+  ],
+  "times_retrieved": 0,
+  "last_retrieved": 0.0
+}

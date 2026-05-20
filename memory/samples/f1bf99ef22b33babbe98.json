@@ -1,0 +1,26 @@
+{
+  "content_hash": "f1bf99ef22b33babbe98",
+  "model": "claude",
+  "task_id": "opt_routing",
+  "task_family": "optimization",
+  "generation": 5,
+  "budget_at_creation": 500,
+  "strategy_text": "**Greedy Build:**\nStart Depot, pick nearest unvisited at each step:\n\nDepot\u2192A(10) [nearest from Depot]\nA\u2192C(8) [nearest from A] \nC\u2192D(7) [nearest from C]\nD\u2192E(6) [nearest from D]\nE\u2192F(8) [nearest from E]\nF\u2192B(16) [only remaining]\nB\u2192Depot(15)\n\nRoute: Depot\u2192A\u2192C\u2192D\u2192E\u2192F\u2192B\u2192Depot\nCost: 10+8+7+6+8+16+15 = **70**\n\n**Quick Check - Key Swaps:**\n- E\u2194F swap: D\u2192F(13)+F\u2192E(8)+E\u2192B(9)=30 vs D\u2192E(6)+E\u2192F(8)+F\u2192B(16)=30 [same]\n- Other swaps break efficient C\u2192D(7) and D\u2192E(6) chain\n\n**2-opt check on worst edge F\u2192B(16):**\nCurrent: ...E\u2192F\u2192B\u2192Depot = 8+16+15=39\nReverse F-B: ...E\u2192B\u2192F\u2192Depot would need E\u2192B(9)+B\u2192F(16)+F\u2192Depot(?) - no direct F\u2192Depot\n\n**Final: Depot\u2192A\u2192C\u2192D\u2192E\u2192F\u2192B\u2192Depot = 70 miles**",
+  "timestamp": 1779261944.992563,
+  "operator_count": 4,
+  "reuse_ratio": 0.19999999999999996,
+  "unique_verbs": [
+    "break",
+    "check",
+    "pick",
+    "swap"
+  ],
+  "lineage": [
+    "a445035ac061b8f99af5",
+    "1ab44de55c4557d30277",
+    "d4719aba66d151643891",
+    "163d1c34cd61fe564ff2"
+  ],
+  "times_retrieved": 0,
+  "last_retrieved": 0.0
+}

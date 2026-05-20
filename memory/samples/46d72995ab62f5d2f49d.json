@@ -1,0 +1,41 @@
+{
+  "content_hash": "46d72995ab62f5d2f49d",
+  "model": "gpt4o",
+  "task_id": "pred_math",
+  "task_family": "prediction",
+  "generation": 20,
+  "budget_at_creation": 250,
+  "strategy_text": "**Sequence Analysis**\n\n1. **Identify Differences:**\n\n   - \\(6 - 2 = 4\\)\n   - \\(14 - 6 = 8\\)\n   - \\(30 - 14 = 16\\)\n   - \\(62 - 30 = 32\\)\n\n2. **Recognize Pattern:**\n\n   - Differences are powers of 2: \\(4, 8, 16, 32\\).\n\n3. **Next Difference:**\n\n   - Double last difference: \\(32 \\times 2 = 64\\).\n\n4. **Calculate Next Term:**\n\n   - \\(62 + 64 = 126\\).\n\n5. **Subsequent Differences:**\n\n   - \\(64 \\times 2 = 128\\)\n   - \\(126 + 128 = 254\\)\n   - \\(128 \\times 2 = 256\\)\n   - \\(254 + 256 = 510\\)\n\n**Conclusion:** Next 3 values are 126, 254, 510.",
+  "timestamp": 1779265407.003307,
+  "operator_count": 4,
+  "reuse_ratio": 0.0,
+  "unique_verbs": [
+    "calculate",
+    "identify",
+    "pattern",
+    "sequence"
+  ],
+  "lineage": [
+    "a445035ac061b8f99af5",
+    "1ab44de55c4557d30277",
+    "d4719aba66d151643891",
+    "be3bb305341100b38d68",
+    "3a30e2697867565ffcae",
+    "1888847ad00dd800c369",
+    "3d692982b74a523edf52",
+    "fc3f6dd7315ec1453cd1",
+    "5cc6d4dfdf0a51c0ad0f",
+    "ed0e0b541f4332a6dbc9",
+    "f2777a278e2473661497",
+    "5a7ad811a7fc390831db",
+    "e3b0c44298fc1c149afb",
+    "e3b0c44298fc1c149afb",
+    "e3b0c44298fc1c149afb",
+    "e3b0c44298fc1c149afb",
+    "e3b0c44298fc1c149afb",
+    "e3b0c44298fc1c149afb",
+    "107c168ed2bdc8cfde24"
+  ],
+  "times_retrieved": 0,
+  "last_retrieved": 0.0
+}

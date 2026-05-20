@@ -1,0 +1,2535 @@
+{
+  "experiment": "cdce_compression_harness",
+  "timestamp": "20260520_002901",
+  "models": [
+    "claude",
+    "gpt4",
+    "gemini"
+  ],
+  "budget_levels": [
+    2000,
+    1000,
+    500,
+    250,
+    125
+  ],
+  "task_families": [
+    "optimization",
+    "prediction",
+    "translation"
+  ],
+  "total_runs": 135,
+  "runs": [
+    {
+      "task_id": "opt_routing",
+      "task_family": "optimization",
+      "model": "claude",
+      "budget": 2000,
+      "operator_count": 4,
+      "total_operations": 4,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "break",
+        "identify",
+        "swap",
+        "test"
+      ],
+      "word_count": 76,
+      "sentence_count": 2,
+      "step_count": 10,
+      "compression_ratio": 0.1415,
+      "content_hash": "f175ac0fcdadad65"
+    },
+    {
+      "task_id": "opt_routing",
+      "task_family": "optimization",
+      "model": "gpt4",
+      "budget": 2000,
+      "operator_count": 1,
+      "total_operations": 1,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "optimize"
+      ],
+      "word_count": 91,
+      "sentence_count": 2,
+      "step_count": 20,
+      "compression_ratio": 0.1,
+      "content_hash": "f5bff05d4103e708"
+    },
+    {
+      "task_id": "opt_routing",
+      "task_family": "optimization",
+      "model": "gemini",
+      "budget": 2000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "opt_portfolio",
+      "task_family": "optimization",
+      "model": "claude",
+      "budget": 2000,
+      "operator_count": 3,
+      "total_operations": 6,
+      "reuse_ratio": 0.5,
+      "unique_verbs": [
+        "minimize",
+        "since",
+        "test"
+      ],
+      "word_count": 244,
+      "sentence_count": 43,
+      "step_count": 15,
+      "compression_ratio": 0.353,
+      "content_hash": "91f28c9b2e0f30c9"
+    },
+    {
+      "task_id": "opt_portfolio",
+      "task_family": "optimization",
+      "model": "gpt4",
+      "budget": 2000,
+      "operator_count": 9,
+      "total_operations": 13,
+      "reuse_ratio": 0.3077,
+      "unique_verbs": [
+        "add",
+        "allocate",
+        "assume",
+        "check",
+        "if",
+        "minimize",
+        "move",
+        "optimize",
+        "test"
+      ],
+      "word_count": 308,
+      "sentence_count": 32,
+      "step_count": 35,
+      "compression_ratio": 0.31,
+      "content_hash": "271ee076caba6314"
+    },
+    {
+      "task_id": "opt_portfolio",
+      "task_family": "optimization",
+      "model": "gemini",
+      "budget": 2000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "opt_schedule",
+      "task_family": "optimization",
+      "model": "claude",
+      "budget": 2000,
+      "operator_count": 2,
+      "total_operations": 3,
+      "reuse_ratio": 0.3333,
+      "unique_verbs": [
+        "identify",
+        "place"
+      ],
+      "word_count": 146,
+      "sentence_count": 0,
+      "step_count": 17,
+      "compression_ratio": 0.2405,
+      "content_hash": "3a786854d11e17df"
+    },
+    {
+      "task_id": "opt_schedule",
+      "task_family": "optimization",
+      "model": "gpt4",
+      "budget": 2000,
+      "operator_count": 6,
+      "total_operations": 6,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "given",
+        "identify",
+        "minimize",
+        "reduce",
+        "repeat",
+        "separate"
+      ],
+      "word_count": 226,
+      "sentence_count": 16,
+      "step_count": 28,
+      "compression_ratio": 0.2335,
+      "content_hash": "d882130479a5ec3a"
+    },
+    {
+      "task_id": "opt_schedule",
+      "task_family": "optimization",
+      "model": "gemini",
+      "budget": 2000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "pred_math",
+      "task_family": "prediction",
+      "model": "claude",
+      "budget": 2000,
+      "operator_count": 1,
+      "total_operations": 1,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "if"
+      ],
+      "word_count": 92,
+      "sentence_count": 0,
+      "step_count": 10,
+      "compression_ratio": 0.1675,
+      "content_hash": "81e21b1d4e00a05e"
+    },
+    {
+      "task_id": "pred_math",
+      "task_family": "prediction",
+      "model": "gpt4",
+      "budget": 2000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 1.0,
+      "unique_verbs": [],
+      "word_count": 103,
+      "sentence_count": 0,
+      "step_count": 10,
+      "compression_ratio": 0.1395,
+      "content_hash": "a483b8da40936766"
+    },
+    {
+      "task_id": "pred_math",
+      "task_family": "prediction",
+      "model": "gemini",
+      "budget": 2000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "pred_music",
+      "task_family": "prediction",
+      "model": "claude",
+      "budget": 2000,
+      "operator_count": 1,
+      "total_operations": 1,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "given"
+      ],
+      "word_count": 88,
+      "sentence_count": 2,
+      "step_count": 6,
+      "compression_ratio": 0.1245,
+      "content_hash": "f1ecf448fb0823b7"
+    },
+    {
+      "task_id": "pred_music",
+      "task_family": "prediction",
+      "model": "gpt4",
+      "budget": 2000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 1.0,
+      "unique_verbs": [],
+      "word_count": 123,
+      "sentence_count": 15,
+      "step_count": 18,
+      "compression_ratio": 0.131,
+      "content_hash": "8db9a6166c139fef"
+    },
+    {
+      "task_id": "pred_music",
+      "task_family": "prediction",
+      "model": "gemini",
+      "budget": 2000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "pred_code",
+      "task_family": "prediction",
+      "model": "claude",
+      "budget": 2000,
+      "operator_count": 2,
+      "total_operations": 4,
+      "reuse_ratio": 0.5,
+      "unique_verbs": [
+        "sum",
+        "total"
+      ],
+      "word_count": 71,
+      "sentence_count": 4,
+      "step_count": 3,
+      "compression_ratio": 0.1055,
+      "content_hash": "69d9b4202607cbce"
+    },
+    {
+      "task_id": "pred_code",
+      "task_family": "prediction",
+      "model": "gpt4",
+      "budget": 2000,
+      "operator_count": 5,
+      "total_operations": 8,
+      "reuse_ratio": 0.375,
+      "unique_verbs": [
+        "accumulate",
+        "add",
+        "sum",
+        "total",
+        "traverse"
+      ],
+      "word_count": 140,
+      "sentence_count": 11,
+      "step_count": 6,
+      "compression_ratio": 0.104,
+      "content_hash": "1fa8cb5746a78f19"
+    },
+    {
+      "task_id": "pred_code",
+      "task_family": "prediction",
+      "model": "gemini",
+      "budget": 2000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "trans_nl_code",
+      "task_family": "translation",
+      "model": "claude",
+      "budget": 2000,
+      "operator_count": 2,
+      "total_operations": 2,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "divide",
+        "sum"
+      ],
+      "word_count": 54,
+      "sentence_count": 7,
+      "step_count": 1,
+      "compression_ratio": 0.074,
+      "content_hash": "520478a61723edac"
+    },
+    {
+      "task_id": "trans_nl_code",
+      "task_family": "translation",
+      "model": "gpt4",
+      "budget": 2000,
+      "operator_count": 5,
+      "total_operations": 7,
+      "reuse_ratio": 0.2857,
+      "unique_verbs": [
+        "average",
+        "calculate",
+        "optimize",
+        "sum",
+        "test"
+      ],
+      "word_count": 129,
+      "sentence_count": 16,
+      "step_count": 5,
+      "compression_ratio": 0.1115,
+      "content_hash": "9e38a81717f6f31f"
+    },
+    {
+      "task_id": "trans_nl_code",
+      "task_family": "translation",
+      "model": "gemini",
+      "budget": 2000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "trans_lang_lang",
+      "task_family": "translation",
+      "model": "claude",
+      "budget": 2000,
+      "operator_count": 3,
+      "total_operations": 3,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "check",
+        "else",
+        "if"
+      ],
+      "word_count": 108,
+      "sentence_count": 23,
+      "step_count": 9,
+      "compression_ratio": 0.1435,
+      "content_hash": "8b53f6744b3a70e9"
+    },
+    {
+      "task_id": "trans_lang_lang",
+      "task_family": "translation",
+      "model": "gpt4",
+      "budget": 2000,
+      "operator_count": 3,
+      "total_operations": 3,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "else",
+        "if",
+        "translate"
+      ],
+      "word_count": 225,
+      "sentence_count": 28,
+      "step_count": 13,
+      "compression_ratio": 0.196,
+      "content_hash": "e67e8ee71b1bd36e"
+    },
+    {
+      "task_id": "trans_lang_lang",
+      "task_family": "translation",
+      "model": "gemini",
+      "budget": 2000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "trans_math_nl",
+      "task_family": "translation",
+      "model": "claude",
+      "budget": 2000,
+      "operator_count": 6,
+      "total_operations": 11,
+      "reuse_ratio": 0.4545,
+      "unique_verbs": [
+        "add",
+        "find",
+        "if",
+        "measure",
+        "move",
+        "sum"
+      ],
+      "word_count": 182,
+      "sentence_count": 5,
+      "step_count": 9,
+      "compression_ratio": 0.169,
+      "content_hash": "cadd68cf69bcf6ba"
+    },
+    {
+      "task_id": "trans_math_nl",
+      "task_family": "translation",
+      "model": "gpt4",
+      "budget": 2000,
+      "operator_count": 5,
+      "total_operations": 6,
+      "reuse_ratio": 0.1667,
+      "unique_verbs": [
+        "add",
+        "check",
+        "if",
+        "measure",
+        "total"
+      ],
+      "word_count": 105,
+      "sentence_count": 12,
+      "step_count": 9,
+      "compression_ratio": 0.107,
+      "content_hash": "970aa7172d46b128"
+    },
+    {
+      "task_id": "trans_math_nl",
+      "task_family": "translation",
+      "model": "gemini",
+      "budget": 2000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "opt_routing",
+      "task_family": "optimization",
+      "model": "claude",
+      "budget": 1000,
+      "operator_count": 2,
+      "total_operations": 2,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "break",
+        "swap"
+      ],
+      "word_count": 63,
+      "sentence_count": 2,
+      "step_count": 2,
+      "compression_ratio": 0.247,
+      "content_hash": "cf8f4bf0089189b4"
+    },
+    {
+      "task_id": "opt_routing",
+      "task_family": "optimization",
+      "model": "gpt4",
+      "budget": 1000,
+      "operator_count": 2,
+      "total_operations": 2,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "choose",
+        "find"
+      ],
+      "word_count": 99,
+      "sentence_count": 8,
+      "step_count": 14,
+      "compression_ratio": 0.192,
+      "content_hash": "5a6e3601a29b0a51"
+    },
+    {
+      "task_id": "opt_routing",
+      "task_family": "optimization",
+      "model": "gemini",
+      "budget": 1000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "opt_portfolio",
+      "task_family": "optimization",
+      "model": "claude",
+      "budget": 1000,
+      "operator_count": 4,
+      "total_operations": 5,
+      "reuse_ratio": 0.2,
+      "unique_verbs": [
+        "check",
+        "if",
+        "since",
+        "test"
+      ],
+      "word_count": 188,
+      "sentence_count": 32,
+      "step_count": 10,
+      "compression_ratio": 0.543,
+      "content_hash": "2a00415ffa95e6ec"
+    },
+    {
+      "task_id": "opt_portfolio",
+      "task_family": "optimization",
+      "model": "gpt4",
+      "budget": 1000,
+      "operator_count": 4,
+      "total_operations": 6,
+      "reuse_ratio": 0.3333,
+      "unique_verbs": [
+        "allocate",
+        "if",
+        "minimize",
+        "total"
+      ],
+      "word_count": 255,
+      "sentence_count": 33,
+      "step_count": 35,
+      "compression_ratio": 0.645,
+      "content_hash": "2e24bf529c909785"
+    },
+    {
+      "task_id": "opt_portfolio",
+      "task_family": "optimization",
+      "model": "gemini",
+      "budget": 1000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "opt_schedule",
+      "task_family": "optimization",
+      "model": "claude",
+      "budget": 1000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 1.0,
+      "unique_verbs": [],
+      "word_count": 94,
+      "sentence_count": 0,
+      "step_count": 10,
+      "compression_ratio": 0.363,
+      "content_hash": "9ea23cf7faebbdb0"
+    },
+    {
+      "task_id": "opt_schedule",
+      "task_family": "optimization",
+      "model": "gpt4",
+      "budget": 1000,
+      "operator_count": 3,
+      "total_operations": 3,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "maximize",
+        "minimize",
+        "separate"
+      ],
+      "word_count": 198,
+      "sentence_count": 13,
+      "step_count": 32,
+      "compression_ratio": 0.419,
+      "content_hash": "8b479a2ae239c1c3"
+    },
+    {
+      "task_id": "opt_schedule",
+      "task_family": "optimization",
+      "model": "gemini",
+      "budget": 1000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "pred_math",
+      "task_family": "prediction",
+      "model": "claude",
+      "budget": 1000,
+      "operator_count": 2,
+      "total_operations": 2,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "if",
+        "sum"
+      ],
+      "word_count": 100,
+      "sentence_count": 2,
+      "step_count": 10,
+      "compression_ratio": 0.357,
+      "content_hash": "bdd0fac7e9cc0986"
+    },
+    {
+      "task_id": "pred_math",
+      "task_family": "prediction",
+      "model": "gpt4",
+      "budget": 1000,
+      "operator_count": 2,
+      "total_operations": 2,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "notice",
+        "subtract"
+      ],
+      "word_count": 142,
+      "sentence_count": 0,
+      "step_count": 10,
+      "compression_ratio": 0.303,
+      "content_hash": "d4b12f33c2a922f6"
+    },
+    {
+      "task_id": "pred_math",
+      "task_family": "prediction",
+      "model": "gemini",
+      "budget": 1000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "pred_music",
+      "task_family": "prediction",
+      "model": "claude",
+      "budget": 1000,
+      "operator_count": 1,
+      "total_operations": 1,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "repeat"
+      ],
+      "word_count": 80,
+      "sentence_count": 1,
+      "step_count": 5,
+      "compression_ratio": 0.236,
+      "content_hash": "6bc4d660728adb97"
+    },
+    {
+      "task_id": "pred_music",
+      "task_family": "prediction",
+      "model": "gpt4",
+      "budget": 1000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 1.0,
+      "unique_verbs": [],
+      "word_count": 162,
+      "sentence_count": 16,
+      "step_count": 18,
+      "compression_ratio": 0.335,
+      "content_hash": "bc3c8fef3e110584"
+    },
+    {
+      "task_id": "pred_music",
+      "task_family": "prediction",
+      "model": "gemini",
+      "budget": 1000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "pred_code",
+      "task_family": "prediction",
+      "model": "claude",
+      "budget": 1000,
+      "operator_count": 3,
+      "total_operations": 5,
+      "reuse_ratio": 0.4,
+      "unique_verbs": [
+        "pattern",
+        "sum",
+        "total"
+      ],
+      "word_count": 100,
+      "sentence_count": 5,
+      "step_count": 4,
+      "compression_ratio": 0.273,
+      "content_hash": "9970eb0ed1f61224"
+    },
+    {
+      "task_id": "pred_code",
+      "task_family": "prediction",
+      "model": "gpt4",
+      "budget": 1000,
+      "operator_count": 4,
+      "total_operations": 6,
+      "reuse_ratio": 0.3333,
+      "unique_verbs": [
+        "add",
+        "iterate",
+        "sum",
+        "total"
+      ],
+      "word_count": 116,
+      "sentence_count": 11,
+      "step_count": 7,
+      "compression_ratio": 0.2,
+      "content_hash": "851ab3eaeddd41b5"
+    },
+    {
+      "task_id": "pred_code",
+      "task_family": "prediction",
+      "model": "gemini",
+      "budget": 1000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "trans_nl_code",
+      "task_family": "translation",
+      "model": "claude",
+      "budget": 1000,
+      "operator_count": 2,
+      "total_operations": 3,
+      "reuse_ratio": 0.3333,
+      "unique_verbs": [
+        "divide",
+        "sum"
+      ],
+      "word_count": 101,
+      "sentence_count": 13,
+      "step_count": 7,
+      "compression_ratio": 0.289,
+      "content_hash": "871434ef7a3bd35c"
+    },
+    {
+      "task_id": "trans_nl_code",
+      "task_family": "translation",
+      "model": "gpt4",
+      "budget": 1000,
+      "operator_count": 7,
+      "total_operations": 8,
+      "reuse_ratio": 0.125,
+      "unique_verbs": [
+        "average",
+        "calculate",
+        "compute",
+        "iterate",
+        "reduce",
+        "sum",
+        "test"
+      ],
+      "word_count": 156,
+      "sentence_count": 15,
+      "step_count": 8,
+      "compression_ratio": 0.252,
+      "content_hash": "b6eaf173f3b66a8c"
+    },
+    {
+      "task_id": "trans_nl_code",
+      "task_family": "translation",
+      "model": "gemini",
+      "budget": 1000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "trans_lang_lang",
+      "task_family": "translation",
+      "model": "claude",
+      "budget": 1000,
+      "operator_count": 3,
+      "total_operations": 3,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "check",
+        "else",
+        "if"
+      ],
+      "word_count": 114,
+      "sentence_count": 22,
+      "step_count": 9,
+      "compression_ratio": 0.291,
+      "content_hash": "652aa348c6c6496b"
+    },
+    {
+      "task_id": "trans_lang_lang",
+      "task_family": "translation",
+      "model": "gpt4",
+      "budget": 1000,
+      "operator_count": 7,
+      "total_operations": 7,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "check",
+        "convert",
+        "else",
+        "given",
+        "if",
+        "iterate",
+        "translate"
+      ],
+      "word_count": 190,
+      "sentence_count": 33,
+      "step_count": 13,
+      "compression_ratio": 0.355,
+      "content_hash": "dadbbf0bd4a89058"
+    },
+    {
+      "task_id": "trans_lang_lang",
+      "task_family": "translation",
+      "model": "gemini",
+      "budget": 1000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "trans_math_nl",
+      "task_family": "translation",
+      "model": "claude",
+      "budget": 1000,
+      "operator_count": 3,
+      "total_operations": 4,
+      "reuse_ratio": 0.25,
+      "unique_verbs": [
+        "add",
+        "measure",
+        "sum"
+      ],
+      "word_count": 189,
+      "sentence_count": 5,
+      "step_count": 9,
+      "compression_ratio": 0.342,
+      "content_hash": "93094f745ff8736f"
+    },
+    {
+      "task_id": "trans_math_nl",
+      "task_family": "translation",
+      "model": "gpt4",
+      "budget": 1000,
+      "operator_count": 4,
+      "total_operations": 5,
+      "reuse_ratio": 0.2,
+      "unique_verbs": [
+        "add",
+        "check",
+        "if",
+        "measure"
+      ],
+      "word_count": 125,
+      "sentence_count": 12,
+      "step_count": 9,
+      "compression_ratio": 0.233,
+      "content_hash": "72ace54fbf5039a2"
+    },
+    {
+      "task_id": "trans_math_nl",
+      "task_family": "translation",
+      "model": "gemini",
+      "budget": 1000,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "opt_routing",
+      "task_family": "optimization",
+      "model": "claude",
+      "budget": 500,
+      "operator_count": 4,
+      "total_operations": 5,
+      "reuse_ratio": 0.2,
+      "unique_verbs": [
+        "break",
+        "check",
+        "pick",
+        "swap"
+      ],
+      "word_count": 86,
+      "sentence_count": 3,
+      "step_count": 2,
+      "compression_ratio": 0.678,
+      "content_hash": "6d31c0b3bc6ab8d8"
+    },
+    {
+      "task_id": "opt_routing",
+      "task_family": "optimization",
+      "model": "gpt4",
+      "budget": 500,
+      "operator_count": 1,
+      "total_operations": 1,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "total"
+      ],
+      "word_count": 109,
+      "sentence_count": 10,
+      "step_count": 14,
+      "compression_ratio": 0.432,
+      "content_hash": "4ab8ca7cd2a052c8"
+    },
+    {
+      "task_id": "opt_routing",
+      "task_family": "optimization",
+      "model": "gemini",
+      "budget": 500,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "opt_portfolio",
+      "task_family": "optimization",
+      "model": "claude",
+      "budget": 500,
+      "operator_count": 4,
+      "total_operations": 5,
+      "reuse_ratio": 0.2,
+      "unique_verbs": [
+        "calculate",
+        "check",
+        "if",
+        "test"
+      ],
+      "word_count": 172,
+      "sentence_count": 21,
+      "step_count": 15,
+      "compression_ratio": 0.874,
+      "content_hash": "761cd494c3ea264c"
+    },
+    {
+      "task_id": "opt_portfolio",
+      "task_family": "optimization",
+      "model": "gpt4",
+      "budget": 500,
+      "operator_count": 1,
+      "total_operations": 1,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "compress"
+      ],
+      "word_count": 224,
+      "sentence_count": 22,
+      "step_count": 28,
+      "compression_ratio": 1.0,
+      "content_hash": "df5e7fc71d882b56"
+    },
+    {
+      "task_id": "opt_portfolio",
+      "task_family": "optimization",
+      "model": "gemini",
+      "budget": 500,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "opt_schedule",
+      "task_family": "optimization",
+      "model": "claude",
+      "budget": 500,
+      "operator_count": 2,
+      "total_operations": 3,
+      "reuse_ratio": 0.3333,
+      "unique_verbs": [
+        "place",
+        "total"
+      ],
+      "word_count": 99,
+      "sentence_count": 2,
+      "step_count": 10,
+      "compression_ratio": 0.758,
+      "content_hash": "bab3368349344f4e"
+    },
+    {
+      "task_id": "opt_schedule",
+      "task_family": "optimization",
+      "model": "gpt4",
+      "budget": 500,
+      "operator_count": 4,
+      "total_operations": 4,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "allocate",
+        "if",
+        "isolate",
+        "place"
+      ],
+      "word_count": 156,
+      "sentence_count": 14,
+      "step_count": 18,
+      "compression_ratio": 0.638,
+      "content_hash": "504f6ceab0c2ef14"
+    },
+    {
+      "task_id": "opt_schedule",
+      "task_family": "optimization",
+      "model": "gemini",
+      "budget": 500,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "pred_math",
+      "task_family": "prediction",
+      "model": "claude",
+      "budget": 500,
+      "operator_count": 2,
+      "total_operations": 2,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "if",
+        "sum"
+      ],
+      "word_count": 100,
+      "sentence_count": 2,
+      "step_count": 9,
+      "compression_ratio": 0.732,
+      "content_hash": "faf89b8f814bfc86"
+    },
+    {
+      "task_id": "pred_math",
+      "task_family": "prediction",
+      "model": "gpt4",
+      "budget": 500,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 1.0,
+      "unique_verbs": [],
+      "word_count": 116,
+      "sentence_count": 5,
+      "step_count": 15,
+      "compression_ratio": 0.612,
+      "content_hash": "95463587aa7624fc"
+    },
+    {
+      "task_id": "pred_math",
+      "task_family": "prediction",
+      "model": "gemini",
+      "budget": 500,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "pred_music",
+      "task_family": "prediction",
+      "model": "claude",
+      "budget": 500,
+      "operator_count": 2,
+      "total_operations": 2,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "pattern",
+        "sum"
+      ],
+      "word_count": 120,
+      "sentence_count": 5,
+      "step_count": 6,
+      "compression_ratio": 0.582,
+      "content_hash": "e6ced191c5f2284b"
+    },
+    {
+      "task_id": "pred_music",
+      "task_family": "prediction",
+      "model": "gpt4",
+      "budget": 500,
+      "operator_count": 2,
+      "total_operations": 2,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "compress",
+        "sequence"
+      ],
+      "word_count": 155,
+      "sentence_count": 9,
+      "step_count": 33,
+      "compression_ratio": 0.694,
+      "content_hash": "6b4eef92844c0ec4"
+    },
+    {
+      "task_id": "pred_music",
+      "task_family": "prediction",
+      "model": "gemini",
+      "budget": 500,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "pred_code",
+      "task_family": "prediction",
+      "model": "claude",
+      "budget": 500,
+      "operator_count": 2,
+      "total_operations": 4,
+      "reuse_ratio": 0.5,
+      "unique_verbs": [
+        "add",
+        "sum"
+      ],
+      "word_count": 78,
+      "sentence_count": 4,
+      "step_count": 3,
+      "compression_ratio": 0.42,
+      "content_hash": "a9345584086bd1a6"
+    },
+    {
+      "task_id": "pred_code",
+      "task_family": "prediction",
+      "model": "gpt4",
+      "budget": 500,
+      "operator_count": 7,
+      "total_operations": 12,
+      "reuse_ratio": 0.4167,
+      "unique_verbs": [
+        "accumulate",
+        "add",
+        "iterate",
+        "pattern",
+        "reduce",
+        "sum",
+        "total"
+      ],
+      "word_count": 232,
+      "sentence_count": 21,
+      "step_count": 12,
+      "compression_ratio": 0.706,
+      "content_hash": "810e78a014009ef7"
+    },
+    {
+      "task_id": "pred_code",
+      "task_family": "prediction",
+      "model": "gemini",
+      "budget": 500,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "trans_nl_code",
+      "task_family": "translation",
+      "model": "claude",
+      "budget": 500,
+      "operator_count": 2,
+      "total_operations": 2,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "average",
+        "sum"
+      ],
+      "word_count": 57,
+      "sentence_count": 11,
+      "step_count": 1,
+      "compression_ratio": 0.38,
+      "content_hash": "122a6a2f665468bf"
+    },
+    {
+      "task_id": "trans_nl_code",
+      "task_family": "translation",
+      "model": "gpt4",
+      "budget": 500,
+      "operator_count": 7,
+      "total_operations": 13,
+      "reuse_ratio": 0.4615,
+      "unique_verbs": [
+        "average",
+        "calculate",
+        "compute",
+        "divide",
+        "iterate",
+        "sum",
+        "test"
+      ],
+      "word_count": 175,
+      "sentence_count": 23,
+      "step_count": 11,
+      "compression_ratio": 0.602,
+      "content_hash": "bc8684e7363ea982"
+    },
+    {
+      "task_id": "trans_nl_code",
+      "task_family": "translation",
+      "model": "gemini",
+      "budget": 500,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "trans_lang_lang",
+      "task_family": "translation",
+      "model": "claude",
+      "budget": 500,
+      "operator_count": 3,
+      "total_operations": 3,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "check",
+        "else",
+        "if"
+      ],
+      "word_count": 111,
+      "sentence_count": 22,
+      "step_count": 9,
+      "compression_ratio": 0.576,
+      "content_hash": "3778fecdc9ed62ec"
+    },
+    {
+      "task_id": "trans_lang_lang",
+      "task_family": "translation",
+      "model": "gpt4",
+      "budget": 500,
+      "operator_count": 6,
+      "total_operations": 6,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "check",
+        "compress",
+        "else",
+        "if",
+        "merge",
+        "reduce"
+      ],
+      "word_count": 160,
+      "sentence_count": 32,
+      "step_count": 8,
+      "compression_ratio": 0.638,
+      "content_hash": "4ab599e46cd3b3d9"
+    },
+    {
+      "task_id": "trans_lang_lang",
+      "task_family": "translation",
+      "model": "gemini",
+      "budget": 500,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "trans_math_nl",
+      "task_family": "translation",
+      "model": "claude",
+      "budget": 500,
+      "operator_count": 3,
+      "total_operations": 4,
+      "reuse_ratio": 0.25,
+      "unique_verbs": [
+        "measure",
+        "sum",
+        "total"
+      ],
+      "word_count": 144,
+      "sentence_count": 4,
+      "step_count": 6,
+      "compression_ratio": 0.618,
+      "content_hash": "8c79f95a4f642460"
+    },
+    {
+      "task_id": "trans_math_nl",
+      "task_family": "translation",
+      "model": "gpt4",
+      "budget": 500,
+      "operator_count": 5,
+      "total_operations": 5,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "add",
+        "if",
+        "look",
+        "measure",
+        "sum"
+      ],
+      "word_count": 144,
+      "sentence_count": 15,
+      "step_count": 9,
+      "compression_ratio": 0.586,
+      "content_hash": "484b46c3280dea06"
+    },
+    {
+      "task_id": "trans_math_nl",
+      "task_family": "translation",
+      "model": "gemini",
+      "budget": 500,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "opt_routing",
+      "task_family": "optimization",
+      "model": "claude",
+      "budget": 250,
+      "operator_count": 2,
+      "total_operations": 2,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "pick",
+        "try"
+      ],
+      "word_count": 65,
+      "sentence_count": 4,
+      "step_count": 7,
+      "compression_ratio": 1.0,
+      "content_hash": "03a34ab81c5f6c6e"
+    },
+    {
+      "task_id": "opt_routing",
+      "task_family": "optimization",
+      "model": "gpt4",
+      "budget": 250,
+      "operator_count": 4,
+      "total_operations": 4,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "minimize",
+        "optimize",
+        "select",
+        "total"
+      ],
+      "word_count": 117,
+      "sentence_count": 9,
+      "step_count": 14,
+      "compression_ratio": 0.9,
+      "content_hash": "077818c1ab69694d"
+    },
+    {
+      "task_id": "opt_routing",
+      "task_family": "optimization",
+      "model": "gemini",
+      "budget": 250,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "opt_portfolio",
+      "task_family": "optimization",
+      "model": "claude",
+      "budget": 250,
+      "operator_count": 2,
+      "total_operations": 2,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "rank",
+        "test"
+      ],
+      "word_count": 83,
+      "sentence_count": 15,
+      "step_count": 9,
+      "compression_ratio": 1.0,
+      "content_hash": "1e1495c106095b7d"
+    },
+    {
+      "task_id": "opt_portfolio",
+      "task_family": "optimization",
+      "model": "gpt4",
+      "budget": 250,
+      "operator_count": 1,
+      "total_operations": 1,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "minimize"
+      ],
+      "word_count": 99,
+      "sentence_count": 6,
+      "step_count": 11,
+      "compression_ratio": 1.0,
+      "content_hash": "ba2a03f8c98ea4d5"
+    },
+    {
+      "task_id": "opt_portfolio",
+      "task_family": "optimization",
+      "model": "gemini",
+      "budget": 250,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "opt_schedule",
+      "task_family": "optimization",
+      "model": "claude",
+      "budget": 250,
+      "operator_count": 2,
+      "total_operations": 3,
+      "reuse_ratio": 0.3333,
+      "unique_verbs": [
+        "place",
+        "total"
+      ],
+      "word_count": 67,
+      "sentence_count": 1,
+      "step_count": 8,
+      "compression_ratio": 1.0,
+      "content_hash": "b10ab37d6ff9653f"
+    },
+    {
+      "task_id": "opt_schedule",
+      "task_family": "optimization",
+      "model": "gpt4",
+      "budget": 250,
+      "operator_count": 2,
+      "total_operations": 3,
+      "reuse_ratio": 0.3333,
+      "unique_verbs": [
+        "isolate",
+        "place"
+      ],
+      "word_count": 129,
+      "sentence_count": 10,
+      "step_count": 15,
+      "compression_ratio": 1.0,
+      "content_hash": "9824a8daf2f85701"
+    },
+    {
+      "task_id": "opt_schedule",
+      "task_family": "optimization",
+      "model": "gemini",
+      "budget": 250,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "pred_math",
+      "task_family": "prediction",
+      "model": "claude",
+      "budget": 250,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 1.0,
+      "unique_verbs": [],
+      "word_count": 87,
+      "sentence_count": 0,
+      "step_count": 12,
+      "compression_ratio": 1.0,
+      "content_hash": "83b076f24db23ffc"
+    },
+    {
+      "task_id": "pred_math",
+      "task_family": "prediction",
+      "model": "gpt4",
+      "budget": 250,
+      "operator_count": 2,
+      "total_operations": 2,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "observe",
+        "pattern"
+      ],
+      "word_count": 99,
+      "sentence_count": 5,
+      "step_count": 15,
+      "compression_ratio": 1.0,
+      "content_hash": "25ccc8d2b54a9517"
+    },
+    {
+      "task_id": "pred_math",
+      "task_family": "prediction",
+      "model": "gemini",
+      "budget": 250,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "pred_music",
+      "task_family": "prediction",
+      "model": "claude",
+      "budget": 250,
+      "operator_count": 1,
+      "total_operations": 1,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "repeat"
+      ],
+      "word_count": 85,
+      "sentence_count": 2,
+      "step_count": 1,
+      "compression_ratio": 0.94,
+      "content_hash": "94086bfce96f323e"
+    },
+    {
+      "task_id": "pred_music",
+      "task_family": "prediction",
+      "model": "gpt4",
+      "budget": 250,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 1.0,
+      "unique_verbs": [],
+      "word_count": 120,
+      "sentence_count": 4,
+      "step_count": 28,
+      "compression_ratio": 1.0,
+      "content_hash": "1079f1a376cdd5f5"
+    },
+    {
+      "task_id": "pred_music",
+      "task_family": "prediction",
+      "model": "gemini",
+      "budget": 250,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "pred_code",
+      "task_family": "prediction",
+      "model": "claude",
+      "budget": 250,
+      "operator_count": 3,
+      "total_operations": 5,
+      "reuse_ratio": 0.4,
+      "unique_verbs": [
+        "accumulate",
+        "add",
+        "sum"
+      ],
+      "word_count": 71,
+      "sentence_count": 4,
+      "step_count": 2,
+      "compression_ratio": 0.752,
+      "content_hash": "68f6457cc23d16d2"
+    },
+    {
+      "task_id": "pred_code",
+      "task_family": "prediction",
+      "model": "gpt4",
+      "budget": 250,
+      "operator_count": 6,
+      "total_operations": 8,
+      "reuse_ratio": 0.25,
+      "unique_verbs": [
+        "aggregate",
+        "compress",
+        "pattern",
+        "sum",
+        "total",
+        "transform"
+      ],
+      "word_count": 155,
+      "sentence_count": 13,
+      "step_count": 8,
+      "compression_ratio": 1.0,
+      "content_hash": "b73d6011fd61748f"
+    },
+    {
+      "task_id": "pred_code",
+      "task_family": "prediction",
+      "model": "gemini",
+      "budget": 250,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "trans_nl_code",
+      "task_family": "translation",
+      "model": "claude",
+      "budget": 250,
+      "operator_count": 1,
+      "total_operations": 1,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "sum"
+      ],
+      "word_count": 59,
+      "sentence_count": 5,
+      "step_count": 1,
+      "compression_ratio": 0.832,
+      "content_hash": "8c1a4c42c479a804"
+    },
+    {
+      "task_id": "trans_nl_code",
+      "task_family": "translation",
+      "model": "gpt4",
+      "budget": 250,
+      "operator_count": 3,
+      "total_operations": 5,
+      "reuse_ratio": 0.4,
+      "unique_verbs": [
+        "average",
+        "sum",
+        "test"
+      ],
+      "word_count": 96,
+      "sentence_count": 12,
+      "step_count": 7,
+      "compression_ratio": 0.716,
+      "content_hash": "b98963512c48564c"
+    },
+    {
+      "task_id": "trans_nl_code",
+      "task_family": "translation",
+      "model": "gemini",
+      "budget": 250,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "trans_lang_lang",
+      "task_family": "translation",
+      "model": "claude",
+      "budget": 250,
+      "operator_count": 2,
+      "total_operations": 2,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "else",
+        "if"
+      ],
+      "word_count": 88,
+      "sentence_count": 19,
+      "step_count": 5,
+      "compression_ratio": 0.932,
+      "content_hash": "2ea5e88a53ae126f"
+    },
+    {
+      "task_id": "trans_lang_lang",
+      "task_family": "translation",
+      "model": "gpt4",
+      "budget": 250,
+      "operator_count": 4,
+      "total_operations": 6,
+      "reuse_ratio": 0.3333,
+      "unique_verbs": [
+        "convert",
+        "else",
+        "if",
+        "translate"
+      ],
+      "word_count": 131,
+      "sentence_count": 19,
+      "step_count": 8,
+      "compression_ratio": 1.0,
+      "content_hash": "a6803d6050b02303"
+    },
+    {
+      "task_id": "trans_lang_lang",
+      "task_family": "translation",
+      "model": "gemini",
+      "budget": 250,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "trans_math_nl",
+      "task_family": "translation",
+      "model": "claude",
+      "budget": 250,
+      "operator_count": 2,
+      "total_operations": 3,
+      "reuse_ratio": 0.3333,
+      "unique_verbs": [
+        "sum",
+        "total"
+      ],
+      "word_count": 115,
+      "sentence_count": 3,
+      "step_count": 6,
+      "compression_ratio": 1.0,
+      "content_hash": "93ec10119003df33"
+    },
+    {
+      "task_id": "trans_math_nl",
+      "task_family": "translation",
+      "model": "gpt4",
+      "budget": 250,
+      "operator_count": 4,
+      "total_operations": 4,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "add",
+        "if",
+        "measure",
+        "sum"
+      ],
+      "word_count": 119,
+      "sentence_count": 13,
+      "step_count": 6,
+      "compression_ratio": 1.0,
+      "content_hash": "6b8b9b851db2fab8"
+    },
+    {
+      "task_id": "trans_math_nl",
+      "task_family": "translation",
+      "model": "gemini",
+      "budget": 250,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "opt_routing",
+      "task_family": "optimization",
+      "model": "claude",
+      "budget": 125,
+      "operator_count": 1,
+      "total_operations": 1,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "test"
+      ],
+      "word_count": 24,
+      "sentence_count": 3,
+      "step_count": 1,
+      "compression_ratio": 1.0,
+      "content_hash": "fb26334d4d70d565"
+    },
+    {
+      "task_id": "opt_routing",
+      "task_family": "optimization",
+      "model": "gpt4",
+      "budget": 125,
+      "operator_count": 1,
+      "total_operations": 1,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "compress"
+      ],
+      "word_count": 54,
+      "sentence_count": 8,
+      "step_count": 13,
+      "compression_ratio": 1.0,
+      "content_hash": "59fa42687212df27"
+    },
+    {
+      "task_id": "opt_routing",
+      "task_family": "optimization",
+      "model": "gemini",
+      "budget": 125,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "opt_portfolio",
+      "task_family": "optimization",
+      "model": "claude",
+      "budget": 125,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 1.0,
+      "unique_verbs": [],
+      "word_count": 33,
+      "sentence_count": 7,
+      "step_count": 5,
+      "compression_ratio": 1.0,
+      "content_hash": "ef7b68d6c133e156"
+    },
+    {
+      "task_id": "opt_portfolio",
+      "task_family": "optimization",
+      "model": "gpt4",
+      "budget": 125,
+      "operator_count": 1,
+      "total_operations": 1,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "minimize"
+      ],
+      "word_count": 45,
+      "sentence_count": 8,
+      "step_count": 8,
+      "compression_ratio": 1.0,
+      "content_hash": "4d79de3d4dc08784"
+    },
+    {
+      "task_id": "opt_portfolio",
+      "task_family": "optimization",
+      "model": "gemini",
+      "budget": 125,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "opt_schedule",
+      "task_family": "optimization",
+      "model": "claude",
+      "budget": 125,
+      "operator_count": 1,
+      "total_operations": 1,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "total"
+      ],
+      "word_count": 24,
+      "sentence_count": 0,
+      "step_count": 2,
+      "compression_ratio": 1.0,
+      "content_hash": "d14f4a188f581f2d"
+    },
+    {
+      "task_id": "opt_schedule",
+      "task_family": "optimization",
+      "model": "gpt4",
+      "budget": 125,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 1.0,
+      "unique_verbs": [],
+      "word_count": 58,
+      "sentence_count": 5,
+      "step_count": 7,
+      "compression_ratio": 1.0,
+      "content_hash": "f16bd5069618ae92"
+    },
+    {
+      "task_id": "opt_schedule",
+      "task_family": "optimization",
+      "model": "gemini",
+      "budget": 125,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "pred_math",
+      "task_family": "prediction",
+      "model": "claude",
+      "budget": 125,
+      "operator_count": 1,
+      "total_operations": 1,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "add"
+      ],
+      "word_count": 57,
+      "sentence_count": 0,
+      "step_count": 8,
+      "compression_ratio": 1.0,
+      "content_hash": "deb63c7c91ce2920"
+    },
+    {
+      "task_id": "pred_math",
+      "task_family": "prediction",
+      "model": "gpt4",
+      "budget": 125,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 1.0,
+      "unique_verbs": [],
+      "word_count": 39,
+      "sentence_count": 5,
+      "step_count": 10,
+      "compression_ratio": 1.0,
+      "content_hash": "4095b3ba5a539410"
+    },
+    {
+      "task_id": "pred_math",
+      "task_family": "prediction",
+      "model": "gemini",
+      "budget": 125,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "pred_music",
+      "task_family": "prediction",
+      "model": "claude",
+      "budget": 125,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 1.0,
+      "unique_verbs": [],
+      "word_count": 43,
+      "sentence_count": 4,
+      "step_count": 2,
+      "compression_ratio": 1.0,
+      "content_hash": "9cda54a45efa1ed0"
+    },
+    {
+      "task_id": "pred_music",
+      "task_family": "prediction",
+      "model": "gpt4",
+      "budget": 125,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 1.0,
+      "unique_verbs": [],
+      "word_count": 56,
+      "sentence_count": 1,
+      "step_count": 7,
+      "compression_ratio": 1.0,
+      "content_hash": "94a454babbbb00d4"
+    },
+    {
+      "task_id": "pred_music",
+      "task_family": "prediction",
+      "model": "gemini",
+      "budget": 125,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "pred_code",
+      "task_family": "prediction",
+      "model": "claude",
+      "budget": 125,
+      "operator_count": 3,
+      "total_operations": 4,
+      "reuse_ratio": 0.25,
+      "unique_verbs": [
+        "accumulate",
+        "sum",
+        "total"
+      ],
+      "word_count": 41,
+      "sentence_count": 1,
+      "step_count": 2,
+      "compression_ratio": 1.0,
+      "content_hash": "aa671100d07a5a13"
+    },
+    {
+      "task_id": "pred_code",
+      "task_family": "prediction",
+      "model": "gpt4",
+      "budget": 125,
+      "operator_count": 4,
+      "total_operations": 6,
+      "reuse_ratio": 0.3333,
+      "unique_verbs": [
+        "add",
+        "iterate",
+        "then",
+        "total"
+      ],
+      "word_count": 71,
+      "sentence_count": 7,
+      "step_count": 5,
+      "compression_ratio": 1.0,
+      "content_hash": "8c50691f8615683d"
+    },
+    {
+      "task_id": "pred_code",
+      "task_family": "prediction",
+      "model": "gemini",
+      "budget": 125,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "trans_nl_code",
+      "task_family": "translation",
+      "model": "claude",
+      "budget": 125,
+      "operator_count": 2,
+      "total_operations": 2,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "average",
+        "sum"
+      ],
+      "word_count": 44,
+      "sentence_count": 4,
+      "step_count": 1,
+      "compression_ratio": 1.0,
+      "content_hash": "a66f85f3b89ccea3"
+    },
+    {
+      "task_id": "trans_nl_code",
+      "task_family": "translation",
+      "model": "gpt4",
+      "budget": 125,
+      "operator_count": 2,
+      "total_operations": 2,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "sum",
+        "test"
+      ],
+      "word_count": 59,
+      "sentence_count": 7,
+      "step_count": 3,
+      "compression_ratio": 1.0,
+      "content_hash": "f0faaf84e8a9eb2d"
+    },
+    {
+      "task_id": "trans_nl_code",
+      "task_family": "translation",
+      "model": "gemini",
+      "budget": 125,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "trans_lang_lang",
+      "task_family": "translation",
+      "model": "claude",
+      "budget": 125,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 1.0,
+      "unique_verbs": [],
+      "word_count": 47,
+      "sentence_count": 11,
+      "step_count": 5,
+      "compression_ratio": 1.0,
+      "content_hash": "d28a2b2fa0387466"
+    },
+    {
+      "task_id": "trans_lang_lang",
+      "task_family": "translation",
+      "model": "gpt4",
+      "budget": 125,
+      "operator_count": 3,
+      "total_operations": 3,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "compress",
+        "else",
+        "if"
+      ],
+      "word_count": 69,
+      "sentence_count": 8,
+      "step_count": 2,
+      "compression_ratio": 1.0,
+      "content_hash": "e507fe41b86824e3"
+    },
+    {
+      "task_id": "trans_lang_lang",
+      "task_family": "translation",
+      "model": "gemini",
+      "budget": 125,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    },
+    {
+      "task_id": "trans_math_nl",
+      "task_family": "translation",
+      "model": "claude",
+      "budget": 125,
+      "operator_count": 3,
+      "total_operations": 3,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "if",
+        "measure",
+        "sum"
+      ],
+      "word_count": 49,
+      "sentence_count": 3,
+      "step_count": 3,
+      "compression_ratio": 1.0,
+      "content_hash": "b40085b77b0f5a05"
+    },
+    {
+      "task_id": "trans_math_nl",
+      "task_family": "translation",
+      "model": "gpt4",
+      "budget": 125,
+      "operator_count": 1,
+      "total_operations": 1,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [
+        "measure"
+      ],
+      "word_count": 42,
+      "sentence_count": 7,
+      "step_count": 3,
+      "compression_ratio": 1.0,
+      "content_hash": "c5b09352e26ed7bd"
+    },
+    {
+      "task_id": "trans_math_nl",
+      "task_family": "translation",
+      "model": "gemini",
+      "budget": 125,
+      "operator_count": 0,
+      "total_operations": 0,
+      "reuse_ratio": 0.0,
+      "unique_verbs": [],
+      "word_count": 0,
+      "sentence_count": 0,
+      "step_count": 0,
+      "compression_ratio": 0.0,
+      "content_hash": ""
+    }
+  ],
+  "convergence_by_budget": {
+    "claude@2000": {
+      "jaccard_mean": 0.0606,
+      "jaccard_pairs": {
+        "optimization_x_prediction": 0.0,
+        "optimization_x_translation": 0.0,
+        "prediction_x_translation": 0.1818
+      }
+    },
+    "gpt4@2000": {
+      "jaccard_mean": 0.1693,
+      "jaccard_pairs": {
+        "optimization_x_prediction": 0.0556,
+        "optimization_x_translation": 0.2381,
+        "prediction_x_translation": 0.2143
+      }
+    },
+    "gemini@2000": {
+      "jaccard_mean": 0.0,
+      "jaccard_pairs": {
+        "optimization_x_prediction": 0,
+        "optimization_x_translation": 0,
+        "prediction_x_translation": 0
+      }
+    },
+    "claude@1000": {
+      "jaccard_mean": 0.1606,
+      "jaccard_pairs": {
+        "optimization_x_prediction": 0.1,
+        "optimization_x_translation": 0.1818,
+        "prediction_x_translation": 0.2
+      }
+    },
+    "gpt4@1000": {
+      "jaccard_mean": 0.0963,
+      "jaccard_pairs": {
+        "optimization_x_prediction": 0.0769,
+        "optimization_x_translation": 0.0455,
+        "prediction_x_translation": 0.1667
+      }
+    },
+    "gemini@1000": {
+      "jaccard_mean": 0.0,
+      "jaccard_pairs": {
+        "optimization_x_prediction": 0,
+        "optimization_x_translation": 0,
+        "prediction_x_translation": 0
+      }
+    },
+    "claude@500": {
+      "jaccard_mean": 0.1788,
+      "jaccard_pairs": {
+        "optimization_x_prediction": 0.0833,
+        "optimization_x_translation": 0.2308,
+        "prediction_x_translation": 0.2222
+      }
+    },
+    "gpt4@500": {
+      "jaccard_mean": 0.1679,
+      "jaccard_pairs": {
+        "optimization_x_prediction": 0.1538,
+        "optimization_x_translation": 0.1,
+        "prediction_x_translation": 0.25
+      }
+    },
+    "gemini@500": {
+      "jaccard_mean": 0.0,
+      "jaccard_pairs": {
+        "optimization_x_prediction": 0,
+        "optimization_x_translation": 0,
+        "prediction_x_translation": 0
+      }
+    },
+    "claude@250": {
+      "jaccard_mean": 0.0847,
+      "jaccard_pairs": {
+        "optimization_x_prediction": 0.0,
+        "optimization_x_translation": 0.1111,
+        "prediction_x_translation": 0.1429
+      }
+    },
+    "gpt4@250": {
+      "jaccard_mean": 0.05,
+      "jaccard_pairs": {
+        "optimization_x_prediction": 0.0833,
+        "optimization_x_translation": 0.0,
+        "prediction_x_translation": 0.0667
+      }
+    },
+    "gemini@250": {
+      "jaccard_mean": 0.0,
+      "jaccard_pairs": {
+        "optimization_x_prediction": 0,
+        "optimization_x_translation": 0,
+        "prediction_x_translation": 0
+      }
+    },
+    "claude@125": {
+      "jaccard_mean": 0.1143,
+      "jaccard_pairs": {
+        "optimization_x_prediction": 0.2,
+        "optimization_x_translation": 0.0,
+        "prediction_x_translation": 0.1429
+      }
+    },
+    "gpt4@125": {
+      "jaccard_mean": 0.0476,
+      "jaccard_pairs": {
+        "optimization_x_prediction": 0.0,
+        "optimization_x_translation": 0.1429,
+        "prediction_x_translation": 0.0
+      }
+    },
+    "gemini@125": {
+      "jaccard_mean": 0.0,
+      "jaccard_pairs": {
+        "optimization_x_prediction": 0,
+        "optimization_x_translation": 0,
+        "prediction_x_translation": 0
+      }
+    }
+  },
+  "memory": {
+    "total_stored": 108,
+    "convergence_events": 0,
+    "cross_model_convergence": {},
+    "operator_by_generation": {
+      "1": {
+        "mean": 4.222222222222222,
+        "min": 2,
+        "max": 9,
+        "count": 9
+      },
+      "2": {
+        "mean": 1.4444444444444444,
+        "min": 0,
+        "max": 4,
+        "count": 9
+      },
+      "3": {
+        "mean": 2.6666666666666665,
+        "min": 1,
+        "max": 6,
+        "count": 9
+      },
+      "4": {
+        "mean": 3.0,
+        "min": 0,
+        "max": 9,
+        "count": 18
+      },
+      "5": {
+        "mean": 3.1666666666666665,
+        "min": 0,
+        "max": 7,
+        "count": 18
+      },
+      "6": {
+        "mean": 2.6666666666666665,
+        "min": 0,
+        "max": 7,
+        "count": 18
+      },
+      "7": {
+        "mean": 2.0555555555555554,
+        "min": 0,
+        "max": 6,
+        "count": 18
+      },
+      "8": {
+        "mean": 1.3333333333333333,
+        "min": 0,
+        "max": 4,
+        "count": 9
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "content_hash": "1d04a42ee1cf5609c76f",
+  "model": "haiku",
+  "task_id": "opt_routing",
+  "task_family": "optimization",
+  "generation": 20,
+  "budget_at_creation": 250,
+  "strategy_text": "# TSP: 6 Stops + Depot\n\n## Quick Distance Matrix\n```\n    D   A   B   C   E   F\nD   -   15  14  7   6   13\nA   10  -   12  8   18  22\nB   15  12  -   10  9   16\nC   20  8   10  -   11  14\nE   18  18  9   11  -   8\nF   -   22  16  14  8   -\n```\n\n## Nearest Neighbor from Depot\nStart Depot \u2192 nearest unvisited:\n- Depot\u2192A (10)\n- A\u2192C (8) \n- C\u2192D (7)\n- D\u2192E (6)\n- E\u2192F (8)\n- F\u2192B (16)\n- B\u2192Depot (15)\n**Total: 70 miles**\n\n## 2-Opt Test: Reverse E-F-B segment\nDepot\u2192A\u2192C\u2192D\u2192B\u2192E\u2192F\u2192Depot\n- 10+8+7+14",
+  "timestamp": 1779265365.9229481,
+  "operator_count": 2,
+  "reuse_ratio": 0.0,
+  "unique_verbs": [
+    "test",
+    "total"
+  ],
+  "lineage": [
+    "a445035ac061b8f99af5",
+    "1ab44de55c4557d30277",
+    "d4719aba66d151643891",
+    "be3bb305341100b38d68",
+    "3a30e2697867565ffcae",
+    "1888847ad00dd800c369",
+    "3d692982b74a523edf52",
+    "fc3f6dd7315ec1453cd1",
+    "5cc6d4dfdf0a51c0ad0f",
+    "ed0e0b541f4332a6dbc9",
+    "f2777a278e2473661497",
+    "5a7ad811a7fc390831db",
+    "e3b0c44298fc1c149afb",
+    "e3b0c44298fc1c149afb",
+    "e3b0c44298fc1c149afb",
+    "e3b0c44298fc1c149afb",
+    "e3b0c44298fc1c149afb",
+    "e3b0c44298fc1c149afb",
+    "42d647182ab4540119d1"
+  ],
+  "times_retrieved": 0,
+  "last_retrieved": 0.0
+}
