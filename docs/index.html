@@ -6,87 +6,108 @@
 <title>CDCE Compression Harness — 3D Visualization</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: #0a0a0f; color: #e0e0e0; font-family: 'SF Mono', 'Fira Code', monospace; overflow: hidden; }
+body { background: #0d1117; color: #f0f0f0; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; overflow: hidden; }
 #canvas { width: 100vw; height: 100vh; display: block; }
+
+#loading {
+  position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+  background: #0d1117; z-index: 100; flex-direction: column; gap: 16px;
+}
+#loading h1 { font-size: 20px; color: #c9d1d9; }
+#loading p { font-size: 14px; color: #8b949e; }
+#loading.hidden { display: none; }
 
 #hud {
   position: fixed; top: 16px; left: 16px;
-  background: rgba(10,10,15,0.85); border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 8px; padding: 16px; max-width: 320px;
-  backdrop-filter: blur(12px); z-index: 10;
+  background: rgba(13,17,23,0.92); border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px; padding: 18px; max-width: 340px;
+  backdrop-filter: blur(16px); z-index: 10;
 }
-#hud h1 { font-size: 14px; color: #8b5cf6; margin-bottom: 8px; letter-spacing: 1px; }
-#hud .stat { font-size: 11px; color: #888; margin: 2px 0; }
-#hud .stat b { color: #e0e0e0; }
+#hud h1 { font-size: 15px; color: #a78bfa; margin-bottom: 10px; letter-spacing: 0.5px; font-weight: 700; }
+#hud .stat { font-size: 13px; color: #c9d1d9; margin: 4px 0; }
+#hud .stat b { color: #ffffff; font-weight: 600; }
+#hud .axes-hint { font-size: 11px; color: #8b949e; margin-top: 10px; line-height: 1.5; }
 
 #controls {
-  position: fixed; bottom: 16px; left: 16px;
-  background: rgba(10,10,15,0.85); border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 8px; padding: 12px 16px; z-index: 10;
-  backdrop-filter: blur(12px);
+  position: fixed; bottom: 16px; left: 16px; right: 16px;
+  background: rgba(13,17,23,0.92); border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px; padding: 14px 18px; z-index: 10;
+  backdrop-filter: blur(16px); display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px;
 }
-#controls label { font-size: 11px; color: #888; margin-right: 12px; cursor: pointer; }
-#controls input[type=checkbox] { margin-right: 4px; accent-color: #8b5cf6; }
+#controls label { font-size: 13px; color: #c9d1d9; cursor: pointer; display: flex; align-items: center; gap: 4px; }
+#controls input[type=checkbox] { accent-color: #a78bfa; width: 14px; height: 14px; }
 #controls select, #controls button {
-  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
-  color: #e0e0e0; padding: 4px 8px; border-radius: 4px; font-size: 11px;
-  font-family: inherit; margin-left: 8px; cursor: pointer;
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+  color: #f0f0f0; padding: 6px 12px; border-radius: 6px; font-size: 13px;
+  font-family: inherit; cursor: pointer;
 }
-#controls button:hover { background: rgba(139,92,246,0.3); }
+#controls button:hover { background: rgba(167,139,250,0.3); border-color: #a78bfa; }
+#controls select:focus, #controls button:focus { outline: 1px solid #a78bfa; }
 
 #tooltip {
   position: fixed; display: none;
-  background: rgba(10,10,15,0.95); border: 1px solid rgba(139,92,246,0.5);
-  border-radius: 6px; padding: 10px 14px; font-size: 11px;
-  pointer-events: none; z-index: 20; max-width: 300px;
-  backdrop-filter: blur(12px);
+  background: rgba(13,17,23,0.96); border: 1px solid #a78bfa;
+  border-radius: 8px; padding: 12px 16px; font-size: 13px;
+  pointer-events: none; z-index: 20; max-width: 340px;
+  backdrop-filter: blur(16px); box-shadow: 0 4px 24px rgba(0,0,0,0.5);
 }
-#tooltip .tt-title { color: #8b5cf6; font-weight: bold; margin-bottom: 4px; }
-#tooltip .tt-row { color: #aaa; margin: 1px 0; }
-#tooltip .tt-row b { color: #e0e0e0; }
+#tooltip .tt-title { color: #a78bfa; font-weight: 700; margin-bottom: 6px; font-size: 14px; }
+#tooltip .tt-row { color: #c9d1d9; margin: 3px 0; }
+#tooltip .tt-row b { color: #ffffff; }
 
 #legend {
   position: fixed; top: 16px; right: 16px;
-  background: rgba(10,10,15,0.85); border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 8px; padding: 12px 16px; z-index: 10;
-  backdrop-filter: blur(12px);
+  background: rgba(13,17,23,0.92); border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px; padding: 14px 18px; z-index: 10;
+  backdrop-filter: blur(16px);
 }
-#legend h2 { font-size: 11px; color: #888; margin-bottom: 6px; letter-spacing: 1px; }
-.legend-item { font-size: 11px; margin: 3px 0; display: flex; align-items: center; }
-.legend-dot { width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; display: inline-block; }
-
-#axes-labels { position: fixed; z-index: 5; pointer-events: none; }
-.axis-label {
-  position: fixed; font-size: 10px; color: rgba(255,255,255,0.4);
-  letter-spacing: 1px; text-transform: uppercase;
-}
+#legend h2 { font-size: 12px; color: #8b949e; margin-bottom: 8px; letter-spacing: 0.5px; text-transform: uppercase; font-weight: 600; }
+.legend-item { font-size: 13px; color: #c9d1d9; margin: 5px 0; display: flex; align-items: center; }
+.legend-dot { width: 12px; height: 12px; border-radius: 50%; margin-right: 10px; display: inline-block; border: 1px solid rgba(255,255,255,0.2); }
+.legend-shape { font-size: 11px; color: #8b949e; margin-top: 10px; line-height: 1.6; }
 </style>
 </head>
 <body>
+
+<div id="loading">
+  <h1>CDCE Compression Harness</h1>
+  <p>Loading 3D visualization...</p>
+</div>
 
 <canvas id="canvas"></canvas>
 
 <div id="hud">
   <h1>CDCE COMPRESSION HARNESS</h1>
   <div class="stat">Geometries: <b id="s-geom">--</b></div>
-  <div class="stat">Generations: <b id="s-gen">--</b></div>
+  <div class="stat">Max generation: <b id="s-gen">--</b></div>
   <div class="stat">Models: <b id="s-models">--</b></div>
   <div class="stat">Convergence events: <b id="s-conv">--</b></div>
-  <div class="stat" style="margin-top:6px; color:#666;">
-    X: budget &nbsp; Y: operators &nbsp; Z: reuse ratio
+  <div class="axes-hint">
+    <b>X</b> = Token budget (left=2000, right=125)<br>
+    <b>Y</b> = Distinct operator count<br>
+    <b>Z</b> = Reuse ratio (front=low, back=high)<br>
+    Drag to orbit. Scroll to zoom. Hover for details.
   </div>
 </div>
 
 <div id="legend">
   <h2>Models</h2>
   <div id="legend-items"></div>
-  <h2 style="margin-top:8px;">Size = Generation Depth</h2>
+  <div class="legend-shape">
+    <h2 style="margin-top:12px;">Task Families</h2>
+    Sphere = Optimization<br>
+    Octahedron = Prediction<br>
+    Cube = Translation<br>
+    <br>
+    Larger = deeper generation<br>
+    Gold wireframes = convergence events
+  </div>
 </div>
 
 <div id="controls">
   <label><input type="checkbox" id="cb-trails" checked> Lineage trails</label>
   <label><input type="checkbox" id="cb-grid" checked> Grid</label>
-  <label><input type="checkbox" id="cb-convergence" checked> Convergence pulses</label>
+  <label><input type="checkbox" id="cb-convergence" checked> Convergence</label>
   <label><input type="checkbox" id="cb-rotate" checked> Auto-rotate</label>
   <select id="sel-view">
     <option value="3d">3D Free</option>
@@ -111,15 +132,14 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 const MODEL_COLORS = {
-  claude:       0xE8403F,
-  haiku:        0x3B82F6,
-  gpt4o:        0x10B981,
-  gpt4:         0x10B981,
-  gpt55:        0x06D6A0,
-  gemini_flash: 0xF59E0B,
-  gemini_pro:   0xEF4444,
+  claude:       0xFF6B6B,
+  haiku:        0x4DABF7,
+  gpt4o:        0x51CF66,
+  gpt4:         0x51CF66,
+  gpt55:        0x20C997,
+  gemini_flash: 0xFFD43B,
+  gemini_pro:   0xFF922B,
 };
-const FAMILY_SHAPES = { optimization: 'sphere', prediction: 'octahedron', translation: 'box' };
 
 let data, scene, camera, renderer, controls;
 let pointGroup, trailGroup, gridGroup, convGroup;
@@ -128,8 +148,13 @@ let raycaster, mouse, tooltip, hoveredMesh = null;
 let clock = new THREE.Clock();
 
 async function init() {
-  const resp = await fetch('data.json');
-  data = await resp.json();
+  try {
+    const resp = await fetch('data.json');
+    data = await resp.json();
+  } catch (e) {
+    document.getElementById('loading').innerHTML = `<h1>Error</h1><p>Could not load data.json: ${e.message}</p>`;
+    return;
+  }
 
   // Stats
   document.getElementById('s-geom').textContent = data.samples.length + ' samples / ' + data.runs.length + ' runs';
@@ -142,38 +167,43 @@ async function init() {
   // Legend
   const legendEl = document.getElementById('legend-items');
   models.forEach(m => {
-    const c = MODEL_COLORS[m] || 0x888888;
+    const c = MODEL_COLORS[m] || 0xAAAAAA;
     const hex = '#' + c.toString(16).padStart(6, '0');
     legendEl.innerHTML += `<div class="legend-item"><span class="legend-dot" style="background:${hex}"></span>${m}</div>`;
   });
 
   // Scene
   scene = new THREE.Scene();
-  scene.fog = new THREE.FogExp2(0x0a0a0f, 0.012);
+  scene.background = new THREE.Color(0x0d1117);
+  scene.fog = new THREE.FogExp2(0x0d1117, 0.008);
 
-  camera = new THREE.PerspectiveCamera(60, innerWidth / innerHeight, 0.1, 500);
-  camera.position.set(35, 25, 35);
+  camera = new THREE.PerspectiveCamera(55, innerWidth / innerHeight, 0.1, 500);
+  camera.position.set(40, 28, 40);
 
   renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('canvas'), antialias: true });
   renderer.setSize(innerWidth, innerHeight);
   renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.2;
 
   controls = new OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
   controls.dampingFactor = 0.05;
   controls.autoRotate = true;
-  controls.autoRotateSpeed = 0.5;
-  controls.target.set(0, 5, 0);
+  controls.autoRotateSpeed = 0.4;
+  controls.target.set(0, 6, 0);
 
-  // Lighting
-  scene.add(new THREE.AmbientLight(0x404060, 0.6));
-  const dir = new THREE.DirectionalLight(0xffffff, 0.8);
-  dir.position.set(20, 30, 20);
-  scene.add(dir);
-  const point = new THREE.PointLight(0x8b5cf6, 0.5, 60);
-  point.position.set(0, 15, 0);
-  scene.add(point);
+  // Brighter lighting
+  scene.add(new THREE.AmbientLight(0x6070a0, 1.0));
+  const dir1 = new THREE.DirectionalLight(0xffffff, 1.2);
+  dir1.position.set(25, 35, 25);
+  scene.add(dir1);
+  const dir2 = new THREE.DirectionalLight(0x8888ff, 0.4);
+  dir2.position.set(-20, 10, -20);
+  scene.add(dir2);
+  const point1 = new THREE.PointLight(0xa78bfa, 0.8, 80);
+  point1.position.set(0, 18, 0);
+  scene.add(point1);
 
   // Groups
   pointGroup = new THREE.Group(); scene.add(pointGroup);
@@ -188,7 +218,6 @@ async function init() {
 
   // Raycaster
   raycaster = new THREE.Raycaster();
-  raycaster.params.Points = { threshold: 0.5 };
   mouse = new THREE.Vector2();
   tooltip = document.getElementById('tooltip');
 
@@ -201,86 +230,90 @@ async function init() {
   document.getElementById('cb-convergence').addEventListener('change', e => { convGroup.visible = e.target.checked; });
   document.getElementById('cb-rotate').addEventListener('change', e => { controls.autoRotate = e.target.checked; });
   document.getElementById('btn-reset').addEventListener('click', () => {
-    camera.position.set(35, 25, 35);
-    controls.target.set(0, 5, 0);
+    camera.position.set(40, 28, 40);
+    controls.target.set(0, 6, 0);
+    controls.autoRotate = true;
+    document.getElementById('cb-rotate').checked = true;
+    document.getElementById('sel-view').value = '3d';
   });
   document.getElementById('sel-view').addEventListener('change', e => {
     const v = e.target.value;
     controls.autoRotate = false;
     document.getElementById('cb-rotate').checked = false;
-    if (v === 'front') { camera.position.set(0, 8, 45); controls.target.set(0, 8, 0); }
-    else if (v === 'side') { camera.position.set(45, 8, 0); controls.target.set(0, 8, 0); }
-    else if (v === 'top') { camera.position.set(0, 45, 0); controls.target.set(0, 0, 0); }
-    else { camera.position.set(35, 25, 35); controls.target.set(0, 5, 0); controls.autoRotate = true; document.getElementById('cb-rotate').checked = true; }
+    if (v === 'front')      { camera.position.set(0, 8, 50); controls.target.set(0, 8, 0); }
+    else if (v === 'side')  { camera.position.set(50, 8, 0); controls.target.set(0, 8, 0); }
+    else if (v === 'top')   { camera.position.set(0, 50, 0); controls.target.set(0, 0, 0); }
+    else { camera.position.set(40, 28, 40); controls.target.set(0, 6, 0); controls.autoRotate = true; document.getElementById('cb-rotate').checked = true; }
   });
+
+  // Hide loading screen
+  document.getElementById('loading').classList.add('hidden');
 
   animate();
 }
 
-// Map data to 3D coords
-// X: budget (2000..125) -> (-20..20) inverted so compression goes right
-// Y: operator count (0..15) -> (0..15)
+// Map data to 3D coordinates
+// X: budget (2000..125) -> (-20..20) inverted so compression pressure increases rightward
+// Y: operator count (0..12) -> (0..14)
 // Z: reuse ratio (0..1) -> (-10..10)
 function mapPos(budget, ops, reuse) {
   const x = ((2000 - budget) / 1875) * 40 - 20;
-  const y = ops * 1.2;
+  const y = ops * 1.3;
   const z = (reuse - 0.5) * 20;
   return new THREE.Vector3(x, y, z);
 }
 
 function buildGrid() {
   // Floor grid
-  const gridMat = new THREE.LineBasicMaterial({ color: 0x222233, transparent: true, opacity: 0.4 });
+  const gridMat = new THREE.LineBasicMaterial({ color: 0x303850, transparent: true, opacity: 0.5 });
   for (let i = -20; i <= 20; i += 5) {
     const g1 = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(i, 0, -10), new THREE.Vector3(i, 0, 10)]);
     gridGroup.add(new THREE.Line(g1, gridMat));
-    const g2 = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-20, 0, i/2), new THREE.Vector3(20, 0, i/2)]);
+    const g2 = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-20, 0, i / 2), new THREE.Vector3(20, 0, i / 2)]);
     gridGroup.add(new THREE.Line(g2, gridMat));
   }
 
-  // Axes
-  const axMat = new THREE.LineBasicMaterial({ color: 0x444466 });
-  const xAxis = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-22, 0, 0), new THREE.Vector3(22, 0, 0)]);
-  const yAxis = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-20, 0, 0), new THREE.Vector3(-20, 20, 0)]);
-  const zAxis = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-20, 0, -12), new THREE.Vector3(-20, 0, 12)]);
-  gridGroup.add(new THREE.Line(xAxis, axMat));
-  gridGroup.add(new THREE.Line(yAxis, axMat));
-  gridGroup.add(new THREE.Line(zAxis, axMat));
+  // Axes - brighter
+  const axMat = new THREE.LineBasicMaterial({ color: 0x58688a });
+  gridGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-22, 0, 0), new THREE.Vector3(22, 0, 0)]), axMat));
+  gridGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-20, 0, 0), new THREE.Vector3(-20, 18, 0)]), axMat));
+  gridGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-20, 0, -12), new THREE.Vector3(-20, 0, 12)]), axMat));
 
   // Budget labels along X axis
   [2000, 1000, 500, 250, 125].forEach(b => {
     const pos = mapPos(b, 0, 0.5);
-    const sprite = makeTextSprite(String(b), 0x666688);
-    sprite.position.set(pos.x, -1.5, 0);
+    const sprite = makeLabel(String(b), '#8b949e', 22);
+    sprite.position.set(pos.x, -1.8, 0);
     sprite.scale.set(3, 1.5, 1);
     gridGroup.add(sprite);
   });
 
-  // Axis title sprites
-  const xLabel = makeTextSprite('Budget \u2192 Compression', 0x8b5cf6);
-  xLabel.position.set(0, -3, 0); xLabel.scale.set(6, 2, 1);
-  gridGroup.add(xLabel);
+  // Axis titles
+  const xL = makeLabel('Budget  -->  Compression', '#a78bfa', 20);
+  xL.position.set(0, -3.5, 0); xL.scale.set(7, 2, 1);
+  gridGroup.add(xL);
 
-  const yLabel = makeTextSprite('Operator Count', 0x8b5cf6);
-  yLabel.position.set(-23, 10, 0); yLabel.scale.set(5, 2, 1);
-  gridGroup.add(yLabel);
+  const yL = makeLabel('Operator Count', '#a78bfa', 20);
+  yL.position.set(-24, 10, 0); yL.scale.set(5.5, 2, 1);
+  gridGroup.add(yL);
 
-  const zLabel = makeTextSprite('Reuse Ratio', 0x8b5cf6);
-  zLabel.position.set(-23, 0, 0); zLabel.scale.set(4, 2, 1);
-  gridGroup.add(zLabel);
+  const zL = makeLabel('Reuse Ratio', '#a78bfa', 20);
+  zL.position.set(-24, -1, 6); zL.scale.set(4.5, 2, 1);
+  gridGroup.add(zL);
 }
 
-function makeTextSprite(text, color) {
+function makeLabel(text, color, fontSize) {
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d');
-  canvas.width = 256; canvas.height = 64;
-  ctx.fillStyle = 'transparent';
-  ctx.fillRect(0, 0, 256, 64);
-  ctx.font = '24px monospace';
-  ctx.fillStyle = '#' + color.toString(16).padStart(6, '0');
+  canvas.width = 512; canvas.height = 96;
+  ctx.clearRect(0, 0, 512, 96);
+  ctx.font = `bold ${fontSize || 22}px -apple-system, sans-serif`;
+  ctx.fillStyle = color;
   ctx.textAlign = 'center';
-  ctx.fillText(text, 128, 40);
+  ctx.textBaseline = 'middle';
+  ctx.fillText(text, 256, 48);
   const tex = new THREE.CanvasTexture(canvas);
+  tex.minFilter = THREE.LinearFilter;
   const mat = new THREE.SpriteMaterial({ map: tex, transparent: true, depthWrite: false });
   return new THREE.Sprite(mat);
 }
@@ -288,62 +321,61 @@ function makeTextSprite(text, color) {
 function buildPoints() {
   pointMeshes = [];
 
+  // Run data points (smaller)
   data.runs.forEach((run, i) => {
     const pos = mapPos(run.budget, run.operator_count, run.reuse_ratio);
-    const color = MODEL_COLORS[run.model] || 0x888888;
-    const size = 0.25 + Math.random() * 0.15;
+    const color = MODEL_COLORS[run.model] || 0xAAAAAA;
+    const size = 0.3;
 
     const family = run.task_family;
     let geo;
-    if (family === 'prediction') geo = new THREE.OctahedronGeometry(size);
-    else if (family === 'translation') geo = new THREE.BoxGeometry(size * 1.4, size * 1.4, size * 1.4);
-    else geo = new THREE.SphereGeometry(size, 12, 8);
+    if (family === 'prediction')        geo = new THREE.OctahedronGeometry(size);
+    else if (family === 'translation')  geo = new THREE.BoxGeometry(size * 1.3, size * 1.3, size * 1.3);
+    else                                geo = new THREE.SphereGeometry(size, 12, 8);
 
     const mat = new THREE.MeshStandardMaterial({
-      color, emissive: color, emissiveIntensity: 0.3,
-      roughness: 0.4, metalness: 0.3,
+      color, emissive: color, emissiveIntensity: 0.4,
+      roughness: 0.35, metalness: 0.25,
     });
     const mesh = new THREE.Mesh(geo, mat);
     mesh.position.copy(pos);
-    mesh.userData = { type: 'run', ...run, index: i };
+    mesh.userData = { type: 'run', ...run, _idx: i };
     pointGroup.add(mesh);
     pointMeshes.push(mesh);
   });
 
-  // Sample geometries (larger, glowing)
+  // Sample geometries (larger, glowing, distinct)
   data.samples.forEach((sample, i) => {
     const budget = sample.budget_at_creation || 125;
     const ops = sample.operator_count || 0;
     const reuse = sample.reuse_ratio || 0;
     const gen = sample.generation || 1;
     const pos = mapPos(budget, ops, reuse);
-    const color = MODEL_COLORS[sample.model] || 0x888888;
-    const size = 0.4 + Math.min(gen, 30) * 0.03;
+    const color = MODEL_COLORS[sample.model] || 0xAAAAAA;
+    const size = 0.5 + Math.min(gen, 35) * 0.025;
 
     const geo = new THREE.IcosahedronGeometry(size, 1);
     const mat = new THREE.MeshStandardMaterial({
-      color, emissive: color, emissiveIntensity: 0.6,
-      roughness: 0.2, metalness: 0.5, wireframe: false,
+      color, emissive: color, emissiveIntensity: 0.7,
+      roughness: 0.15, metalness: 0.5,
     });
     const mesh = new THREE.Mesh(geo, mat);
     mesh.position.copy(pos);
-    mesh.userData = { type: 'sample', ...sample, index: i };
+    mesh.userData = { type: 'sample', ...sample, _idx: i };
     pointGroup.add(mesh);
     pointMeshes.push(mesh);
 
-    // Glow ring
-    const ringGeo = new THREE.RingGeometry(size * 1.3, size * 1.6, 24);
-    const ringMat = new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.15, side: THREE.DoubleSide });
+    // Outer glow ring
+    const ringGeo = new THREE.TorusGeometry(size * 1.5, 0.06, 8, 32);
+    const ringMat = new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.25 });
     const ring = new THREE.Mesh(ringGeo, ringMat);
     ring.position.copy(pos);
-    ring.lookAt(camera.position);
-    ring.userData = { isRing: true, parentIdx: i };
+    ring.userData = { _isDecor: true };
     pointGroup.add(ring);
   });
 }
 
 function buildTrails() {
-  // Draw lineage trails for sample geometries that have lineage data
   const hashToSample = {};
   data.samples.forEach(s => { hashToSample[s.content_hash] = s; });
 
@@ -351,72 +383,52 @@ function buildTrails() {
     const lineage = sample.lineage || [];
     if (lineage.length < 2) return;
 
-    const color = MODEL_COLORS[sample.model] || 0x888888;
-    const points = [];
-
-    // Reconstruct approximate positions along the lineage
-    // Each ancestor was at a progressively higher budget
+    const color = MODEL_COLORS[sample.model] || 0xAAAAAA;
     const budgets = [2000, 1000, 500, 250, 125];
+    const points = [];
     const stepCount = Math.min(lineage.length, budgets.length);
 
     for (let i = 0; i < stepCount; i++) {
       const ancestor = hashToSample[lineage[i]];
       if (ancestor) {
-        points.push(mapPos(
-          ancestor.budget_at_creation || budgets[i] || 125,
-          ancestor.operator_count || 0,
-          ancestor.reuse_ratio || 0
-        ));
+        points.push(mapPos(ancestor.budget_at_creation || budgets[i] || 125, ancestor.operator_count || 0, ancestor.reuse_ratio || 0));
       } else {
-        // Interpolate
-        const budgetGuess = budgets[Math.min(i, budgets.length - 1)] || 500;
-        const opsGuess = Math.max(1, (sample.operator_count || 3) + (stepCount - i) * 0.5);
-        points.push(mapPos(budgetGuess, opsGuess, sample.reuse_ratio || 0));
+        const bg = budgets[Math.min(i, budgets.length - 1)] || 500;
+        const og = Math.max(1, (sample.operator_count || 3) + (stepCount - i) * 0.5);
+        points.push(mapPos(bg, og, sample.reuse_ratio || 0));
       }
     }
-    // Add current position
-    points.push(mapPos(
-      sample.budget_at_creation || 125,
-      sample.operator_count || 0,
-      sample.reuse_ratio || 0
-    ));
-
+    points.push(mapPos(sample.budget_at_creation || 125, sample.operator_count || 0, sample.reuse_ratio || 0));
     if (points.length < 2) return;
 
     const curve = new THREE.CatmullRomCurve3(points);
     const curvePoints = curve.getPoints(40);
     const geo = new THREE.BufferGeometry().setFromPoints(curvePoints);
 
-    // Gradient opacity trail
     const colors = [];
     curvePoints.forEach((_, idx) => {
       const t = idx / curvePoints.length;
       const c = new THREE.Color(color);
-      c.multiplyScalar(0.3 + t * 0.7);
+      c.multiplyScalar(0.4 + t * 0.6);
       colors.push(c.r, c.g, c.b);
     });
     geo.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
-
-    const mat = new THREE.LineBasicMaterial({ vertexColors: true, transparent: true, opacity: 0.5 });
-    trailGroup.add(new THREE.Line(geo, mat));
+    trailGroup.add(new THREE.Line(geo, new THREE.LineBasicMaterial({ vertexColors: true, transparent: true, opacity: 0.6 })));
   });
 }
 
 function buildConvergencePulses() {
-  data.convergence_log.forEach(event => {
-    // Place convergence pulse at a position derived from the hash
+  data.convergence_log.forEach((event, i) => {
     const hashVal = parseInt((event.hash || '').slice(0, 8), 16) || 0;
     const x = ((hashVal % 40) - 20);
-    const y = (event.generation || 5) * 1.2;
+    const y = (event.generation || 5) * 1.3;
     const z = ((hashVal % 20) - 10);
 
-    const geo = new THREE.SphereGeometry(0.8, 16, 12);
-    const mat = new THREE.MeshBasicMaterial({
-      color: 0xffd700, transparent: true, opacity: 0.25, wireframe: true,
-    });
+    const geo = new THREE.IcosahedronGeometry(1.0, 1);
+    const mat = new THREE.MeshBasicMaterial({ color: 0xffd43b, transparent: true, opacity: 0.3, wireframe: true });
     const mesh = new THREE.Mesh(geo, mat);
     mesh.position.set(x, y, z);
-    mesh.userData = { type: 'convergence', ...event };
+    mesh.userData = { type: 'convergence', ...event, _idx: i };
     convGroup.add(mesh);
     pointMeshes.push(mesh);
   });
@@ -432,16 +444,17 @@ function onMouseMove(e) {
   if (hits.length > 0) {
     const obj = hits[0].object;
     const d = obj.userData;
+    if (d._isDecor) return;
 
     if (hoveredMesh && hoveredMesh !== obj) {
-      hoveredMesh.material.emissiveIntensity = hoveredMesh.userData.type === 'sample' ? 0.6 : 0.3;
+      hoveredMesh.material.emissiveIntensity = hoveredMesh.userData.type === 'sample' ? 0.7 : 0.4;
     }
     hoveredMesh = obj;
-    obj.material.emissiveIntensity = 1.0;
+    obj.material.emissiveIntensity = 1.2;
 
     tooltip.style.display = 'block';
-    tooltip.style.left = (e.clientX + 16) + 'px';
-    tooltip.style.top = (e.clientY - 10) + 'px';
+    tooltip.style.left = Math.min(e.clientX + 16, innerWidth - 360) + 'px';
+    tooltip.style.top = Math.min(e.clientY - 10, innerHeight - 200) + 'px';
 
     const title = tooltip.querySelector('.tt-title');
     const body = tooltip.querySelector('.tt-body');
@@ -465,7 +478,7 @@ function onMouseMove(e) {
         <div class="tt-row">Reuse: <b>${(d.reuse_ratio || 0).toFixed(3)}</b></div>
         <div class="tt-row">Verbs: <b>${(d.unique_verbs || []).join(', ') || 'none'}</b></div>
         <div class="tt-row">Lineage: <b>${(d.lineage || []).length} ancestors</b></div>
-        <div class="tt-row">Addr: <b>${(d.content_hash || '').slice(0, 24)}...</b></div>
+        <div class="tt-row">Addr: <b style="font-family:monospace;font-size:11px">${(d.content_hash || '').slice(0, 20)}...</b></div>
       `;
     } else if (d.type === 'convergence') {
       title.textContent = 'Convergence Event';
@@ -473,12 +486,12 @@ function onMouseMove(e) {
         <div class="tt-row">Models: <b>${(d.models || []).join(' + ')}</b></div>
         <div class="tt-row">Tasks: <b>${(d.tasks || []).join(' + ')}</b></div>
         <div class="tt-row">Generation: <b>${d.generation || '?'}</b></div>
-        <div class="tt-row">Hash: <b>${(d.hash || '').slice(0, 16)}...</b></div>
+        <div class="tt-row">Hash: <b style="font-family:monospace;font-size:11px">${(d.hash || '').slice(0, 20)}...</b></div>
       `;
     }
   } else {
     if (hoveredMesh) {
-      hoveredMesh.material.emissiveIntensity = hoveredMesh.userData.type === 'sample' ? 0.6 : 0.3;
+      hoveredMesh.material.emissiveIntensity = hoveredMesh.userData.type === 'sample' ? 0.7 : 0.4;
       hoveredMesh = null;
     }
     tooltip.style.display = 'none';
@@ -494,31 +507,30 @@ function onResize() {
 function animate() {
   requestAnimationFrame(animate);
   const t = clock.getElapsedTime();
-
   controls.update();
 
   // Animate convergence pulses
   convGroup.children.forEach((mesh, i) => {
-    const s = 1 + 0.3 * Math.sin(t * 2 + i);
+    const s = 1 + 0.25 * Math.sin(t * 2.5 + i * 1.1);
     mesh.scale.set(s, s, s);
-    mesh.material.opacity = 0.15 + 0.1 * Math.sin(t * 3 + i * 0.5);
+    mesh.material.opacity = 0.2 + 0.15 * Math.sin(t * 3 + i * 0.7);
+    mesh.rotation.y = t * 0.5 + i;
   });
 
-  // Subtle float on sample geometries
+  // Subtle rotation on sample icosahedra
   pointGroup.children.forEach(mesh => {
     if (mesh.userData.type === 'sample') {
-      mesh.rotation.y = t * 0.3;
-      mesh.position.y += Math.sin(t * 1.5 + mesh.userData.index * 0.7) * 0.003;
-    }
-    if (mesh.userData.isRing) {
-      mesh.lookAt(camera.position);
+      mesh.rotation.y = t * 0.25 + mesh.userData._idx * 0.4;
+      mesh.rotation.x = Math.sin(t * 0.8 + mesh.userData._idx) * 0.1;
     }
   });
 
   renderer.render(scene, camera);
 }
 
-init();
+init().catch(err => {
+  document.getElementById('loading').innerHTML = `<h1>Error</h1><p>${err.message}</p>`;
+});
 </script>
 </body>
 </html>
