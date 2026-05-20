@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CDCE Compression Harness — 3D Visualization</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0a0a0f; color: #e0e0e0; font-family: 'SF Mono', 'Fira Code', monospace; overflow: hidden; }
+#canvas { width: 100vw; height: 100vh; display: block; }
+
+#hud {
+  position: fixed; top: 16px; left: 16px;
+  background: rgba(10,10,15,0.85); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px; padding: 16px; max-width: 320px;
+  backdrop-filter: blur(12px); z-index: 10;
+}
+#hud h1 { font-size: 14px; color: #8b5cf6; margin-bottom: 8px; letter-spacing: 1px; }
+#hud .stat { font-size: 11px; color: #888; margin: 2px 0; }
+#hud .stat b { color: #e0e0e0; }
+
+#controls {
+  position: fixed; bottom: 16px; left: 16px;
+  background: rgba(10,10,15,0.85); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px; padding: 12px 16px; z-index: 10;
+  backdrop-filter: blur(12px);
+}
+#controls label { font-size: 11px; color: #888; margin-right: 12px; cursor: pointer; }
+#controls input[type=checkbox] { margin-right: 4px; accent-color: #8b5cf6; }
+#controls select, #controls button {
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+  color: #e0e0e0; padding: 4px 8px; border-radius: 4px; font-size: 11px;
+  font-family: inherit; margin-left: 8px; cursor: pointer;
+}
+#controls button:hover { background: rgba(139,92,246,0.3); }
+
+#tooltip {
+  position: fixed; display: none;
+  background: rgba(10,10,15,0.95); border: 1px solid rgba(139,92,246,0.5);
+  border-radius: 6px; padding: 10px 14px; font-size: 11px;
+  pointer-events: none; z-index: 20; max-width: 300px;
+  backdrop-filter: blur(12px);
+}
+#tooltip .tt-title { color: #8b5cf6; font-weight: bold; margin-bottom: 4px; }
+#tooltip .tt-row { color: #aaa; margin: 1px 0; }
+#tooltip .tt-row b { color: #e0e0e0; }
+
+#legend {
+  position: fixed; top: 16px; right: 16px;
+  background: rgba(10,10,15,0.85); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px; padding: 12px 16px; z-index: 10;
+  backdrop-filter: blur(12px);
+}
+#legend h2 { font-size: 11px; color: #888; margin-bottom: 6px; letter-spacing: 1px; }
+.legend-item { font-size: 11px; margin: 3px 0; display: flex; align-items: center; }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; display: inline-block; }
+
+#axes-labels { position: fixed; z-index: 5; pointer-events: none; }
+.axis-label {
+  position: fixed; font-size: 10px; color: rgba(255,255,255,0.4);
+  letter-spacing: 1px; text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+
+<canvas id="canvas"></canvas>
+
+<div id="hud">
+  <h1>CDCE COMPRESSION HARNESS</h1>
+  <div class="stat">Geometries: <b id="s-geom">--</b></div>
+  <div class="stat">Generations: <b id="s-gen">--</b></div>
+  <div class="stat">Models: <b id="s-models">--</b></div>
+  <div class="stat">Convergence events: <b id="s-conv">--</b></div>
+  <div class="stat" style="margin-top:6px; color:#666;">
+    X: budget &nbsp; Y: operators &nbsp; Z: reuse ratio
+  </div>
+</div>
+
+<div id="legend">
+  <h2>Models</h2>
+  <div id="legend-items"></div>
+  <h2 style="margin-top:8px;">Size = Generation Depth</h2>
+</div>
+
+<div id="controls">
+  <label><input type="checkbox" id="cb-trails" checked> Lineage trails</label>
+  <label><input type="checkbox" id="cb-grid" checked> Grid</label>
+  <label><input type="checkbox" id="cb-convergence" checked> Convergence pulses</label>
+  <label><input type="checkbox" id="cb-rotate" checked> Auto-rotate</label>
+  <select id="sel-view">
+    <option value="3d">3D Free</option>
+    <option value="front">Front (Budget vs Ops)</option>
+    <option value="side">Side (Ops vs Reuse)</option>
+    <option value="top">Top (Budget vs Reuse)</option>
+  </select>
+  <button id="btn-reset">Reset View</button>
+</div>
+
+<div id="tooltip">
+  <div class="tt-title"></div>
+  <div class="tt-body"></div>
+</div>
+
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/" } }
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+const MODEL_COLORS = {
+  claude:       0xE8403F,
+  haiku:        0x3B82F6,
+  gpt4o:        0x10B981,
+  gpt4:         0x10B981,
+  gpt55:        0x06D6A0,
+  gemini_flash: 0xF59E0B,
+  gemini_pro:   0xEF4444,
+};
+const FAMILY_SHAPES = { optimization: 'sphere', prediction: 'octahedron', translation: 'box' };
+
+let data, scene, camera, renderer, controls;
+let pointGroup, trailGroup, gridGroup, convGroup;
+let pointMeshes = [];
+let raycaster, mouse, tooltip, hoveredMesh = null;
+let clock = new THREE.Clock();
+
+async function init() {
+  const resp = await fetch('data.json');
+  data = await resp.json();
+
+  // Stats
+  document.getElementById('s-geom').textContent = data.samples.length + ' samples / ' + data.runs.length + ' runs';
+  const maxGen = Math.max(...data.samples.map(s => s.generation || 0));
+  document.getElementById('s-gen').textContent = maxGen;
+  const models = [...new Set(data.runs.map(r => r.model))];
+  document.getElementById('s-models').textContent = models.join(', ');
+  document.getElementById('s-conv').textContent = data.convergence_log.length;
+
+  // Legend
+  const legendEl = document.getElementById('legend-items');
+  models.forEach(m => {
+    const c = MODEL_COLORS[m] || 0x888888;
+    const hex = '#' + c.toString(16).padStart(6, '0');
+    legendEl.innerHTML += `<div class="legend-item"><span class="legend-dot" style="background:${hex}"></span>${m}</div>`;
+  });
+
+  // Scene
+  scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x0a0a0f, 0.012);
+
+  camera = new THREE.PerspectiveCamera(60, innerWidth / innerHeight, 0.1, 500);
+  camera.position.set(35, 25, 35);
+
+  renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('canvas'), antialias: true });
+  renderer.setSize(innerWidth, innerHeight);
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+
+  controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.05;
+  controls.autoRotate = true;
+  controls.autoRotateSpeed = 0.5;
+  controls.target.set(0, 5, 0);
+
+  // Lighting
+  scene.add(new THREE.AmbientLight(0x404060, 0.6));
+  const dir = new THREE.DirectionalLight(0xffffff, 0.8);
+  dir.position.set(20, 30, 20);
+  scene.add(dir);
+  const point = new THREE.PointLight(0x8b5cf6, 0.5, 60);
+  point.position.set(0, 15, 0);
+  scene.add(point);
+
+  // Groups
+  pointGroup = new THREE.Group(); scene.add(pointGroup);
+  trailGroup = new THREE.Group(); scene.add(trailGroup);
+  gridGroup  = new THREE.Group(); scene.add(gridGroup);
+  convGroup  = new THREE.Group(); scene.add(convGroup);
+
+  buildGrid();
+  buildPoints();
+  buildTrails();
+  buildConvergencePulses();
+
+  // Raycaster
+  raycaster = new THREE.Raycaster();
+  raycaster.params.Points = { threshold: 0.5 };
+  mouse = new THREE.Vector2();
+  tooltip = document.getElementById('tooltip');
+
+  window.addEventListener('mousemove', onMouseMove);
+  window.addEventListener('resize', onResize);
+
+  // Controls
+  document.getElementById('cb-trails').addEventListener('change', e => { trailGroup.visible = e.target.checked; });
+  document.getElementById('cb-grid').addEventListener('change', e => { gridGroup.visible = e.target.checked; });
+  document.getElementById('cb-convergence').addEventListener('change', e => { convGroup.visible = e.target.checked; });
+  document.getElementById('cb-rotate').addEventListener('change', e => { controls.autoRotate = e.target.checked; });
+  document.getElementById('btn-reset').addEventListener('click', () => {
+    camera.position.set(35, 25, 35);
+    controls.target.set(0, 5, 0);
+  });
+  document.getElementById('sel-view').addEventListener('change', e => {
+    const v = e.target.value;
+    controls.autoRotate = false;
+    document.getElementById('cb-rotate').checked = false;
+    if (v === 'front') { camera.position.set(0, 8, 45); controls.target.set(0, 8, 0); }
+    else if (v === 'side') { camera.position.set(45, 8, 0); controls.target.set(0, 8, 0); }
+    else if (v === 'top') { camera.position.set(0, 45, 0); controls.target.set(0, 0, 0); }
+    else { camera.position.set(35, 25, 35); controls.target.set(0, 5, 0); controls.autoRotate = true; document.getElementById('cb-rotate').checked = true; }
+  });
+
+  animate();
+}
+
+// Map data to 3D coords
+// X: budget (2000..125) -> (-20..20) inverted so compression goes right
+// Y: operator count (0..15) -> (0..15)
+// Z: reuse ratio (0..1) -> (-10..10)
+function mapPos(budget, ops, reuse) {
+  const x = ((2000 - budget) / 1875) * 40 - 20;
+  const y = ops * 1.2;
+  const z = (reuse - 0.5) * 20;
+  return new THREE.Vector3(x, y, z);
+}
+
+function buildGrid() {
+  // Floor grid
+  const gridMat = new THREE.LineBasicMaterial({ color: 0x222233, transparent: true, opacity: 0.4 });
+  for (let i = -20; i <= 20; i += 5) {
+    const g1 = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(i, 0, -10), new THREE.Vector3(i, 0, 10)]);
+    gridGroup.add(new THREE.Line(g1, gridMat));
+    const g2 = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-20, 0, i/2), new THREE.Vector3(20, 0, i/2)]);
+    gridGroup.add(new THREE.Line(g2, gridMat));
+  }
+
+  // Axes
+  const axMat = new THREE.LineBasicMaterial({ color: 0x444466 });
+  const xAxis = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-22, 0, 0), new THREE.Vector3(22, 0, 0)]);
+  const yAxis = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-20, 0, 0), new THREE.Vector3(-20, 20, 0)]);
+  const zAxis = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-20, 0, -12), new THREE.Vector3(-20, 0, 12)]);
+  gridGroup.add(new THREE.Line(xAxis, axMat));
+  gridGroup.add(new THREE.Line(yAxis, axMat));
+  gridGroup.add(new THREE.Line(zAxis, axMat));
+
+  // Budget labels along X axis
+  [2000, 1000, 500, 250, 125].forEach(b => {
+    const pos = mapPos(b, 0, 0.5);
+    const sprite = makeTextSprite(String(b), 0x666688);
+    sprite.position.set(pos.x, -1.5, 0);
+    sprite.scale.set(3, 1.5, 1);
+    gridGroup.add(sprite);
+  });
+
+  // Axis title sprites
+  const xLabel = makeTextSprite('Budget \u2192 Compression', 0x8b5cf6);
+  xLabel.position.set(0, -3, 0); xLabel.scale.set(6, 2, 1);
+  gridGroup.add(xLabel);
+
+  const yLabel = makeTextSprite('Operator Count', 0x8b5cf6);
+  yLabel.position.set(-23, 10, 0); yLabel.scale.set(5, 2, 1);
+  gridGroup.add(yLabel);
+
+  const zLabel = makeTextSprite('Reuse Ratio', 0x8b5cf6);
+  zLabel.position.set(-23, 0, 0); zLabel.scale.set(4, 2, 1);
+  gridGroup.add(zLabel);
+}
+
+function makeTextSprite(text, color) {
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = 256; canvas.height = 64;
+  ctx.fillStyle = 'transparent';
+  ctx.fillRect(0, 0, 256, 64);
+  ctx.font = '24px monospace';
+  ctx.fillStyle = '#' + color.toString(16).padStart(6, '0');
+  ctx.textAlign = 'center';
+  ctx.fillText(text, 128, 40);
+  const tex = new THREE.CanvasTexture(canvas);
+  const mat = new THREE.SpriteMaterial({ map: tex, transparent: true, depthWrite: false });
+  return new THREE.Sprite(mat);
+}
+
+function buildPoints() {
+  pointMeshes = [];
+
+  data.runs.forEach((run, i) => {
+    const pos = mapPos(run.budget, run.operator_count, run.reuse_ratio);
+    const color = MODEL_COLORS[run.model] || 0x888888;
+    const size = 0.25 + Math.random() * 0.15;
+
+    const family = run.task_family;
+    let geo;
+    if (family === 'prediction') geo = new THREE.OctahedronGeometry(size);
+    else if (family === 'translation') geo = new THREE.BoxGeometry(size * 1.4, size * 1.4, size * 1.4);
+    else geo = new THREE.SphereGeometry(size, 12, 8);
+
+    const mat = new THREE.MeshStandardMaterial({
+      color, emissive: color, emissiveIntensity: 0.3,
+      roughness: 0.4, metalness: 0.3,
+    });
+    const mesh = new THREE.Mesh(geo, mat);
+    mesh.position.copy(pos);
+    mesh.userData = { type: 'run', ...run, index: i };
+    pointGroup.add(mesh);
+    pointMeshes.push(mesh);
+  });
+
+  // Sample geometries (larger, glowing)
+  data.samples.forEach((sample, i) => {
+    const budget = sample.budget_at_creation || 125;
+    const ops = sample.operator_count || 0;
+    const reuse = sample.reuse_ratio || 0;
+    const gen = sample.generation || 1;
+    const pos = mapPos(budget, ops, reuse);
+    const color = MODEL_COLORS[sample.model] || 0x888888;
+    const size = 0.4 + Math.min(gen, 30) * 0.03;
+
+    const geo = new THREE.IcosahedronGeometry(size, 1);
+    const mat = new THREE.MeshStandardMaterial({
+      color, emissive: color, emissiveIntensity: 0.6,
+      roughness: 0.2, metalness: 0.5, wireframe: false,
+    });
+    const mesh = new THREE.Mesh(geo, mat);
+    mesh.position.copy(pos);
+    mesh.userData = { type: 'sample', ...sample, index: i };
+    pointGroup.add(mesh);
+    pointMeshes.push(mesh);
+
+    // Glow ring
+    const ringGeo = new THREE.RingGeometry(size * 1.3, size * 1.6, 24);
+    const ringMat = new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.15, side: THREE.DoubleSide });
+    const ring = new THREE.Mesh(ringGeo, ringMat);
+    ring.position.copy(pos);
+    ring.lookAt(camera.position);
+    ring.userData = { isRing: true, parentIdx: i };
+    pointGroup.add(ring);
+  });
+}
+
+function buildTrails() {
+  // Draw lineage trails for sample geometries that have lineage data
+  const hashToSample = {};
+  data.samples.forEach(s => { hashToSample[s.content_hash] = s; });
+
+  data.samples.forEach(sample => {
+    const lineage = sample.lineage || [];
+    if (lineage.length < 2) return;
+
+    const color = MODEL_COLORS[sample.model] || 0x888888;
+    const points = [];
+
+    // Reconstruct approximate positions along the lineage
+    // Each ancestor was at a progressively higher budget
+    const budgets = [2000, 1000, 500, 250, 125];
+    const stepCount = Math.min(lineage.length, budgets.length);
+
+    for (let i = 0; i < stepCount; i++) {
+      const ancestor = hashToSample[lineage[i]];
+      if (ancestor) {
+        points.push(mapPos(
+          ancestor.budget_at_creation || budgets[i] || 125,
+          ancestor.operator_count || 0,
+          ancestor.reuse_ratio || 0
+        ));
+      } else {
+        // Interpolate
+        const budgetGuess = budgets[Math.min(i, budgets.length - 1)] || 500;
+        const opsGuess = Math.max(1, (sample.operator_count || 3) + (stepCount - i) * 0.5);
+        points.push(mapPos(budgetGuess, opsGuess, sample.reuse_ratio || 0));
+      }
+    }
+    // Add current position
+    points.push(mapPos(
+      sample.budget_at_creation || 125,
+      sample.operator_count || 0,
+      sample.reuse_ratio || 0
+    ));
+
+    if (points.length < 2) return;
+
+    const curve = new THREE.CatmullRomCurve3(points);
+    const curvePoints = curve.getPoints(40);
+    const geo = new THREE.BufferGeometry().setFromPoints(curvePoints);
+
+    // Gradient opacity trail
+    const colors = [];
+    curvePoints.forEach((_, idx) => {
+      const t = idx / curvePoints.length;
+      const c = new THREE.Color(color);
+      c.multiplyScalar(0.3 + t * 0.7);
+      colors.push(c.r, c.g, c.b);
+    });
+    geo.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+
+    const mat = new THREE.LineBasicMaterial({ vertexColors: true, transparent: true, opacity: 0.5 });
+    trailGroup.add(new THREE.Line(geo, mat));
+  });
+}
+
+function buildConvergencePulses() {
+  data.convergence_log.forEach(event => {
+    // Place convergence pulse at a position derived from the hash
+    const hashVal = parseInt((event.hash || '').slice(0, 8), 16) || 0;
+    const x = ((hashVal % 40) - 20);
+    const y = (event.generation || 5) * 1.2;
+    const z = ((hashVal % 20) - 10);
+
+    const geo = new THREE.SphereGeometry(0.8, 16, 12);
+    const mat = new THREE.MeshBasicMaterial({
+      color: 0xffd700, transparent: true, opacity: 0.25, wireframe: true,
+    });
+    const mesh = new THREE.Mesh(geo, mat);
+    mesh.position.set(x, y, z);
+    mesh.userData = { type: 'convergence', ...event };
+    convGroup.add(mesh);
+    pointMeshes.push(mesh);
+  });
+}
+
+function onMouseMove(e) {
+  mouse.x = (e.clientX / innerWidth) * 2 - 1;
+  mouse.y = -(e.clientY / innerHeight) * 2 + 1;
+
+  raycaster.setFromCamera(mouse, camera);
+  const hits = raycaster.intersectObjects(pointMeshes);
+
+  if (hits.length > 0) {
+    const obj = hits[0].object;
+    const d = obj.userData;
+
+    if (hoveredMesh && hoveredMesh !== obj) {
+      hoveredMesh.material.emissiveIntensity = hoveredMesh.userData.type === 'sample' ? 0.6 : 0.3;
+    }
+    hoveredMesh = obj;
+    obj.material.emissiveIntensity = 1.0;
+
+    tooltip.style.display = 'block';
+    tooltip.style.left = (e.clientX + 16) + 'px';
+    tooltip.style.top = (e.clientY - 10) + 'px';
+
+    const title = tooltip.querySelector('.tt-title');
+    const body = tooltip.querySelector('.tt-body');
+
+    if (d.type === 'run') {
+      title.textContent = `${d.model} / ${d.task_id}`;
+      body.innerHTML = `
+        <div class="tt-row">Budget: <b>${d.budget}</b></div>
+        <div class="tt-row">Operators: <b>${d.operator_count}</b></div>
+        <div class="tt-row">Reuse: <b>${(d.reuse_ratio || 0).toFixed(3)}</b></div>
+        <div class="tt-row">Words: <b>${d.word_count}</b></div>
+        <div class="tt-row">Efficiency: <b>${(d.efficiency || 0).toFixed(4)}</b></div>
+        <div class="tt-row">Family: <b>${d.task_family}</b></div>
+      `;
+    } else if (d.type === 'sample') {
+      title.textContent = `${d.model} / ${d.task_id} (gen ${d.generation})`;
+      body.innerHTML = `
+        <div class="tt-row">Generation: <b>${d.generation}</b></div>
+        <div class="tt-row">Budget: <b>${d.budget_at_creation}</b></div>
+        <div class="tt-row">Operators: <b>${d.operator_count}</b></div>
+        <div class="tt-row">Reuse: <b>${(d.reuse_ratio || 0).toFixed(3)}</b></div>
+        <div class="tt-row">Verbs: <b>${(d.unique_verbs || []).join(', ') || 'none'}</b></div>
+        <div class="tt-row">Lineage: <b>${(d.lineage || []).length} ancestors</b></div>
+        <div class="tt-row">Addr: <b>${(d.content_hash || '').slice(0, 24)}...</b></div>
+      `;
+    } else if (d.type === 'convergence') {
+      title.textContent = 'Convergence Event';
+      body.innerHTML = `
+        <div class="tt-row">Models: <b>${(d.models || []).join(' + ')}</b></div>
+        <div class="tt-row">Tasks: <b>${(d.tasks || []).join(' + ')}</b></div>
+        <div class="tt-row">Generation: <b>${d.generation || '?'}</b></div>
+        <div class="tt-row">Hash: <b>${(d.hash || '').slice(0, 16)}...</b></div>
+      `;
+    }
+  } else {
+    if (hoveredMesh) {
+      hoveredMesh.material.emissiveIntensity = hoveredMesh.userData.type === 'sample' ? 0.6 : 0.3;
+      hoveredMesh = null;
+    }
+    tooltip.style.display = 'none';
+  }
+}
+
+function onResize() {
+  camera.aspect = innerWidth / innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+}
+
+function animate() {
+  requestAnimationFrame(animate);
+  const t = clock.getElapsedTime();
+
+  controls.update();
+
+  // Animate convergence pulses
+  convGroup.children.forEach((mesh, i) => {
+    const s = 1 + 0.3 * Math.sin(t * 2 + i);
+    mesh.scale.set(s, s, s);
+    mesh.material.opacity = 0.15 + 0.1 * Math.sin(t * 3 + i * 0.5);
+  });
+
+  // Subtle float on sample geometries
+  pointGroup.children.forEach(mesh => {
+    if (mesh.userData.type === 'sample') {
+      mesh.rotation.y = t * 0.3;
+      mesh.position.y += Math.sin(t * 1.5 + mesh.userData.index * 0.7) * 0.003;
+    }
+    if (mesh.userData.isRing) {
+      mesh.lookAt(camera.position);
+    }
+  });
+
+  renderer.render(scene, camera);
+}
+
+init();
+</script>
+</body>
+</html>
