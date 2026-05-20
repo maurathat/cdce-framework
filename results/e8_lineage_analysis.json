@@ -1,0 +1,6798 @@
+{
+  "lineage_traces": [
+    {
+      "model": "claude",
+      "task_id": "opt_routing",
+      "final_gen": 20,
+      "chain_length": 20,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "swap",
+            "test",
+            "try",
+            "verify"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "test"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "identify",
+            "swap",
+            "test"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 36,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "swap"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 12,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "check",
+            "pick",
+            "swap"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "pick",
+            "try"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "test"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.9428,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "check",
+            "identify",
+            "since",
+            "test",
+            "try"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "find",
+            "swap",
+            "test",
+            "verify"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "given",
+            "identify",
+            "swap",
+            "verify"
+          ]
+        },
+        {
+          "gen": 11,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "check",
+            "find",
+            "swap",
+            "total"
+          ]
+        },
+        {
+          "gen": 12,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "identify",
+            "since",
+            "swap",
+            "total",
+            "verify"
+          ]
+        },
+        {
+          "gen": 13,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "check",
+            "find",
+            "total"
+          ]
+        },
+        {
+          "gen": 14,
+          "ops": 6,
+          "tower": "H",
+          "cosine": 0.75,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "compress",
+            "identify",
+            "since",
+            "total",
+            "verify"
+          ]
+        },
+        {
+          "gen": 15,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 48,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "identify",
+            "sequence",
+            "total"
+          ]
+        },
+        {
+          "gen": 16,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break"
+          ]
+        },
+        {
+          "gen": 17,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.8165,
+          "root_idx": 28,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "swap",
+            "total"
+          ]
+        },
+        {
+          "gen": 18,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "find"
+          ]
+        },
+        {
+          "gen": 19,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.8165,
+          "root_idx": 60,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "identify",
+            "total"
+          ]
+        },
+        {
+          "gen": 20,
+          "ops": 0,
+          "tower": "R",
+          "cosine": 0.0,
+          "root_idx": -1
+        }
+      ]
+    },
+    {
+      "model": "gpt4",
+      "task_id": "trans_nl_code",
+      "final_gen": 5,
+      "chain_length": 5,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8528,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "calculate",
+            "divide",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "divide"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "divide",
+            "sum"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8528,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "calculate",
+            "optimize",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 7,
+          "tower": "O",
+          "cosine": 0.7845,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "calculate",
+            "compute",
+            "iterate",
+            "reduce",
+            "sum",
+            "test"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "opt_routing",
+      "final_gen": 20,
+      "chain_length": 12,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "swap",
+            "test",
+            "try",
+            "verify"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "test"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "identify",
+            "swap",
+            "test"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "optimize"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "choose",
+            "find"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "total"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "minimize",
+            "optimize",
+            "select",
+            "total"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "total"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "find",
+            "minimize",
+            "move"
+          ]
+        },
+        {
+          "gen": 19,
+          "ops": 7,
+          "tower": "O",
+          "cosine": 0.7845,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "pattern",
+            "sequence",
+            "swap",
+            "test",
+            "then",
+            "total"
+          ]
+        },
+        {
+          "gen": 20,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "test",
+            "total"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "pred_math",
+      "final_gen": 37,
+      "chain_length": 29,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "swap",
+            "test",
+            "try",
+            "verify"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "test"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "identify",
+            "swap",
+            "test"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "optimize"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "choose",
+            "find"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "total"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "minimize",
+            "optimize",
+            "select",
+            "total"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "total"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "find",
+            "minimize",
+            "move"
+          ]
+        },
+        {
+          "gen": 19,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.8944,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "identify",
+            "pattern",
+            "sequence"
+          ]
+        },
+        {
+          "gen": 20,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.8944,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "identify",
+            "pattern",
+            "sequence"
+          ]
+        },
+        {
+          "gen": 21,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 104,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "compress",
+            "identify",
+            "pattern"
+          ]
+        },
+        {
+          "gen": 22,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "compute",
+            "pattern"
+          ]
+        },
+        {
+          "gen": 23,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "compute",
+            "pattern"
+          ]
+        },
+        {
+          "gen": 24,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 1.0,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "compute",
+            "observe",
+            "pattern"
+          ]
+        },
+        {
+          "gen": 25,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "identify",
+            "pattern"
+          ]
+        },
+        {
+          "gen": 26,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "identify",
+            "pattern"
+          ]
+        },
+        {
+          "gen": 27,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.8944,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "identify",
+            "pattern",
+            "sequence"
+          ]
+        },
+        {
+          "gen": 28,
+          "ops": 6,
+          "tower": "H",
+          "cosine": 0.8321,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "given",
+            "identify",
+            "pattern",
+            "repeat",
+            "sequence"
+          ]
+        },
+        {
+          "gen": 29,
+          "ops": 6,
+          "tower": "H",
+          "cosine": 0.8321,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "given",
+            "identify",
+            "pattern",
+            "repeat",
+            "sequence"
+          ]
+        },
+        {
+          "gen": 30,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.8944,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "given",
+            "pattern",
+            "sequence"
+          ]
+        },
+        {
+          "gen": 31,
+          "ops": 6,
+          "tower": "H",
+          "cosine": 0.8321,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "identify",
+            "observe",
+            "pattern",
+            "rule",
+            "sequence"
+          ]
+        },
+        {
+          "gen": 32,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.8944,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "compute",
+            "pattern",
+            "rule",
+            "sequence"
+          ]
+        },
+        {
+          "gen": 33,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.8944,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "compute",
+            "pattern",
+            "rule",
+            "sequence"
+          ]
+        },
+        {
+          "gen": 34,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8575,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "compute",
+            "identify",
+            "pattern",
+            "rule",
+            "sequence"
+          ]
+        },
+        {
+          "gen": 35,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "identify",
+            "observe",
+            "pattern",
+            "sequence"
+          ]
+        },
+        {
+          "gen": 36,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.8944,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "identify",
+            "pattern",
+            "sequence"
+          ]
+        },
+        {
+          "gen": 37,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "identify",
+            "pattern",
+            "sequence"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "pred_code",
+      "final_gen": 20,
+      "chain_length": 18,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 68,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8528,
+          "root_idx": 52,
+          "root_type": "integer",
+          "verbs": [
+            "accumulate",
+            "add",
+            "sum",
+            "total",
+            "traverse"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 52,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "iterate",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 7,
+          "tower": "O",
+          "cosine": 0.7845,
+          "root_idx": 52,
+          "root_type": "integer",
+          "verbs": [
+            "accumulate",
+            "add",
+            "iterate",
+            "pattern",
+            "reduce",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 6,
+          "tower": "H",
+          "cosine": 0.9449,
+          "root_idx": 60,
+          "root_type": "integer",
+          "verbs": [
+            "aggregate",
+            "compress",
+            "pattern",
+            "sum",
+            "total",
+            "transform"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 52,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "iterate",
+            "then",
+            "total"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.9428,
+          "root_idx": 68,
+          "root_type": "integer",
+          "verbs": [
+            "compute",
+            "observe",
+            "pattern",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 68,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "enumerate",
+            "pattern",
+            "sum",
+            "then"
+          ]
+        },
+        {
+          "gen": 11,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "accumulate",
+            "add",
+            "sum"
+          ]
+        },
+        {
+          "gen": 12,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "sum"
+          ]
+        },
+        {
+          "gen": 14,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "given",
+            "observe",
+            "pattern"
+          ]
+        },
+        {
+          "gen": 15,
+          "ops": 6,
+          "tower": "H",
+          "cosine": 0.8944,
+          "root_idx": 60,
+          "root_type": "integer",
+          "verbs": [
+            "accumulate",
+            "compress",
+            "compute",
+            "pattern",
+            "sum",
+            "transform"
+          ]
+        },
+        {
+          "gen": 16,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 68,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "sum"
+          ]
+        },
+        {
+          "gen": 17,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern"
+          ]
+        },
+        {
+          "gen": 19,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 60,
+          "root_type": "integer",
+          "verbs": [
+            "accumulate",
+            "pattern",
+            "sum",
+            "transform"
+          ]
+        },
+        {
+          "gen": 20,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.8165,
+          "root_idx": 60,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "sum",
+            "transform"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt4",
+      "task_id": "opt_routing",
+      "final_gen": 5,
+      "chain_length": 5,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "swap",
+            "test",
+            "try",
+            "verify"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "test"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "identify",
+            "swap",
+            "test"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "optimize"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "choose",
+            "find"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "opt_routing",
+      "final_gen": 25,
+      "chain_length": 12,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "swap",
+            "test",
+            "try",
+            "verify"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "test"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "identify",
+            "swap",
+            "test"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "optimize"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "choose",
+            "find"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "total"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "minimize",
+            "optimize",
+            "select",
+            "total"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "total"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "find",
+            "minimize",
+            "move"
+          ]
+        },
+        {
+          "gen": 22,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "find"
+          ]
+        },
+        {
+          "gen": 25,
+          "ops": 0,
+          "tower": "R",
+          "cosine": 0.0,
+          "root_idx": -1
+        }
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "pred_math",
+      "final_gen": 20,
+      "chain_length": 12,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "swap",
+            "test",
+            "try",
+            "verify"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "test"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "identify",
+            "swap",
+            "test"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "optimize"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "choose",
+            "find"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "total"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "minimize",
+            "optimize",
+            "select",
+            "total"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "total"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "find",
+            "minimize",
+            "move"
+          ]
+        },
+        {
+          "gen": 19,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.8944,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "identify",
+            "pattern",
+            "sequence"
+          ]
+        },
+        {
+          "gen": 20,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.8944,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "identify",
+            "pattern",
+            "sequence"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "pred_math",
+      "final_gen": 20,
+      "chain_length": 15,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "swap",
+            "test",
+            "try",
+            "verify"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "test"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "identify",
+            "swap",
+            "test"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "optimize"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "choose",
+            "find"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "total"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "minimize",
+            "optimize",
+            "select",
+            "total"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "total"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "find",
+            "minimize",
+            "move"
+          ]
+        },
+        {
+          "gen": 16,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "formula",
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 17,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.8944,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "check",
+            "formula",
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 18,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 19,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "rule",
+            "verify"
+          ]
+        },
+        {
+          "gen": 20,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "rule"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "trans_math_nl",
+      "final_gen": 37,
+      "chain_length": 30,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "swap",
+            "test",
+            "try",
+            "verify"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "test"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "identify",
+            "swap",
+            "test"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "optimize"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "choose",
+            "find"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "total"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "minimize",
+            "optimize",
+            "select",
+            "total"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "total"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "find",
+            "minimize",
+            "move"
+          ]
+        },
+        {
+          "gen": 18,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "if",
+            "measure",
+            "total"
+          ]
+        },
+        {
+          "gen": 19,
+          "ops": 9,
+          "tower": "O",
+          "cosine": 0.8825,
+          "root_idx": 112,
+          "root_type": "half-integer",
+          "verbs": [
+            "add",
+            "because",
+            "compress",
+            "if",
+            "measure",
+            "move",
+            "separate",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 20,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.7906,
+          "root_idx": 112,
+          "root_type": "half-integer",
+          "verbs": [
+            "add",
+            "compress",
+            "if",
+            "measure",
+            "total"
+          ]
+        },
+        {
+          "gen": 21,
+          "ops": 7,
+          "tower": "O",
+          "cosine": 0.8528,
+          "root_idx": 68,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "compress",
+            "formula",
+            "if",
+            "measure",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 22,
+          "ops": 8,
+          "tower": "O",
+          "cosine": 0.7559,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "check",
+            "find",
+            "formula",
+            "if",
+            "measure",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 23,
+          "ops": 9,
+          "tower": "O",
+          "cosine": 0.8216,
+          "root_idx": 112,
+          "root_type": "half-integer",
+          "verbs": [
+            "add",
+            "check",
+            "compress",
+            "find",
+            "formula",
+            "if",
+            "measure",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 24,
+          "ops": 8,
+          "tower": "O",
+          "cosine": 0.7559,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "check",
+            "compress",
+            "formula",
+            "if",
+            "measure",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 25,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.7906,
+          "root_idx": 112,
+          "root_type": "half-integer",
+          "verbs": [
+            "add",
+            "compress",
+            "formula",
+            "measure",
+            "total"
+          ]
+        },
+        {
+          "gen": 26,
+          "ops": 9,
+          "tower": "O",
+          "cosine": 0.8825,
+          "root_idx": 112,
+          "root_type": "half-integer",
+          "verbs": [
+            "add",
+            "break",
+            "compress",
+            "formula",
+            "if",
+            "measure",
+            "move",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 27,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "compress",
+            "measure",
+            "total"
+          ]
+        },
+        {
+          "gen": 28,
+          "ops": 6,
+          "tower": "H",
+          "cosine": 0.75,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "break",
+            "measure",
+            "move",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 29,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.9428,
+          "root_idx": 60,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "decode",
+            "measure",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 30,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "compress",
+            "measure",
+            "total"
+          ]
+        },
+        {
+          "gen": 31,
+          "ops": 10,
+          "tower": "O",
+          "cosine": 0.8839,
+          "root_idx": 112,
+          "root_type": "half-integer",
+          "verbs": [
+            "add",
+            "break",
+            "check",
+            "compress",
+            "given",
+            "if",
+            "measure",
+            "move",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 32,
+          "ops": 7,
+          "tower": "O",
+          "cosine": 0.825,
+          "root_idx": 112,
+          "root_type": "half-integer",
+          "verbs": [
+            "add",
+            "check",
+            "compress",
+            "if",
+            "measure",
+            "move",
+            "total"
+          ]
+        },
+        {
+          "gen": 33,
+          "ops": 8,
+          "tower": "O",
+          "cosine": 0.7559,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "check",
+            "compress",
+            "decode",
+            "measure",
+            "move",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 34,
+          "ops": 8,
+          "tower": "O",
+          "cosine": 0.7559,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "check",
+            "formula",
+            "if",
+            "measure",
+            "move",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 35,
+          "ops": 7,
+          "tower": "O",
+          "cosine": 0.8528,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "check",
+            "compress",
+            "measure",
+            "move",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 36,
+          "ops": 6,
+          "tower": "H",
+          "cosine": 0.75,
+          "root_idx": 56,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "compress",
+            "if",
+            "move",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 37,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "measure"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt4",
+      "task_id": "pred_math",
+      "final_gen": 5,
+      "chain_length": 3,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 84,
+          "root_type": "integer",
+          "verbs": [
+            "find",
+            "identify",
+            "pattern"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "if"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "notice",
+            "subtract"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "opt_routing",
+      "final_gen": 20,
+      "chain_length": 12,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "swap",
+            "test",
+            "try",
+            "verify"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "test"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "identify",
+            "swap",
+            "test"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "optimize"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "choose",
+            "find"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "total"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "minimize",
+            "optimize",
+            "select",
+            "total"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "total"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "find",
+            "minimize",
+            "move"
+          ]
+        },
+        {
+          "gen": 19,
+          "ops": 7,
+          "tower": "O",
+          "cosine": 0.7845,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "pattern",
+            "sequence",
+            "swap",
+            "test",
+            "then",
+            "total"
+          ]
+        },
+        {
+          "gen": 20,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "find",
+            "optimize",
+            "since",
+            "total"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "trans_math_nl",
+      "final_gen": 20,
+      "chain_length": 13,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "swap",
+            "test",
+            "try",
+            "verify"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "test"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "identify",
+            "swap",
+            "test"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "optimize"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "choose",
+            "find"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "total"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "minimize",
+            "optimize",
+            "select",
+            "total"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "total"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "find",
+            "minimize",
+            "move"
+          ]
+        },
+        {
+          "gen": 18,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "if",
+            "measure",
+            "total"
+          ]
+        },
+        {
+          "gen": 19,
+          "ops": 9,
+          "tower": "O",
+          "cosine": 0.8825,
+          "root_idx": 112,
+          "root_type": "half-integer",
+          "verbs": [
+            "add",
+            "because",
+            "compress",
+            "if",
+            "measure",
+            "move",
+            "separate",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 20,
+          "ops": 7,
+          "tower": "O",
+          "cosine": 0.825,
+          "root_idx": 112,
+          "root_type": "half-integer",
+          "verbs": [
+            "add",
+            "break",
+            "if",
+            "measure",
+            "move",
+            "sum",
+            "total"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "trans_nl_code",
+      "final_gen": 20,
+      "chain_length": 19,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8528,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "calculate",
+            "divide",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "divide"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "divide",
+            "sum"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "divide",
+            "sum"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "sum"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "sum"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "sum"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "divide",
+            "sum"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "divide",
+            "sum"
+          ]
+        },
+        {
+          "gen": 11,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average"
+          ]
+        },
+        {
+          "gen": 12,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "divide",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 13,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "accumulate",
+            "average",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 14,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 15,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "divide",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 16,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "divide",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 17,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "accumulate",
+            "average",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 18,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.8165,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 19,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 20,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "trans_math_nl",
+      "final_gen": 38,
+      "chain_length": 31,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "swap",
+            "test",
+            "try",
+            "verify"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "test"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "identify",
+            "swap",
+            "test"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "optimize"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "choose",
+            "find"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "total"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "minimize",
+            "optimize",
+            "select",
+            "total"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "total"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "find",
+            "minimize",
+            "move"
+          ]
+        },
+        {
+          "gen": 18,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "if",
+            "measure",
+            "total"
+          ]
+        },
+        {
+          "gen": 19,
+          "ops": 9,
+          "tower": "O",
+          "cosine": 0.8825,
+          "root_idx": 112,
+          "root_type": "half-integer",
+          "verbs": [
+            "add",
+            "because",
+            "compress",
+            "if",
+            "measure",
+            "move",
+            "separate",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 20,
+          "ops": 7,
+          "tower": "O",
+          "cosine": 0.825,
+          "root_idx": 112,
+          "root_type": "half-integer",
+          "verbs": [
+            "add",
+            "break",
+            "if",
+            "measure",
+            "move",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 21,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "measure"
+          ]
+        },
+        {
+          "gen": 22,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "calculate",
+            "formula",
+            "if",
+            "measure"
+          ]
+        },
+        {
+          "gen": 23,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "calculate",
+            "combine",
+            "measure",
+            "sum"
+          ]
+        },
+        {
+          "gen": 24,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 44,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "break",
+            "calculate",
+            "sum"
+          ]
+        },
+        {
+          "gen": 25,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "calculate",
+            "if",
+            "sum"
+          ]
+        },
+        {
+          "gen": 26,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "combine",
+            "measure"
+          ]
+        },
+        {
+          "gen": 27,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "measure"
+          ]
+        },
+        {
+          "gen": 28,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 68,
+          "root_type": "integer",
+          "verbs": [
+            "formula",
+            "sum"
+          ]
+        },
+        {
+          "gen": 29,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "formula",
+            "if",
+            "measure"
+          ]
+        },
+        {
+          "gen": 30,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "formula",
+            "measure",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 31,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "formula",
+            "measure"
+          ]
+        },
+        {
+          "gen": 32,
+          "ops": 6,
+          "tower": "H",
+          "cosine": 0.9449,
+          "root_idx": 68,
+          "root_type": "integer",
+          "verbs": [
+            "combine",
+            "formula",
+            "if",
+            "measure",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 33,
+          "ops": 8,
+          "tower": "O",
+          "cosine": 0.7559,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "check",
+            "find",
+            "formula",
+            "if",
+            "measure",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 34,
+          "ops": 8,
+          "tower": "O",
+          "cosine": 0.7559,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "check",
+            "compress",
+            "formula",
+            "if",
+            "measure",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 35,
+          "ops": 7,
+          "tower": "O",
+          "cosine": 0.8528,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "check",
+            "find",
+            "formula",
+            "measure",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 36,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.9428,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "check",
+            "formula",
+            "if",
+            "measure"
+          ]
+        },
+        {
+          "gen": 37,
+          "ops": 6,
+          "tower": "H",
+          "cosine": 0.8944,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "calculate",
+            "formula",
+            "if",
+            "measure",
+            "sum"
+          ]
+        },
+        {
+          "gen": 38,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "check",
+            "measure"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "pred_math",
+      "final_gen": 34,
+      "chain_length": 29,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "swap",
+            "test",
+            "try",
+            "verify"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "test"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "identify",
+            "swap",
+            "test"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "optimize"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "choose",
+            "find"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "total"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "minimize",
+            "optimize",
+            "select",
+            "total"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "total"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "find",
+            "minimize",
+            "move"
+          ]
+        },
+        {
+          "gen": 16,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "formula",
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 17,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.8944,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "check",
+            "formula",
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 18,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 19,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "rule",
+            "verify"
+          ]
+        },
+        {
+          "gen": 20,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 21,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "rule",
+            "verify"
+          ]
+        },
+        {
+          "gen": 22,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 23,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 24,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 25,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "rule",
+            "verify"
+          ]
+        },
+        {
+          "gen": 26,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 27,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 28,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 29,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 30,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 31,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 32,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 33,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 34,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "rule"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "trans_math_nl",
+      "final_gen": 29,
+      "chain_length": 20,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "if",
+            "measure",
+            "move",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "if",
+            "measure",
+            "sum"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 6,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 112,
+          "root_type": "half-integer",
+          "verbs": [
+            "add",
+            "find",
+            "if",
+            "measure",
+            "move",
+            "sum"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "check",
+            "if",
+            "measure",
+            "total"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "check",
+            "if",
+            "measure"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.7906,
+          "root_idx": 112,
+          "root_type": "half-integer",
+          "verbs": [
+            "add",
+            "if",
+            "look",
+            "measure",
+            "sum"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "if",
+            "measure",
+            "sum"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "measure"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 68,
+          "root_type": "integer",
+          "verbs": [
+            "if",
+            "sum"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.8165,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "if",
+            "measure",
+            "sum"
+          ]
+        },
+        {
+          "gen": 11,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "measure"
+          ]
+        },
+        {
+          "gen": 17,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "identify"
+          ]
+        },
+        {
+          "gen": 13,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress"
+          ]
+        },
+        {
+          "gen": 14,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress"
+          ]
+        },
+        {
+          "gen": 15,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "calculate"
+          ]
+        },
+        {
+          "gen": 17,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "identify"
+          ]
+        },
+        {
+          "gen": 24,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress"
+          ]
+        },
+        {
+          "gen": 26,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "if",
+            "measure"
+          ]
+        },
+        {
+          "gen": 28,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 104,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "identify"
+          ]
+        },
+        {
+          "gen": 29,
+          "ops": 0,
+          "tower": "R",
+          "cosine": 0.0,
+          "root_idx": -1
+        }
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "opt_routing",
+      "final_gen": 20,
+      "chain_length": 11,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "swap",
+            "test",
+            "try",
+            "verify"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "test"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "identify",
+            "swap",
+            "test"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "optimize"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "choose",
+            "find"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "total"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "minimize",
+            "optimize",
+            "select",
+            "total"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "total"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "find",
+            "minimize",
+            "move"
+          ]
+        },
+        {
+          "gen": 20,
+          "ops": 0,
+          "tower": "R",
+          "cosine": 0.0,
+          "root_idx": -1
+        }
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "trans_nl_code",
+      "final_gen": 30,
+      "chain_length": 29,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8528,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "calculate",
+            "divide",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "divide"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "divide",
+            "sum"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "divide",
+            "sum"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "sum"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "sum"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "sum"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "divide",
+            "sum"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "divide",
+            "sum"
+          ]
+        },
+        {
+          "gen": 11,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average"
+          ]
+        },
+        {
+          "gen": 12,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "divide",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 13,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "accumulate",
+            "average",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 14,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 15,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "divide",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 16,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "divide",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 17,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "accumulate",
+            "average",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 18,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.8165,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 19,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 20,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 21,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 22,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.8165,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 23,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "divide",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 24,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "divide",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 25,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "divide",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 26,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "divide",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 27,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "divide",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 28,
+          "ops": 6,
+          "tower": "H",
+          "cosine": 0.8944,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "accumulate",
+            "average",
+            "divide",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 29,
+          "ops": 6,
+          "tower": "H",
+          "cosine": 0.8944,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "accumulate",
+            "average",
+            "divide",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 30,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "enumerate",
+            "sum",
+            "test"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt4",
+      "task_id": "pred_math",
+      "final_gen": 10,
+      "chain_length": 5,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 84,
+          "root_type": "integer",
+          "verbs": [
+            "find",
+            "identify",
+            "pattern"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "if"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "notice",
+            "subtract"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "observe",
+            "pattern"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "identify",
+            "pattern",
+            "rule"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "trans_math_nl",
+      "final_gen": 20,
+      "chain_length": 13,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "swap",
+            "test",
+            "try",
+            "verify"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "test"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "identify",
+            "swap",
+            "test"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "optimize"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "choose",
+            "find"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "total"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "minimize",
+            "optimize",
+            "select",
+            "total"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "total"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "find",
+            "minimize",
+            "move"
+          ]
+        },
+        {
+          "gen": 18,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "if",
+            "measure",
+            "total"
+          ]
+        },
+        {
+          "gen": 19,
+          "ops": 9,
+          "tower": "O",
+          "cosine": 0.8825,
+          "root_idx": 112,
+          "root_type": "half-integer",
+          "verbs": [
+            "add",
+            "because",
+            "compress",
+            "if",
+            "measure",
+            "move",
+            "separate",
+            "sum",
+            "total"
+          ]
+        },
+        {
+          "gen": 20,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.7906,
+          "root_idx": 112,
+          "root_type": "half-integer",
+          "verbs": [
+            "add",
+            "compress",
+            "if",
+            "measure",
+            "total"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gemini_flash",
+      "task_id": "trans_lang_lang",
+      "final_gen": 20,
+      "chain_length": 18,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "else",
+            "if"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "else",
+            "if"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "check",
+            "else",
+            "if"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 104,
+          "root_type": "integer",
+          "verbs": [
+            "else",
+            "if",
+            "translate"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 7,
+          "tower": "O",
+          "cosine": 0.9129,
+          "root_idx": 104,
+          "root_type": "integer",
+          "verbs": [
+            "check",
+            "convert",
+            "else",
+            "given",
+            "if",
+            "iterate",
+            "translate"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 6,
+          "tower": "H",
+          "cosine": 0.8944,
+          "root_idx": 104,
+          "root_type": "integer",
+          "verbs": [
+            "check",
+            "compress",
+            "else",
+            "if",
+            "merge",
+            "reduce"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 1.0,
+          "root_idx": 104,
+          "root_type": "integer",
+          "verbs": [
+            "convert",
+            "else",
+            "if",
+            "translate"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 104,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "else",
+            "if"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 8,
+          "tower": "O",
+          "cosine": 0.7559,
+          "root_idx": 60,
+          "root_type": "integer",
+          "verbs": [
+            "accumulate",
+            "check",
+            "convert",
+            "else",
+            "if",
+            "iterate",
+            "merge",
+            "transform"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 6,
+          "tower": "H",
+          "cosine": 0.75,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "accumulate",
+            "check",
+            "else",
+            "if",
+            "iterate",
+            "translate"
+          ]
+        },
+        {
+          "gen": 11,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "else",
+            "if"
+          ]
+        },
+        {
+          "gen": 13,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "map"
+          ]
+        },
+        {
+          "gen": 14,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "check",
+            "convert",
+            "map",
+            "then"
+          ]
+        },
+        {
+          "gen": 15,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress"
+          ]
+        },
+        {
+          "gen": 16,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "check",
+            "convert",
+            "map"
+          ]
+        },
+        {
+          "gen": 17,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "convert",
+            "map"
+          ]
+        },
+        {
+          "gen": 19,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "convert"
+          ]
+        },
+        {
+          "gen": 20,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "convert"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "pred_math",
+      "final_gen": 30,
+      "chain_length": 26,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 84,
+          "root_type": "integer",
+          "verbs": [
+            "find",
+            "identify",
+            "pattern"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "if"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 68,
+          "root_type": "integer",
+          "verbs": [
+            "if",
+            "sum"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 68,
+          "root_type": "integer",
+          "verbs": [
+            "if",
+            "sum"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "add"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "add"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "add"
+          ]
+        },
+        {
+          "gen": 12,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern",
+            "rule",
+            "sequence"
+          ]
+        },
+        {
+          "gen": 13,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 14,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "rule"
+          ]
+        },
+        {
+          "gen": 15,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.8944,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "pattern",
+            "rule",
+            "sequence"
+          ]
+        },
+        {
+          "gen": 16,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 17,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.8944,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "pattern",
+            "rule",
+            "sequence"
+          ]
+        },
+        {
+          "gen": 18,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 19,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 20,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 21,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 22,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 23,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "rule"
+          ]
+        },
+        {
+          "gen": 24,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 25,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.8944,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "pattern",
+            "rule",
+            "sequence"
+          ]
+        },
+        {
+          "gen": 26,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 27,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 28,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "pattern",
+            "rule"
+          ]
+        },
+        {
+          "gen": 29,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 108,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "rule"
+          ]
+        },
+        {
+          "gen": 30,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gemini_pro",
+      "task_id": "trans_math_nl",
+      "final_gen": 18,
+      "chain_length": 11,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "swap",
+            "test",
+            "try",
+            "verify"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "test"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "identify",
+            "swap",
+            "test"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "optimize"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "choose",
+            "find"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "total"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "minimize",
+            "optimize",
+            "select",
+            "total"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "total"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "find",
+            "minimize",
+            "move"
+          ]
+        },
+        {
+          "gen": 18,
+          "ops": 0,
+          "tower": "R",
+          "cosine": 0.0,
+          "root_idx": -1
+        }
+      ]
+    },
+    {
+      "model": "gpt4",
+      "task_id": "trans_nl_code",
+      "final_gen": 10,
+      "chain_length": 10,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8528,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "calculate",
+            "divide",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "divide"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "divide",
+            "sum"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8528,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "calculate",
+            "optimize",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 7,
+          "tower": "O",
+          "cosine": 0.7845,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "calculate",
+            "compute",
+            "iterate",
+            "reduce",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 7,
+          "tower": "O",
+          "cosine": 0.8111,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "calculate",
+            "compute",
+            "divide",
+            "iterate",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.8165,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 7,
+          "tower": "O",
+          "cosine": 0.9129,
+          "root_idx": 100,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "calculate",
+            "compress",
+            "minimize",
+            "reduce",
+            "sum",
+            "test"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "average",
+            "calculate",
+            "sum",
+            "test"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "pred_math",
+      "final_gen": 5,
+      "chain_length": 4,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 84,
+          "root_type": "integer",
+          "verbs": [
+            "find",
+            "identify",
+            "pattern"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "if"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 68,
+          "root_type": "integer",
+          "verbs": [
+            "if",
+            "sum"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 68,
+          "root_type": "integer",
+          "verbs": [
+            "if",
+            "sum"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt4o",
+      "task_id": "opt_routing",
+      "final_gen": 38,
+      "chain_length": 28,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "swap",
+            "test",
+            "try",
+            "verify"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "test"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "identify",
+            "swap",
+            "test"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "optimize"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "choose",
+            "find"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "total"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "minimize",
+            "optimize",
+            "select",
+            "total"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "total"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "find",
+            "minimize",
+            "move"
+          ]
+        },
+        {
+          "gen": 19,
+          "ops": 7,
+          "tower": "O",
+          "cosine": 0.7845,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "pattern",
+            "sequence",
+            "swap",
+            "test",
+            "then",
+            "total"
+          ]
+        },
+        {
+          "gen": 20,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "find",
+            "optimize",
+            "since",
+            "total"
+          ]
+        },
+        {
+          "gen": 21,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 56,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "choose",
+            "move",
+            "total"
+          ]
+        },
+        {
+          "gen": 22,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 56,
+          "root_type": "integer",
+          "verbs": [
+            "calculate",
+            "identify",
+            "move",
+            "total"
+          ]
+        },
+        {
+          "gen": 23,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.8165,
+          "root_idx": 56,
+          "root_type": "integer",
+          "verbs": [
+            "minimize",
+            "select",
+            "total"
+          ]
+        },
+        {
+          "gen": 24,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 56,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "choose",
+            "find",
+            "select",
+            "total"
+          ]
+        },
+        {
+          "gen": 25,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "total"
+          ]
+        },
+        {
+          "gen": 27,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "total"
+          ]
+        },
+        {
+          "gen": 28,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.9487,
+          "root_idx": 56,
+          "root_type": "integer",
+          "verbs": [
+            "choose",
+            "select",
+            "total"
+          ]
+        },
+        {
+          "gen": 29,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "maximize",
+            "total"
+          ]
+        },
+        {
+          "gen": 30,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 52,
+          "root_type": "integer",
+          "verbs": [
+            "find",
+            "total"
+          ]
+        },
+        {
+          "gen": 32,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 52,
+          "root_type": "integer",
+          "verbs": [
+            "find",
+            "total"
+          ]
+        },
+        {
+          "gen": 33,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 52,
+          "root_type": "integer",
+          "verbs": [
+            "find",
+            "total"
+          ]
+        },
+        {
+          "gen": 34,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 60,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "reduce",
+            "select",
+            "total"
+          ]
+        },
+        {
+          "gen": 35,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 56,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "minimize",
+            "select",
+            "total"
+          ]
+        },
+        {
+          "gen": 36,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 52,
+          "root_type": "integer",
+          "verbs": [
+            "choose",
+            "find",
+            "minimize",
+            "total"
+          ]
+        },
+        {
+          "gen": 37,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 56,
+          "root_type": "integer",
+          "verbs": [
+            "choose",
+            "total"
+          ]
+        },
+        {
+          "gen": 38,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "total"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt4",
+      "task_id": "opt_routing",
+      "final_gen": 10,
+      "chain_length": 10,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "swap",
+            "test",
+            "try",
+            "verify"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "test"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "identify",
+            "swap",
+            "test"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "optimize"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "choose",
+            "find"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "total"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "minimize",
+            "optimize",
+            "select",
+            "total"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "total"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "find",
+            "minimize",
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude",
+      "task_id": "opt_routing",
+      "final_gen": 5,
+      "chain_length": 5,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "swap",
+            "test",
+            "try",
+            "verify"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "test"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "identify",
+            "swap",
+            "test"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 36,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "swap"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 12,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "check",
+            "pick",
+            "swap"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "haiku",
+      "task_id": "opt_routing",
+      "final_gen": 37,
+      "chain_length": 29,
+      "steps": [
+        {
+          "gen": 1,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "swap",
+            "test",
+            "try",
+            "verify"
+          ]
+        },
+        {
+          "gen": 2,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "test"
+          ]
+        },
+        {
+          "gen": 3,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "break",
+            "identify",
+            "swap",
+            "test"
+          ]
+        },
+        {
+          "gen": 4,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 20,
+          "root_type": "integer",
+          "verbs": [
+            "optimize"
+          ]
+        },
+        {
+          "gen": 5,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "choose",
+            "find"
+          ]
+        },
+        {
+          "gen": 6,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "total"
+          ]
+        },
+        {
+          "gen": 7,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "minimize",
+            "optimize",
+            "select",
+            "total"
+          ]
+        },
+        {
+          "gen": 8,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress"
+          ]
+        },
+        {
+          "gen": 9,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 64,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "total"
+          ]
+        },
+        {
+          "gen": 10,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 72,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "find",
+            "minimize",
+            "move"
+          ]
+        },
+        {
+          "gen": 19,
+          "ops": 7,
+          "tower": "O",
+          "cosine": 0.7845,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "optimize",
+            "pattern",
+            "sequence",
+            "swap",
+            "test",
+            "then",
+            "total"
+          ]
+        },
+        {
+          "gen": 20,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "test",
+            "total"
+          ]
+        },
+        {
+          "gen": 21,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "check",
+            "swap",
+            "test",
+            "total"
+          ]
+        },
+        {
+          "gen": 22,
+          "ops": 6,
+          "tower": "H",
+          "cosine": 0.75,
+          "root_idx": 112,
+          "root_type": "half-integer",
+          "verbs": [
+            "check",
+            "compress",
+            "select",
+            "sequence",
+            "swap",
+            "total"
+          ]
+        },
+        {
+          "gen": 23,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 12,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "select",
+            "swap",
+            "test",
+            "total"
+          ]
+        },
+        {
+          "gen": 24,
+          "ops": 1,
+          "tower": "R",
+          "cosine": 0.7071,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress"
+          ]
+        },
+        {
+          "gen": 25,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 104,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "pattern"
+          ]
+        },
+        {
+          "gen": 26,
+          "ops": 8,
+          "tower": "O",
+          "cosine": 0.8839,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "assume",
+            "check",
+            "compress",
+            "if",
+            "pattern",
+            "search",
+            "test",
+            "total"
+          ]
+        },
+        {
+          "gen": 27,
+          "ops": 8,
+          "tower": "O",
+          "cosine": 0.8839,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "check",
+            "compress",
+            "given",
+            "if",
+            "pattern",
+            "test",
+            "total",
+            "try"
+          ]
+        },
+        {
+          "gen": 28,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "check",
+            "compress",
+            "test",
+            "total"
+          ]
+        },
+        {
+          "gen": 29,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.8165,
+          "root_idx": 0,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "isolate",
+            "test"
+          ]
+        },
+        {
+          "gen": 30,
+          "ops": 2,
+          "tower": "C",
+          "cosine": 1.0,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "test"
+          ]
+        },
+        {
+          "gen": 31,
+          "ops": 5,
+          "tower": "H",
+          "cosine": 0.8018,
+          "root_idx": 68,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "identify",
+            "then",
+            "total",
+            "try"
+          ]
+        },
+        {
+          "gen": 32,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.8165,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "compress",
+            "identify",
+            "test"
+          ]
+        },
+        {
+          "gen": 33,
+          "ops": 7,
+          "tower": "O",
+          "cosine": 0.825,
+          "root_idx": 112,
+          "root_type": "half-integer",
+          "verbs": [
+            "calculate",
+            "check",
+            "compress",
+            "given",
+            "test",
+            "total",
+            "try"
+          ]
+        },
+        {
+          "gen": 34,
+          "ops": 8,
+          "tower": "O",
+          "cosine": 0.8839,
+          "root_idx": 24,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "check",
+            "compress",
+            "given",
+            "identify",
+            "if",
+            "test",
+            "total"
+          ]
+        },
+        {
+          "gen": 35,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.866,
+          "root_idx": 4,
+          "root_type": "integer",
+          "verbs": [
+            "check",
+            "compress",
+            "test",
+            "total"
+          ]
+        },
+        {
+          "gen": 36,
+          "ops": 4,
+          "tower": "H",
+          "cosine": 0.7071,
+          "root_idx": 8,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "compress",
+            "find",
+            "test"
+          ]
+        },
+        {
+          "gen": 37,
+          "ops": 3,
+          "tower": "C",
+          "cosine": 0.8165,
+          "root_idx": 16,
+          "root_type": "integer",
+          "verbs": [
+            "add",
+            "compress",
+            "test"
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "chains_analyzed": 30,
+    "converging": 15,
+    "diverging": 8,
+    "stable": 7,
+    "by_generation": {
+      "1": {
+        "mean_cosine": 0.8299,
+        "n": 30
+      },
+      "2": {
+        "mean_cosine": 0.7071,
+        "n": 26
+      },
+      "3": {
+        "mean_cosine": 0.7595,
+        "n": 30
+      },
+      "4": {
+        "mean_cosine": 0.7975,
+        "n": 28
+      },
+      "5": {
+        "mean_cosine": 0.9649,
+        "n": 30
+      },
+      "6": {
+        "mean_cosine": 0.7395,
+        "n": 23
+      },
+      "7": {
+        "mean_cosine": 0.8578,
+        "n": 25
+      },
+      "8": {
+        "mean_cosine": 0.7636,
+        "n": 24
+      },
+      "9": {
+        "mean_cosine": 0.9618,
+        "n": 24
+      },
+      "10": {
+        "mean_cosine": 0.7328,
+        "n": 22
+      },
+      "11": {
+        "mean_cosine": 0.7474,
+        "n": 6
+      },
+      "12": {
+        "mean_cosine": 0.726,
+        "n": 5
+      },
+      "13": {
+        "mean_cosine": 0.7789,
+        "n": 6
+      },
+      "14": {
+        "mean_cosine": 0.7778,
+        "n": 7
+      },
+      "15": {
+        "mean_cosine": 0.8104,
+        "n": 7
+      },
+      "16": {
+        "mean_cosine": 0.8278,
+        "n": 8
+      },
+      "17": {
+        "mean_cosine": 0.7932,
+        "n": 10
+      },
+      "18": {
+        "mean_cosine": 0.7531,
+        "n": 10
+      },
+      "19": {
+        "mean_cosine": 0.8393,
+        "n": 18
+      },
+      "20": {
+        "mean_cosine": 0.8191,
+        "n": 17
+      },
+      "21": {
+        "mean_cosine": 0.8819,
+        "n": 8
+      },
+      "22": {
+        "mean_cosine": 0.7937,
+        "n": 9
+      },
+      "23": {
+        "mean_cosine": 0.8256,
+        "n": 8
+      },
+      "24": {
+        "mean_cosine": 0.8106,
+        "n": 9
+      },
+      "25": {
+        "mean_cosine": 0.9063,
+        "n": 8
+      },
+      "26": {
+        "mean_cosine": 0.8966,
+        "n": 8
+      },
+      "27": {
+        "mean_cosine": 0.8313,
+        "n": 8
+      },
+      "28": {
+        "mean_cosine": 0.883,
+        "n": 9
+      },
+      "29": {
+        "mean_cosine": 0.8927,
+        "n": 8
+      },
+      "30": {
+        "mean_cosine": 0.8156,
+        "n": 8
+      },
+      "31": {
+        "mean_cosine": 0.845,
+        "n": 5
+      },
+      "32": {
+        "mean_cosine": 0.8647,
+        "n": 6
+      },
+      "33": {
+        "mean_cosine": 0.823,
+        "n": 6
+      },
+      "34": {
+        "mean_cosine": 0.8044,
+        "n": 6
+      },
+      "35": {
+        "mean_cosine": 0.7972,
+        "n": 5
+      },
+      "36": {
+        "mean_cosine": 0.8003,
+        "n": 5
+      },
+      "37": {
+        "mean_cosine": 0.8836,
+        "n": 5
+      },
+      "38": {
+        "mean_cosine": 0.8279,
+        "n": 2
+      }
+    }
+  }
+}
