@@ -1,0 +1,119 @@
+{
+  "4": {
+    "trained": {
+      "label": "trained-4D",
+      "dim": 4,
+      "num_roots": 24,
+      "mean_cos": 0.9977686886439092,
+      "std_cos": 0.002410227315181494,
+      "max_cos": 0.9999877602996607,
+      "min_cos": 0.9779796032379391,
+      "median_cos": 0.9984797460599409
+    },
+    "random_proj": {
+      "label": "random-proj-4D",
+      "dim": 4,
+      "num_roots": 24,
+      "mean_cos": 0.8983416496235399,
+      "std_cos": 0.04996400296674482,
+      "max_cos": 0.9985175517830552,
+      "min_cos": 0.7376249348716492,
+      "median_cos": 0.8967207427267386
+    },
+    "null": {
+      "label": "null-4D",
+      "dim": 4,
+      "num_roots": 24,
+      "mean_cos": 0.8940782503390475,
+      "std_cos": 0.051535967444990956,
+      "max_cos": 0.9958772944962357,
+      "min_cos": 0.7415302745885635,
+      "median_cos": 0.8934168485930943
+    }
+  },
+  "8": {
+    "trained": {
+      "label": "trained-8D",
+      "dim": 8,
+      "num_roots": 240,
+      "mean_cos": 0.9973688305444425,
+      "std_cos": 0.0022876299586488138,
+      "max_cos": 0.9999109160581132,
+      "min_cos": 0.9810414716834903,
+      "median_cos": 0.9980118475528411,
+      "pct_integer_roots": 0.0,
+      "pct_half_integer_roots": 100.0
+    },
+    "random_proj": {
+      "label": "random-proj-8D",
+      "dim": 8,
+      "num_roots": 240,
+      "mean_cos": 0.8498777948730515,
+      "std_cos": 0.03856876079426369,
+      "max_cos": 0.9828524111285261,
+      "min_cos": 0.7735736783772433,
+      "median_cos": 0.844342979864581,
+      "pct_integer_roots": 51.5,
+      "pct_half_integer_roots": 48.5
+    },
+    "null": {
+      "label": "null-8D",
+      "dim": 8,
+      "num_roots": 240,
+      "mean_cos": 0.8489297234846499,
+      "std_cos": 0.03803239883474834,
+      "max_cos": 0.9822878334503559,
+      "min_cos": 0.7639333873627506,
+      "median_cos": 0.8437853670593194,
+      "pct_integer_roots": 49.0,
+      "pct_half_integer_roots": 51.0
+    }
+  },
+  "16": {
+    "trained": {
+      "label": "trained-16D",
+      "dim": 16,
+      "num_roots": 240,
+      "mean_cos": 0.9877803089241389,
+      "std_cos": 0.008937502885343295,
+      "max_cos": 0.9982015352676172,
+      "min_cos": 0.8937652558429773,
+      "median_cos": 0.9898384995202689,
+      "pct_integer_roots": 0.0,
+      "pct_half_integer_roots": 100.0
+    },
+    "random_proj": {
+      "label": "random-proj-16D",
+      "dim": 16,
+      "num_roots": 240,
+      "mean_cos": 0.5242753337907438,
+      "std_cos": 0.09727529717776383,
+      "max_cos": 0.8149766821798918,
+      "min_cos": 0.237023842705084,
+      "median_cos": 0.52350660071134,
+      "pct_integer_roots": 54.8,
+      "pct_half_integer_roots": 45.2
+    },
+    "null": {
+      "label": "null-16D",
+      "dim": 16,
+      "num_roots": 240,
+      "mean_cos": 0.5911249255831538,
+      "std_cos": 0.1066691588920379,
+      "max_cos": 0.8499510795650514,
+      "min_cos": 0.25727360632876856,
+      "median_cos": 0.5927161164994346,
+      "pct_integer_roots": 42.5,
+      "pct_half_integer_roots": 57.5
+    }
+  },
+  "metadata": {
+    "device": "mps",
+    "num_images": 1000,
+    "embed_dim": 1280,
+    "train_epochs": 20,
+    "train_lr": 0.001,
+    "e8_roots": 240,
+    "d4_roots": 24
+  }
+}
