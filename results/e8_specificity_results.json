@@ -1,0 +1,92 @@
+{
+  "e8_trained": {
+    "label": "E8-trained",
+    "dim": 8,
+    "num_roots": 240,
+    "mean_cos": 0.9967244449646523,
+    "std_cos": 0.0024603230629252366,
+    "max_cos": 0.9997049127993042,
+    "min_cos": 0.9803901500916712,
+    "median_cos": 0.9974059708004288,
+    "pct_integer_roots": 100.0,
+    "pct_half_integer_roots": 0.0
+  },
+  "random_codebooks": [
+    {
+      "label": "Random-1-trained",
+      "dim": 8,
+      "num_roots": 240,
+      "mean_cos": 0.9932305973797783,
+      "std_cos": 0.004898087185867313,
+      "max_cos": 0.9993734065337614,
+      "min_cos": 0.9511318214976173,
+      "median_cos": 0.9945162373721876,
+      "pct_integer_roots": 100.0,
+      "pct_half_integer_roots": 0.0
+    },
+    {
+      "label": "Random-2-trained",
+      "dim": 8,
+      "num_roots": 240,
+      "mean_cos": 0.9958200582501782,
+      "std_cos": 0.0034492603439968865,
+      "max_cos": 0.9998831576503953,
+      "min_cos": 0.9632700981973988,
+      "median_cos": 0.9968349110220072,
+      "pct_integer_roots": 0.0,
+      "pct_half_integer_roots": 100.0
+    },
+    {
+      "label": "Random-3-trained",
+      "dim": 8,
+      "num_roots": 240,
+      "mean_cos": 0.9965074257373513,
+      "std_cos": 0.002428194758598825,
+      "max_cos": 0.9997296822162909,
+      "min_cos": 0.9830764532430223,
+      "median_cos": 0.9971745165918741,
+      "pct_integer_roots": 0.0,
+      "pct_half_integer_roots": 100.0
+    },
+    {
+      "label": "Random-4-trained",
+      "dim": 8,
+      "num_roots": 240,
+      "mean_cos": 0.9965836877027966,
+      "std_cos": 0.0025046328327379907,
+      "max_cos": 0.9998764929510187,
+      "min_cos": 0.9611260300707498,
+      "median_cos": 0.9971674826192778,
+      "pct_integer_roots": 0.0,
+      "pct_half_integer_roots": 100.0
+    },
+    {
+      "label": "Random-5-trained",
+      "dim": 8,
+      "num_roots": 240,
+      "mean_cos": 0.9961131887979803,
+      "std_cos": 0.00296220785546964,
+      "max_cos": 0.9998502211219937,
+      "min_cos": 0.9736929179469198,
+      "median_cos": 0.9969273790416016,
+      "pct_integer_roots": 0.0,
+      "pct_half_integer_roots": 100.0
+    }
+  ],
+  "random_codebook_avg_mean_cos": 0.995651,
+  "random_codebook_std_mean_cos": 0.001241,
+  "cross_test": {
+    "label": "E8-proj\u2192random-cb",
+    "dim": 8,
+    "num_roots": 240,
+    "mean_cos": 0.9231536824889447,
+    "std_cos": 0.012834473652900738,
+    "max_cos": 0.9652570946761712,
+    "min_cos": 0.8600917692630979,
+    "median_cos": 0.9243235863345539,
+    "pct_integer_roots": 0.0,
+    "pct_half_integer_roots": 100.0
+  },
+  "e8_advantage": 0.001073,
+  "verdict": "marginal"
+}

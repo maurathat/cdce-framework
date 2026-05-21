@@ -1,0 +1,127 @@
+{
+  "real_vs_e8": {
+    "label": "Real operators \u2192 E8",
+    "n_vectors": 158,
+    "n_codebook": 240,
+    "mean_cos": 0.8154730274965104,
+    "std_cos": 0.10478209238313699,
+    "max_cos": 0.9999999999999998,
+    "min_cos": 0.7071067811865475,
+    "median_cos": 0.801783725737273,
+    "pct_integer": 95.6,
+    "pct_half_integer": 4.4
+  },
+  "real_vs_random_cb_avg": 0.8254,
+  "sparse_random_vs_e8": {
+    "label": "Sparsity-matched random \u2192 E8",
+    "n_vectors": 158,
+    "n_codebook": 240,
+    "mean_cos": 0.8433818502778476,
+    "std_cos": 0.10425628871425349,
+    "max_cos": 0.9999995088847143,
+    "min_cos": 0.7071067811865475,
+    "median_cos": 0.852608550052302,
+    "pct_integer": 96.2,
+    "pct_half_integer": 3.8
+  },
+  "sparse_random_vs_random_cb": {
+    "label": "Sparsity-matched random \u2192 random CB",
+    "n_vectors": 158,
+    "n_codebook": 240,
+    "mean_cos": 0.8306490853866619,
+    "std_cos": 0.056656281843073,
+    "max_cos": 0.9346754953341718,
+    "min_cos": 0.6737769244041633,
+    "median_cos": 0.8299142267250674,
+    "pct_integer": 26.6,
+    "pct_half_integer": 73.4
+  },
+  "dense_random_vs_e8": {
+    "label": "Dense random \u2192 E8",
+    "n_vectors": 158,
+    "n_codebook": 240,
+    "mean_cos": 0.8573918717213045,
+    "std_cos": 0.0386053076381275,
+    "max_cos": 0.9494911063154176,
+    "min_cos": 0.7759408493763221,
+    "median_cos": 0.8549523414014186,
+    "pct_integer": 44.9,
+    "pct_half_integer": 55.1
+  },
+  "dense_random_vs_random_cb": {
+    "label": "Dense random \u2192 random CB",
+    "n_vectors": 158,
+    "n_codebook": 240,
+    "mean_cos": 0.8271041709017469,
+    "std_cos": 0.054696242989721644,
+    "max_cos": 0.968601545578242,
+    "min_cos": 0.672348168981635,
+    "median_cos": 0.8327118518261541,
+    "pct_integer": 48.1,
+    "pct_half_integer": 51.9
+  },
+  "random_codebook_results": [
+    {
+      "label": "Real operators \u2192 random CB #1",
+      "n_vectors": 158,
+      "n_codebook": 240,
+      "mean_cos": 0.805418564359469,
+      "std_cos": 0.052104170570601425,
+      "max_cos": 0.9234819727048396,
+      "min_cos": 0.6499244496938295,
+      "median_cos": 0.8210318278792692,
+      "pct_integer": 34.2,
+      "pct_half_integer": 65.8
+    },
+    {
+      "label": "Real operators \u2192 random CB #2",
+      "n_vectors": 158,
+      "n_codebook": 240,
+      "mean_cos": 0.8580650165987056,
+      "std_cos": 0.06956900416916952,
+      "max_cos": 0.9584497446319913,
+      "min_cos": 0.7196595680777241,
+      "median_cos": 0.8483588915480282,
+      "pct_integer": 53.8,
+      "pct_half_integer": 46.2
+    },
+    {
+      "label": "Real operators \u2192 random CB #3",
+      "n_vectors": 158,
+      "n_codebook": 240,
+      "mean_cos": 0.8039245008746649,
+      "std_cos": 0.059106801971088974,
+      "max_cos": 0.9386984601293122,
+      "min_cos": 0.7317289925977781,
+      "median_cos": 0.7954434988448806,
+      "pct_integer": 70.3,
+      "pct_half_integer": 29.7
+    },
+    {
+      "label": "Real operators \u2192 random CB #4",
+      "n_vectors": 158,
+      "n_codebook": 240,
+      "mean_cos": 0.8277714785787735,
+      "std_cos": 0.05991268858545264,
+      "max_cos": 0.9330144919029897,
+      "min_cos": 0.6865820517590121,
+      "median_cos": 0.8496033507643184,
+      "pct_integer": 40.5,
+      "pct_half_integer": 59.5
+    },
+    {
+      "label": "Real operators \u2192 random CB #5",
+      "n_vectors": 158,
+      "n_codebook": 240,
+      "mean_cos": 0.8319511930144594,
+      "std_cos": 0.052723521033915026,
+      "max_cos": 0.9633592225680243,
+      "min_cos": 0.7017069861956543,
+      "median_cos": 0.8345277759961494,
+      "pct_integer": 64.6,
+      "pct_half_integer": 35.4
+    }
+  ],
+  "e8_advantage_over_random_cb": -0.009953,
+  "real_vs_sparse_random_advantage": -0.027909
+}
