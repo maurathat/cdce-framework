@@ -1,0 +1,468 @@
+{
+  "experiment": "prompt_ablation",
+  "timestamp": "20260521_140131",
+  "budget": 125,
+  "model": "claude-sonnet-4-20250514",
+  "modes": [
+    "A_compress",
+    "B_budget_only",
+    "C_neutral"
+  ],
+  "results": [
+    {
+      "task_id": "opt_routing",
+      "task_name": "Route Planning",
+      "family": "optimization",
+      "mode": "A_compress",
+      "operator_count": 3,
+      "unique_verbs": [
+        "check",
+        "swap",
+        "then"
+      ],
+      "word_count": 56,
+      "output_tokens": 125,
+      "reuse_ratio": 0.0
+    },
+    {
+      "task_id": "opt_routing",
+      "task_name": "Route Planning",
+      "family": "optimization",
+      "mode": "B_budget_only",
+      "operator_count": 2,
+      "unique_verbs": [
+        "identify",
+        "test"
+      ],
+      "word_count": 66,
+      "output_tokens": 125,
+      "reuse_ratio": 0.0
+    },
+    {
+      "task_id": "opt_routing",
+      "task_name": "Route Planning",
+      "family": "optimization",
+      "mode": "C_neutral",
+      "operator_count": 1,
+      "unique_verbs": [
+        "find"
+      ],
+      "word_count": 64,
+      "output_tokens": 125,
+      "reuse_ratio": 0.0
+    },
+    {
+      "task_id": "opt_portfolio",
+      "task_name": "Resource Allocation",
+      "family": "optimization",
+      "mode": "A_compress",
+      "operator_count": 2,
+      "unique_verbs": [
+        "add",
+        "minimize"
+      ],
+      "word_count": 57,
+      "output_tokens": 125,
+      "reuse_ratio": 0.33333333333333337
+    },
+    {
+      "task_id": "opt_portfolio",
+      "task_name": "Resource Allocation",
+      "family": "optimization",
+      "mode": "B_budget_only",
+      "operator_count": 2,
+      "unique_verbs": [
+        "calculate",
+        "minimize"
+      ],
+      "word_count": 43,
+      "output_tokens": 125,
+      "reuse_ratio": 0.0
+    },
+    {
+      "task_id": "opt_portfolio",
+      "task_name": "Resource Allocation",
+      "family": "optimization",
+      "mode": "C_neutral",
+      "operator_count": 2,
+      "unique_verbs": [
+        "minimize",
+        "total"
+      ],
+      "word_count": 62,
+      "output_tokens": 125,
+      "reuse_ratio": 0.5
+    },
+    {
+      "task_id": "opt_schedule",
+      "task_name": "Scheduling",
+      "family": "optimization",
+      "mode": "A_compress",
+      "operator_count": 2,
+      "unique_verbs": [
+        "identify",
+        "separate"
+      ],
+      "word_count": 48,
+      "output_tokens": 125,
+      "reuse_ratio": 0.0
+    },
+    {
+      "task_id": "opt_schedule",
+      "task_name": "Scheduling",
+      "family": "optimization",
+      "mode": "B_budget_only",
+      "operator_count": 1,
+      "unique_verbs": [
+        "identify"
+      ],
+      "word_count": 57,
+      "output_tokens": 125,
+      "reuse_ratio": 0.0
+    },
+    {
+      "task_id": "opt_schedule",
+      "task_name": "Scheduling",
+      "family": "optimization",
+      "mode": "C_neutral",
+      "operator_count": 2,
+      "unique_verbs": [
+        "identify",
+        "look"
+      ],
+      "word_count": 74,
+      "output_tokens": 125,
+      "reuse_ratio": 0.33333333333333337
+    },
+    {
+      "task_id": "pred_math",
+      "task_name": "Sequence Prediction",
+      "family": "prediction",
+      "mode": "A_compress",
+      "operator_count": 2,
+      "unique_verbs": [
+        "pattern",
+        "rule"
+      ],
+      "word_count": 45,
+      "output_tokens": 125,
+      "reuse_ratio": 0.0
+    },
+    {
+      "task_id": "pred_math",
+      "task_name": "Sequence Prediction",
+      "family": "prediction",
+      "mode": "B_budget_only",
+      "operator_count": 3,
+      "unique_verbs": [
+        "look",
+        "pattern",
+        "rule"
+      ],
+      "word_count": 53,
+      "output_tokens": 125,
+      "reuse_ratio": 0.0
+    },
+    {
+      "task_id": "pred_math",
+      "task_name": "Sequence Prediction",
+      "family": "prediction",
+      "mode": "C_neutral",
+      "operator_count": 6,
+      "unique_verbs": [
+        "find",
+        "given",
+        "look",
+        "notice",
+        "pattern",
+        "sequence"
+      ],
+      "word_count": 66,
+      "output_tokens": 125,
+      "reuse_ratio": 0.1428571428571429
+    },
+    {
+      "task_id": "pred_music",
+      "task_name": "Musical Pattern",
+      "family": "prediction",
+      "mode": "A_compress",
+      "operator_count": 3,
+      "unique_verbs": [
+        "pattern",
+        "repeat",
+        "sequence"
+      ],
+      "word_count": 41,
+      "output_tokens": 125,
+      "reuse_ratio": 0.0
+    },
+    {
+      "task_id": "pred_music",
+      "task_name": "Musical Pattern",
+      "family": "prediction",
+      "mode": "B_budget_only",
+      "operator_count": 0,
+      "unique_verbs": [],
+      "word_count": 50,
+      "output_tokens": 125,
+      "reuse_ratio": 0.0
+    },
+    {
+      "task_id": "pred_music",
+      "task_name": "Musical Pattern",
+      "family": "prediction",
+      "mode": "C_neutral",
+      "operator_count": 5,
+      "unique_verbs": [
+        "given",
+        "identify",
+        "map",
+        "pattern",
+        "sequence"
+      ],
+      "word_count": 58,
+      "output_tokens": 125,
+      "reuse_ratio": 0.0
+    },
+    {
+      "task_id": "pred_code",
+      "task_name": "Code Completion",
+      "family": "prediction",
+      "mode": "A_compress",
+      "operator_count": 3,
+      "unique_verbs": [
+        "pattern",
+        "sum",
+        "transform"
+      ],
+      "word_count": 49,
+      "output_tokens": 125,
+      "reuse_ratio": 0.5
+    },
+    {
+      "task_id": "pred_code",
+      "task_name": "Code Completion",
+      "family": "prediction",
+      "mode": "B_budget_only",
+      "operator_count": 3,
+      "unique_verbs": [
+        "look",
+        "pattern",
+        "sum"
+      ],
+      "word_count": 51,
+      "output_tokens": 125,
+      "reuse_ratio": 0.0
+    },
+    {
+      "task_id": "pred_code",
+      "task_name": "Code Completion",
+      "family": "prediction",
+      "mode": "C_neutral",
+      "operator_count": 3,
+      "unique_verbs": [
+        "given",
+        "identify",
+        "pattern"
+      ],
+      "word_count": 56,
+      "output_tokens": 125,
+      "reuse_ratio": 0.0
+    },
+    {
+      "task_id": "trans_nl_code",
+      "task_name": "Natural Language \u2192 Code",
+      "family": "translation",
+      "mode": "A_compress",
+      "operator_count": 4,
+      "unique_verbs": [
+        "average",
+        "calculate",
+        "sum",
+        "test"
+      ],
+      "word_count": 53,
+      "output_tokens": 125,
+      "reuse_ratio": 0.0
+    },
+    {
+      "task_id": "trans_nl_code",
+      "task_name": "Natural Language \u2192 Code",
+      "family": "translation",
+      "mode": "B_budget_only",
+      "operator_count": 6,
+      "unique_verbs": [
+        "average",
+        "calculate",
+        "divide",
+        "enumerate",
+        "sum",
+        "test"
+      ],
+      "word_count": 65,
+      "output_tokens": 125,
+      "reuse_ratio": 0.25
+    },
+    {
+      "task_id": "trans_nl_code",
+      "task_name": "Natural Language \u2192 Code",
+      "family": "translation",
+      "mode": "C_neutral",
+      "operator_count": 3,
+      "unique_verbs": [
+        "average",
+        "break",
+        "calculate"
+      ],
+      "word_count": 75,
+      "output_tokens": 125,
+      "reuse_ratio": 0.4
+    },
+    {
+      "task_id": "trans_lang_lang",
+      "task_name": "Python \u2192 JavaScript",
+      "family": "translation",
+      "mode": "A_compress",
+      "operator_count": 3,
+      "unique_verbs": [
+        "assign",
+        "check",
+        "convert"
+      ],
+      "word_count": 58,
+      "output_tokens": 125,
+      "reuse_ratio": 0.0
+    },
+    {
+      "task_id": "trans_lang_lang",
+      "task_name": "Python \u2192 JavaScript",
+      "family": "translation",
+      "mode": "B_budget_only",
+      "operator_count": 1,
+      "unique_verbs": [
+        "check"
+      ],
+      "word_count": 62,
+      "output_tokens": 125,
+      "reuse_ratio": 0.0
+    },
+    {
+      "task_id": "trans_lang_lang",
+      "task_name": "Python \u2192 JavaScript",
+      "family": "translation",
+      "mode": "C_neutral",
+      "operator_count": 1,
+      "unique_verbs": [
+        "convert"
+      ],
+      "word_count": 67,
+      "output_tokens": 125,
+      "reuse_ratio": 0.0
+    },
+    {
+      "task_id": "trans_math_nl",
+      "task_name": "Math \u2192 Natural Language",
+      "family": "translation",
+      "mode": "A_compress",
+      "operator_count": 3,
+      "unique_verbs": [
+        "if",
+        "measure",
+        "sum"
+      ],
+      "word_count": 72,
+      "output_tokens": 125,
+      "reuse_ratio": 0.25
+    },
+    {
+      "task_id": "trans_math_nl",
+      "task_name": "Math \u2192 Natural Language",
+      "family": "translation",
+      "mode": "B_budget_only",
+      "operator_count": 3,
+      "unique_verbs": [
+        "if",
+        "measure",
+        "move"
+      ],
+      "word_count": 65,
+      "output_tokens": 125,
+      "reuse_ratio": 0.0
+    },
+    {
+      "task_id": "trans_math_nl",
+      "task_name": "Math \u2192 Natural Language",
+      "family": "translation",
+      "mode": "C_neutral",
+      "operator_count": 4,
+      "unique_verbs": [
+        "break",
+        "look",
+        "map",
+        "pattern"
+      ],
+      "word_count": 88,
+      "output_tokens": 125,
+      "reuse_ratio": 0.0
+    }
+  ],
+  "summaries": {
+    "A_compress": {
+      "mean_ops": 2.7777777777777777,
+      "median_ops": 3.0,
+      "std_ops": 0.6285393610547089,
+      "mean_words": 53.22222222222222,
+      "mean_tokens": 125.0,
+      "n": 9,
+      "ops_list": [
+        3,
+        2,
+        2,
+        2,
+        3,
+        3,
+        4,
+        3,
+        3
+      ]
+    },
+    "B_budget_only": {
+      "mean_ops": 2.3333333333333335,
+      "median_ops": 2.0,
+      "std_ops": 1.632993161855452,
+      "mean_words": 56.888888888888886,
+      "mean_tokens": 125.0,
+      "n": 9,
+      "ops_list": [
+        2,
+        2,
+        1,
+        3,
+        0,
+        3,
+        6,
+        1,
+        3
+      ]
+    },
+    "C_neutral": {
+      "mean_ops": 3.0,
+      "median_ops": 3.0,
+      "std_ops": 1.632993161855452,
+      "mean_words": 67.77777777777777,
+      "mean_tokens": 125.0,
+      "n": 9,
+      "ops_list": [
+        1,
+        2,
+        2,
+        6,
+        5,
+        3,
+        3,
+        1,
+        4
+      ]
+    }
+  }
+}
