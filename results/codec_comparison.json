@@ -1,0 +1,73 @@
+{
+  "E8-240": {
+    "label": "E8-240",
+    "codebook_size": 240,
+    "bits_per_vector": 7.91,
+    "mean_cosine": 0.820055,
+    "mean_error": 0.179945,
+    "angle_preservation": 0.559987,
+    "round_trip_drift": 0.551121,
+    "efficiency_per_bit": 0.070823,
+    "codebook_utilization": 0.1125,
+    "unique_entries_used": 27
+  },
+  "Random-240": {
+    "label": "Random-240",
+    "codebook_size": 240,
+    "bits_per_vector": 7.91,
+    "mean_cosine": 0.82621,
+    "mean_cosine_std": 0.015662,
+    "mean_error": 0.17379,
+    "angle_preservation": 0.693731,
+    "angle_preservation_std": 0.025524,
+    "round_trip_drift": 0.580525,
+    "efficiency_per_bit": 0.087738,
+    "codebook_utilization": 0.2367,
+    "unique_entries_used": 56.8,
+    "n_trials": 10
+  },
+  "KMeans-240": {
+    "label": "KMeans-240",
+    "codebook_size": 240,
+    "bits_per_vector": 7.91,
+    "mean_cosine": 0.997335,
+    "mean_error": 0.002665,
+    "angle_preservation": 0.994259,
+    "round_trip_drift": 0.036702,
+    "efficiency_per_bit": 0.125746,
+    "codebook_utilization": 1.0,
+    "unique_entries_used": 240
+  },
+  "Random-256": {
+    "label": "Random-256",
+    "codebook_size": 256,
+    "bits_per_vector": 8.0,
+    "mean_cosine": 0.830851,
+    "mean_cosine_std": 0.012522,
+    "mean_error": 0.169149,
+    "angle_preservation": 0.698328,
+    "angle_preservation_std": 0.023667,
+    "round_trip_drift": 0.57314,
+    "efficiency_per_bit": 0.087291,
+    "codebook_utilization": 0.2293,
+    "unique_entries_used": 58.7,
+    "n_trials": 10
+  },
+  "KMeans-256": {
+    "label": "KMeans-256",
+    "codebook_size": 256,
+    "bits_per_vector": 8.0,
+    "mean_cosine": 0.997986,
+    "mean_error": 0.002014,
+    "angle_preservation": 0.995831,
+    "round_trip_drift": 0.029437,
+    "efficiency_per_bit": 0.124479,
+    "codebook_utilization": 1.0,
+    "unique_entries_used": 256
+  },
+  "metadata": {
+    "n_vectors": 883,
+    "mean_sparsity": 2.86,
+    "n_random_trials": 10
+  }
+}
