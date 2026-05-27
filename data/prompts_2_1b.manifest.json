@@ -1,0 +1,288 @@
+{
+  "prompts_file": "prompts_2_1b.txt",
+  "records": [
+    {
+      "gsm8k_index": 857,
+      "question_char_len": 365,
+      "reference_step_count": 2,
+      "step_bucket": "low"
+    },
+    {
+      "gsm8k_index": 600,
+      "question_char_len": 232,
+      "reference_step_count": 1,
+      "step_bucket": "low"
+    },
+    {
+      "gsm8k_index": 8,
+      "question_char_len": 403,
+      "reference_step_count": 7,
+      "step_bucket": "high"
+    },
+    {
+      "gsm8k_index": 1258,
+      "question_char_len": 174,
+      "reference_step_count": 3,
+      "step_bucket": "medium"
+    },
+    {
+      "gsm8k_index": 940,
+      "question_char_len": 238,
+      "reference_step_count": 2,
+      "step_bucket": "low"
+    },
+    {
+      "gsm8k_index": 72,
+      "question_char_len": 192,
+      "reference_step_count": 3,
+      "step_bucket": "medium"
+    },
+    {
+      "gsm8k_index": 1110,
+      "question_char_len": 327,
+      "reference_step_count": 2,
+      "step_bucket": "low"
+    },
+    {
+      "gsm8k_index": 532,
+      "question_char_len": 143,
+      "reference_step_count": 5,
+      "step_bucket": "high"
+    },
+    {
+      "gsm8k_index": 954,
+      "question_char_len": 201,
+      "reference_step_count": 3,
+      "step_bucket": "medium"
+    },
+    {
+      "gsm8k_index": 434,
+      "question_char_len": 175,
+      "reference_step_count": 5,
+      "step_bucket": "high"
+    },
+    {
+      "gsm8k_index": 1132,
+      "question_char_len": 169,
+      "reference_step_count": 4,
+      "step_bucket": "medium"
+    },
+    {
+      "gsm8k_index": 1298,
+      "question_char_len": 148,
+      "reference_step_count": 5,
+      "step_bucket": "high"
+    },
+    {
+      "gsm8k_index": 999,
+      "question_char_len": 193,
+      "reference_step_count": 1,
+      "step_bucket": "low"
+    },
+    {
+      "gsm8k_index": 219,
+      "question_char_len": 222,
+      "reference_step_count": 3,
+      "step_bucket": "medium"
+    },
+    {
+      "gsm8k_index": 374,
+      "question_char_len": 148,
+      "reference_step_count": 2,
+      "step_bucket": "low"
+    },
+    {
+      "gsm8k_index": 113,
+      "question_char_len": 106,
+      "reference_step_count": 2,
+      "step_bucket": "low"
+    },
+    {
+      "gsm8k_index": 1116,
+      "question_char_len": 183,
+      "reference_step_count": 2,
+      "step_bucket": "low"
+    },
+    {
+      "gsm8k_index": 256,
+      "question_char_len": 174,
+      "reference_step_count": 6,
+      "step_bucket": "high"
+    },
+    {
+      "gsm8k_index": 1155,
+      "question_char_len": 135,
+      "reference_step_count": 3,
+      "step_bucket": "medium"
+    },
+    {
+      "gsm8k_index": 127,
+      "question_char_len": 144,
+      "reference_step_count": 2,
+      "step_bucket": "low"
+    },
+    {
+      "gsm8k_index": 1215,
+      "question_char_len": 404,
+      "reference_step_count": 5,
+      "step_bucket": "high"
+    },
+    {
+      "gsm8k_index": 139,
+      "question_char_len": 169,
+      "reference_step_count": 2,
+      "step_bucket": "low"
+    },
+    {
+      "gsm8k_index": 1072,
+      "question_char_len": 141,
+      "reference_step_count": 5,
+      "step_bucket": "high"
+    },
+    {
+      "gsm8k_index": 252,
+      "question_char_len": 200,
+      "reference_step_count": 5,
+      "step_bucket": "high"
+    },
+    {
+      "gsm8k_index": 1172,
+      "question_char_len": 355,
+      "reference_step_count": 5,
+      "step_bucket": "high"
+    },
+    {
+      "gsm8k_index": 1217,
+      "question_char_len": 302,
+      "reference_step_count": 7,
+      "step_bucket": "high"
+    },
+    {
+      "gsm8k_index": 769,
+      "question_char_len": 263,
+      "reference_step_count": 2,
+      "step_bucket": "low"
+    },
+    {
+      "gsm8k_index": 483,
+      "question_char_len": 231,
+      "reference_step_count": 4,
+      "step_bucket": "medium"
+    },
+    {
+      "gsm8k_index": 510,
+      "question_char_len": 294,
+      "reference_step_count": 3,
+      "step_bucket": "medium"
+    },
+    {
+      "gsm8k_index": 1056,
+      "question_char_len": 233,
+      "reference_step_count": 3,
+      "step_bucket": "medium"
+    },
+    {
+      "gsm8k_index": 897,
+      "question_char_len": 184,
+      "reference_step_count": 3,
+      "step_bucket": "medium"
+    },
+    {
+      "gsm8k_index": 478,
+      "question_char_len": 234,
+      "reference_step_count": 3,
+      "step_bucket": "medium"
+    },
+    {
+      "gsm8k_index": 172,
+      "question_char_len": 256,
+      "reference_step_count": 5,
+      "step_bucket": "high"
+    },
+    {
+      "gsm8k_index": 530,
+      "question_char_len": 324,
+      "reference_step_count": 6,
+      "step_bucket": "high"
+    },
+    {
+      "gsm8k_index": 174,
+      "question_char_len": 436,
+      "reference_step_count": 2,
+      "step_bucket": "low"
+    },
+    {
+      "gsm8k_index": 1165,
+      "question_char_len": 305,
+      "reference_step_count": 6,
+      "step_bucket": "high"
+    },
+    {
+      "gsm8k_index": 1223,
+      "question_char_len": 173,
+      "reference_step_count": 3,
+      "step_bucket": "medium"
+    },
+    {
+      "gsm8k_index": 32,
+      "question_char_len": 155,
+      "reference_step_count": 2,
+      "step_bucket": "low"
+    },
+    {
+      "gsm8k_index": 68,
+      "question_char_len": 144,
+      "reference_step_count": 3,
+      "step_bucket": "medium"
+    },
+    {
+      "gsm8k_index": 641,
+      "question_char_len": 171,
+      "reference_step_count": 5,
+      "step_bucket": "high"
+    },
+    {
+      "gsm8k_index": 339,
+      "question_char_len": 157,
+      "reference_step_count": 5,
+      "step_bucket": "high"
+    },
+    {
+      "gsm8k_index": 61,
+      "question_char_len": 208,
+      "reference_step_count": 3,
+      "step_bucket": "medium"
+    },
+    {
+      "gsm8k_index": 289,
+      "question_char_len": 249,
+      "reference_step_count": 2,
+      "step_bucket": "low"
+    },
+    {
+      "gsm8k_index": 436,
+      "question_char_len": 140,
+      "reference_step_count": 3,
+      "step_bucket": "medium"
+    },
+    {
+      "gsm8k_index": 332,
+      "question_char_len": 165,
+      "reference_step_count": 1,
+      "step_bucket": "low"
+    }
+  ],
+  "sampling": {
+    "buckets": "low(<=2 steps) / medium(3-4) / high(5+)",
+    "n_per_bucket": 15,
+    "n_total": 45,
+    "seed": 42
+  },
+  "schema": "cdce.test_2_1b.prompt_manifest/v1",
+  "scope_caveat": "GSM8K is ARITHMETIC reasoning. A 2.1b result on this set concerns arithmetic operators specifically, not reasoning in general. reference_step_count is a SAMPLING aid only — it is NOT the operator metric and does not enter the correlation.",
+  "source": {
+    "config": "main",
+    "dataset": "openai/gsm8k",
+    "split": "test"
+  }
+}

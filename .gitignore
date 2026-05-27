@@ -30,3 +30,5 @@ Thumbs.db
 *.swp
 *.swo
 .env.save
+__pycache__/
+*.pyc
