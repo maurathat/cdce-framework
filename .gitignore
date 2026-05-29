@@ -20,6 +20,10 @@ __pycache__/
 .venv/
 venv/
 
+# v0.4.1 trace store and release artifact
+routing_store/
+routing_store_v0_4_1.tar.gz
+
 # OS
 .DS_Store
 Thumbs.db

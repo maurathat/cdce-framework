@@ -1,0 +1,800 @@
+{
+  "run_id": "section_6_4_v04_20260528_151519",
+  "timestamp": "20260528_151519",
+  "dry_run": true,
+  "grid": {
+    "tasks": [
+      "trans_nl_code",
+      "opt_routing"
+    ],
+    "models": [
+      "claude",
+      "gpt4o",
+      "gemini_flash"
+    ],
+    "conditions": [
+      "no_strategy",
+      "shuffled",
+      "correct"
+    ],
+    "budgets": [
+      2000,
+      1000,
+      500,
+      250,
+      125
+    ],
+    "replay_budget": 125,
+    "source": "Section_6_4_CrossModel_Transfer_Draft.md",
+    "note_cross_model": "Cross-model transfer: correct strategies may come from any source model, not necessarily the receiving model.",
+    "note_source_homogeneity": "All correct-strategy selections happen to come from GPT-4o because that model reached the deepest generation in the v0.3 corpus. This is an artifact of which models were run longest, not a design choice. The cross-model transfer claim holds (strategies compressed by GPT-4o are tested on Claude and Gemini), but the source-model diversity is zero. A future run should select per-(source_model, task, budget) to test whether source model identity affects transfer."
+  },
+  "strategy_selections": {
+    "correct": {
+      "opt_routing@1000": {
+        "strategy_kappa": "sha256:384f876dbe9fac14935653f294177678be49851fbf2617882498ef9391e3d995",
+        "content_hash": "sha256:7e43322b828ac76e2c73a3965339e0fe6140badbc950f1e446593ada6ef43328",
+        "source_model": "gpt4o",
+        "generation": 40,
+        "text_len": 778
+      },
+      "trans_nl_code@1000": {
+        "strategy_kappa": "sha256:c6945d63ee48fdf620ca663980ceb1e3b057628c871b299198aa7f36dbc76631",
+        "content_hash": "sha256:eb5a6601527eb269f71c1107e2245e6f2f5b110f70119141af013894cfe8c68c",
+        "source_model": "gpt4o",
+        "generation": 39,
+        "text_len": 1095
+      },
+      "trans_nl_code@250": {
+        "strategy_kappa": "sha256:45f76ef36f0ec1b4980c6f2e33e583f1d4e51ec74b0296852f7114f46c379964",
+        "content_hash": "sha256:a4094b165ddbd3fd994729dc269ecc5f4b2ee98535645a924c027dfe5dbb5b97",
+        "source_model": "gpt4o",
+        "generation": 41,
+        "text_len": 893
+      },
+      "opt_routing@500": {
+        "strategy_kappa": "sha256:8dd1b7a0973b45f6274ac8c32b3b349d50b24f20b92b2fc22d173e8698e19205",
+        "content_hash": "sha256:469d44a6499f3c17d961c59c558d9ccd839fd0cd0d033354b85eb54628e70628",
+        "source_model": "gpt4o",
+        "generation": 41,
+        "text_len": 977
+      },
+      "trans_nl_code@500": {
+        "strategy_kappa": "sha256:c2173cc76f096dd3eb586c727606767f1ec32ba812d26d70a550c779c3de86a4",
+        "content_hash": "sha256:c9da40a338a42724aee5ab4b2c35bc4b8a6f46e267bb174e9ad81877b9eeb892",
+        "source_model": "gpt4o",
+        "generation": 40,
+        "text_len": 1161
+      },
+      "opt_routing@2000": {
+        "strategy_kappa": "sha256:10a533d78dc148ef96cfec2bf7dffbdd3abb06b7fa39d23ccb65172f833adbbf",
+        "content_hash": "sha256:e2d24f3bb77cc4a9f4013feea33e3dda12810dc1ae565d09be1825f42a6aa906",
+        "source_model": "gpt4o",
+        "generation": 39,
+        "text_len": 615
+      },
+      "trans_nl_code@2000": {
+        "strategy_kappa": "sha256:2c486342d8ab1bac1d3a80fe1086ebe82c0d7cc5d451fe99f4540bcb80f887d5",
+        "content_hash": "sha256:66f0e4038b80b347576dedf934134e553359c4634e944eb21ca99d8a9b984a4c",
+        "source_model": "gpt4o",
+        "generation": 38,
+        "text_len": 724
+      },
+      "opt_routing@250": {
+        "strategy_kappa": "sha256:5ac7048f21a6eedb436fa13b361e9d9a8297cc5b4de170b836ef1f3c38276430",
+        "content_hash": "sha256:2eb63bc3d4979f0e29737a6a4ada199af7cda048f1d6cb2d0aa2a229c45f350b",
+        "source_model": "gpt4o",
+        "generation": 42,
+        "text_len": 803
+      },
+      "opt_routing@125": {
+        "strategy_kappa": "sha256:9bd7d94407dfbf690e7e87f0a33ff63a01e52d7a8260cbd865922298bf0a357d",
+        "content_hash": "sha256:6d1b0a3ecdfd43c19cb6b4f8f5c33997af4e5fdc39a565572a34f09b93a3bc4a",
+        "source_model": "gpt4o",
+        "generation": 43,
+        "text_len": 301
+      },
+      "trans_nl_code@125": {
+        "strategy_kappa": "sha256:855f00bb62e44352a0808a9be693b2cf7bf8645cadf4bdd233d094a3665f779c",
+        "content_hash": "sha256:02ed5c55cce57fa434fb65498eb78d60b7e7ba84e9fc2c981646aad18a39f8b3",
+        "source_model": "gpt4o",
+        "generation": 42,
+        "text_len": 319
+      }
+    },
+    "shuffled": {
+      "2000": {
+        "strategy_kappa": "sha256:7d58086a12d3cbba67765dcbfd47a9fd5434a5338a6ca8ef8556167f8be50b5b",
+        "content_hash": "30e7f0e921550c9f8b67",
+        "task_id": "trans_lang_lang",
+        "source_model": "claude",
+        "generation": 19,
+        "text_len": 968
+      },
+      "1000": {
+        "strategy_kappa": "sha256:0cf0d35ccb0b35127ff05c3a8bb60ba74ec0aeeed9e19f82009589cf5b669721",
+        "content_hash": "6bdfcdeda63e9f7f546a",
+        "task_id": "opt_schedule",
+        "source_model": "claude",
+        "generation": 27,
+        "text_len": 456
+      },
+      "500": {
+        "strategy_kappa": "sha256:185584b8f61d1cbbd5bdff7e667e2d38440fbd705454268cd0ee39c8c732693e",
+        "content_hash": "bced94222bab1e42db69",
+        "task_id": "trans_lang_lang",
+        "source_model": "gemini_flash",
+        "generation": 21,
+        "text_len": 72
+      },
+      "250": {
+        "strategy_kappa": "sha256:eddb312926cc84bee8dc5ad0a9ae07d2c4eab0a0b9e39222aa698828dc12eb6d",
+        "content_hash": "c0633aa5710339165998",
+        "task_id": "trans_lang_lang",
+        "source_model": "claude",
+        "generation": 9,
+        "text_len": 839
+      },
+      "125": {
+        "strategy_kappa": "sha256:cda44b29bc8c2ec7c0beb9fedf6bb08ff9ed73f179d80405c6bebd1a363a55d2",
+        "content_hash": "e2deb0481177cce82d55",
+        "task_id": "opt_portfolio",
+        "source_model": "claude",
+        "generation": 30,
+        "text_len": 185
+      }
+    }
+  },
+  "cost_ceiling": 15.0,
+  "cost_reserve": 5.0,
+  "results": [
+    {
+      "cell_index": 0,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "claude",
+      "condition": "no_strategy",
+      "budget": 2000,
+      "strategy_kappa": null,
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0315
+    },
+    {
+      "cell_index": 1,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "claude",
+      "condition": "shuffled",
+      "budget": 2000,
+      "strategy_kappa": "sha256:7d58086a12d3cbba67765dcbfd47a9fd5434a5338a6ca8ef8556167f8be50b5b",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0375
+    },
+    {
+      "cell_index": 2,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "claude",
+      "condition": "correct",
+      "budget": 2000,
+      "strategy_kappa": "sha256:10a533d78dc148ef96cfec2bf7dffbdd3abb06b7fa39d23ccb65172f833adbbf",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0375
+    },
+    {
+      "cell_index": 3,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "claude",
+      "condition": "no_strategy",
+      "budget": 1000,
+      "strategy_kappa": null,
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0165
+    },
+    {
+      "cell_index": 4,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "claude",
+      "condition": "shuffled",
+      "budget": 1000,
+      "strategy_kappa": "sha256:0cf0d35ccb0b35127ff05c3a8bb60ba74ec0aeeed9e19f82009589cf5b669721",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0195
+    },
+    {
+      "cell_index": 5,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "claude",
+      "condition": "correct",
+      "budget": 1000,
+      "strategy_kappa": "sha256:384f876dbe9fac14935653f294177678be49851fbf2617882498ef9391e3d995",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0195
+    },
+    {
+      "cell_index": 6,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "claude",
+      "condition": "no_strategy",
+      "budget": 500,
+      "strategy_kappa": null,
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.009
+    },
+    {
+      "cell_index": 7,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "claude",
+      "condition": "shuffled",
+      "budget": 500,
+      "strategy_kappa": "sha256:185584b8f61d1cbbd5bdff7e667e2d38440fbd705454268cd0ee39c8c732693e",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.010499999999999999
+    },
+    {
+      "cell_index": 8,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "claude",
+      "condition": "correct",
+      "budget": 500,
+      "strategy_kappa": "sha256:8dd1b7a0973b45f6274ac8c32b3b349d50b24f20b92b2fc22d173e8698e19205",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.010499999999999999
+    },
+    {
+      "cell_index": 9,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "claude",
+      "condition": "no_strategy",
+      "budget": 250,
+      "strategy_kappa": null,
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0052499999999999995
+    },
+    {
+      "cell_index": 10,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "claude",
+      "condition": "shuffled",
+      "budget": 250,
+      "strategy_kappa": "sha256:eddb312926cc84bee8dc5ad0a9ae07d2c4eab0a0b9e39222aa698828dc12eb6d",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.006
+    },
+    {
+      "cell_index": 11,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "claude",
+      "condition": "correct",
+      "budget": 250,
+      "strategy_kappa": "sha256:5ac7048f21a6eedb436fa13b361e9d9a8297cc5b4de170b836ef1f3c38276430",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.006
+    },
+    {
+      "cell_index": 12,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "claude",
+      "condition": "no_strategy",
+      "budget": 125,
+      "strategy_kappa": null,
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.003375
+    },
+    {
+      "cell_index": 12,
+      "replication": 1,
+      "task_id": "opt_routing",
+      "model": "claude",
+      "condition": "no_strategy",
+      "budget": 125,
+      "strategy_kappa": null,
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.003375
+    },
+    {
+      "cell_index": 13,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "claude",
+      "condition": "shuffled",
+      "budget": 125,
+      "strategy_kappa": "sha256:cda44b29bc8c2ec7c0beb9fedf6bb08ff9ed73f179d80405c6bebd1a363a55d2",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.00375
+    },
+    {
+      "cell_index": 13,
+      "replication": 1,
+      "task_id": "opt_routing",
+      "model": "claude",
+      "condition": "shuffled",
+      "budget": 125,
+      "strategy_kappa": "sha256:cda44b29bc8c2ec7c0beb9fedf6bb08ff9ed73f179d80405c6bebd1a363a55d2",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.00375
+    },
+    {
+      "cell_index": 14,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "claude",
+      "condition": "correct",
+      "budget": 125,
+      "strategy_kappa": "sha256:9bd7d94407dfbf690e7e87f0a33ff63a01e52d7a8260cbd865922298bf0a357d",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.00375
+    },
+    {
+      "cell_index": 14,
+      "replication": 1,
+      "task_id": "opt_routing",
+      "model": "claude",
+      "condition": "correct",
+      "budget": 125,
+      "strategy_kappa": "sha256:9bd7d94407dfbf690e7e87f0a33ff63a01e52d7a8260cbd865922298bf0a357d",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.00375
+    },
+    {
+      "cell_index": 15,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gpt4o",
+      "condition": "no_strategy",
+      "budget": 2000,
+      "strategy_kappa": null,
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.02125
+    },
+    {
+      "cell_index": 16,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gpt4o",
+      "condition": "shuffled",
+      "budget": 2000,
+      "strategy_kappa": "sha256:7d58086a12d3cbba67765dcbfd47a9fd5434a5338a6ca8ef8556167f8be50b5b",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.026250000000000002
+    },
+    {
+      "cell_index": 17,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gpt4o",
+      "condition": "correct",
+      "budget": 2000,
+      "strategy_kappa": "sha256:10a533d78dc148ef96cfec2bf7dffbdd3abb06b7fa39d23ccb65172f833adbbf",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.026250000000000002
+    },
+    {
+      "cell_index": 18,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gpt4o",
+      "condition": "no_strategy",
+      "budget": 1000,
+      "strategy_kappa": null,
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.01125
+    },
+    {
+      "cell_index": 19,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gpt4o",
+      "condition": "shuffled",
+      "budget": 1000,
+      "strategy_kappa": "sha256:0cf0d35ccb0b35127ff05c3a8bb60ba74ec0aeeed9e19f82009589cf5b669721",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.01375
+    },
+    {
+      "cell_index": 20,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gpt4o",
+      "condition": "correct",
+      "budget": 1000,
+      "strategy_kappa": "sha256:384f876dbe9fac14935653f294177678be49851fbf2617882498ef9391e3d995",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.01375
+    },
+    {
+      "cell_index": 21,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gpt4o",
+      "condition": "no_strategy",
+      "budget": 500,
+      "strategy_kappa": null,
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.00625
+    },
+    {
+      "cell_index": 22,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gpt4o",
+      "condition": "shuffled",
+      "budget": 500,
+      "strategy_kappa": "sha256:185584b8f61d1cbbd5bdff7e667e2d38440fbd705454268cd0ee39c8c732693e",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0075
+    },
+    {
+      "cell_index": 23,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gpt4o",
+      "condition": "correct",
+      "budget": 500,
+      "strategy_kappa": "sha256:8dd1b7a0973b45f6274ac8c32b3b349d50b24f20b92b2fc22d173e8698e19205",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0075
+    },
+    {
+      "cell_index": 24,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gpt4o",
+      "condition": "no_strategy",
+      "budget": 250,
+      "strategy_kappa": null,
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.00375
+    },
+    {
+      "cell_index": 25,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gpt4o",
+      "condition": "shuffled",
+      "budget": 250,
+      "strategy_kappa": "sha256:eddb312926cc84bee8dc5ad0a9ae07d2c4eab0a0b9e39222aa698828dc12eb6d",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.004375
+    },
+    {
+      "cell_index": 26,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gpt4o",
+      "condition": "correct",
+      "budget": 250,
+      "strategy_kappa": "sha256:5ac7048f21a6eedb436fa13b361e9d9a8297cc5b4de170b836ef1f3c38276430",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.004375
+    },
+    {
+      "cell_index": 27,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gpt4o",
+      "condition": "no_strategy",
+      "budget": 125,
+      "strategy_kappa": null,
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0025
+    },
+    {
+      "cell_index": 27,
+      "replication": 1,
+      "task_id": "opt_routing",
+      "model": "gpt4o",
+      "condition": "no_strategy",
+      "budget": 125,
+      "strategy_kappa": null,
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0025
+    },
+    {
+      "cell_index": 28,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gpt4o",
+      "condition": "shuffled",
+      "budget": 125,
+      "strategy_kappa": "sha256:cda44b29bc8c2ec7c0beb9fedf6bb08ff9ed73f179d80405c6bebd1a363a55d2",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0028125
+    },
+    {
+      "cell_index": 28,
+      "replication": 1,
+      "task_id": "opt_routing",
+      "model": "gpt4o",
+      "condition": "shuffled",
+      "budget": 125,
+      "strategy_kappa": "sha256:cda44b29bc8c2ec7c0beb9fedf6bb08ff9ed73f179d80405c6bebd1a363a55d2",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0028125
+    },
+    {
+      "cell_index": 29,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gpt4o",
+      "condition": "correct",
+      "budget": 125,
+      "strategy_kappa": "sha256:9bd7d94407dfbf690e7e87f0a33ff63a01e52d7a8260cbd865922298bf0a357d",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0028125
+    },
+    {
+      "cell_index": 29,
+      "replication": 1,
+      "task_id": "opt_routing",
+      "model": "gpt4o",
+      "condition": "correct",
+      "budget": 125,
+      "strategy_kappa": "sha256:9bd7d94407dfbf690e7e87f0a33ff63a01e52d7a8260cbd865922298bf0a357d",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0028125
+    },
+    {
+      "cell_index": 30,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gemini_flash",
+      "condition": "no_strategy",
+      "budget": 2000,
+      "strategy_kappa": null,
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0008500000000000001
+    },
+    {
+      "cell_index": 31,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gemini_flash",
+      "condition": "shuffled",
+      "budget": 2000,
+      "strategy_kappa": "sha256:7d58086a12d3cbba67765dcbfd47a9fd5434a5338a6ca8ef8556167f8be50b5b",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0010500000000000002
+    },
+    {
+      "cell_index": 32,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gemini_flash",
+      "condition": "correct",
+      "budget": 2000,
+      "strategy_kappa": "sha256:10a533d78dc148ef96cfec2bf7dffbdd3abb06b7fa39d23ccb65172f833adbbf",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0010500000000000002
+    },
+    {
+      "cell_index": 33,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gemini_flash",
+      "condition": "no_strategy",
+      "budget": 1000,
+      "strategy_kappa": null,
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.00045000000000000004
+    },
+    {
+      "cell_index": 34,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gemini_flash",
+      "condition": "shuffled",
+      "budget": 1000,
+      "strategy_kappa": "sha256:0cf0d35ccb0b35127ff05c3a8bb60ba74ec0aeeed9e19f82009589cf5b669721",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.00055
+    },
+    {
+      "cell_index": 35,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gemini_flash",
+      "condition": "correct",
+      "budget": 1000,
+      "strategy_kappa": "sha256:384f876dbe9fac14935653f294177678be49851fbf2617882498ef9391e3d995",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.00055
+    },
+    {
+      "cell_index": 36,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gemini_flash",
+      "condition": "no_strategy",
+      "budget": 500,
+      "strategy_kappa": null,
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.00025
+    },
+    {
+      "cell_index": 37,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gemini_flash",
+      "condition": "shuffled",
+      "budget": 500,
+      "strategy_kappa": "sha256:185584b8f61d1cbbd5bdff7e667e2d38440fbd705454268cd0ee39c8c732693e",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.00030000000000000003
+    },
+    {
+      "cell_index": 38,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gemini_flash",
+      "condition": "correct",
+      "budget": 500,
+      "strategy_kappa": "sha256:8dd1b7a0973b45f6274ac8c32b3b349d50b24f20b92b2fc22d173e8698e19205",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.00030000000000000003
+    },
+    {
+      "cell_index": 39,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gemini_flash",
+      "condition": "no_strategy",
+      "budget": 250,
+      "strategy_kappa": null,
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.00015000000000000001
+    },
+    {
+      "cell_index": 40,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gemini_flash",
+      "condition": "shuffled",
+      "budget": 250,
+      "strategy_kappa": "sha256:eddb312926cc84bee8dc5ad0a9ae07d2c4eab0a0b9e39222aa698828dc12eb6d",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.00017500000000000003
+    },
+    {
+      "cell_index": 41,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gemini_flash",
+      "condition": "correct",
+      "budget": 250,
+      "strategy_kappa": "sha256:5ac7048f21a6eedb436fa13b361e9d9a8297cc5b4de170b836ef1f3c38276430",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.00017500000000000003
+    },
+    {
+      "cell_index": 42,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gemini_flash",
+      "condition": "no_strategy",
+      "budget": 125,
+      "strategy_kappa": null,
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0001
+    },
+    {
+      "cell_index": 42,
+      "replication": 1,
+      "task_id": "opt_routing",
+      "model": "gemini_flash",
+      "condition": "no_strategy",
+      "budget": 125,
+      "strategy_kappa": null,
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0001
+    },
+    {
+      "cell_index": 43,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gemini_flash",
+      "condition": "shuffled",
+      "budget": 125,
+      "strategy_kappa": "sha256:cda44b29bc8c2ec7c0beb9fedf6bb08ff9ed73f179d80405c6bebd1a363a55d2",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0001125
+    },
+    {
+      "cell_index": 43,
+      "replication": 1,
+      "task_id": "opt_routing",
+      "model": "gemini_flash",
+      "condition": "shuffled",
+      "budget": 125,
+      "strategy_kappa": "sha256:cda44b29bc8c2ec7c0beb9fedf6bb08ff9ed73f179d80405c6bebd1a363a55d2",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0001125
+    },
+    {
+      "cell_index": 44,
+      "replication": 0,
+      "task_id": "opt_routing",
+      "model": "gemini_flash",
+      "condition": "correct",
+      "budget": 125,
+      "strategy_kappa": "sha256:9bd7d94407dfbf690e7e87f0a33ff63a01e52d7a8260cbd865922298bf0a357d",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0001125
+    },
+    {
+      "cell_index": 44,
+      "replication": 1,
+      "task_id": "opt_routing",
+      "model": "gemini_flash",
+      "condition": "correct",
+      "budget": 125,
+      "strategy_kappa": "sha256:9bd7d94407dfbf690e7e87f0a33ff63a01e52d7a8260cbd865922298bf0a357d",
+      "trace_kappa": null,
+      "status": "dry_run",
+      "est_cost": 0.0001125
+    }
+  ]
+}

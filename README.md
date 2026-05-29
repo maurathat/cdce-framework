@@ -4,6 +4,52 @@
 
 This harness implements the Compositional Decentralized Compression Emergence (CDCE) framework: a systematic test of whether AI reasoning, when forced through progressively tighter token budgets, exhibits universal compression signatures independent of model substrate.
 
+## Reproducing §6.4 (Cross-Model Strategy Transfer)
+
+The v0.4.1 corpus contains 286 content-addressed traces covering 2 tasks
+(opt_routing, trans_nl_code), 3 models (Claude Sonnet 4, GPT-4o, Gemini 2.5
+Flash), 3 conditions (no-strategy, shuffled, correct), and 5 budget levels.
+Every trace is a `make_trace()` object whose κ-label verifies by recompute.
+
+### Setup
+
+```bash
+# Unpack the trace store (provisional; Zenodo deposit pending)
+tar xzf routing_store_v0_4_1.tar.gz
+```
+
+### Reproduce
+
+```bash
+python3 analyze_section_6_4_corpus.py \
+    manifests/section_6_4_v04_20260528_152116.json \
+    manifests/section_6_4_v04_20260528_152507.json \
+    manifests/section_6_4_v04_20260528_155940.json
+```
+
+**Do not** run the analysis on `manifests/*.json` — only these three canonical
+manifests define the published corpus. See `manifests/README.md` for the full
+provenance index.
+
+### Expected output
+
+- `results/section_6_4_analysis.json` — machine-readable, includes `scorer_version`
+- `results/section_6_4_analysis.md` — markdown tables for paper inclusion
+- 286 traces verified, 0 failures
+
+### Scorer hash
+
+SHA-256 of `src/scorers.py` at time of publication:
+`f2083546785e2cb89a2a6a319cd0136b62c9e4b337b7083405e6679b015ba442`
+
+This pins the grading logic that produced the published numbers. If
+`src/scorers.py` changes, the hash changes — rerun and compare.
+
+### Headline findings (Phase 2, 10 reps per cell)
+
+- GPT-4o opt_routing @500: **+41% specific lift** [+6%, +76% CI]
+- Gemini Flash trans_nl_code @1000: **+73% specific lift** [+44%, +101% CI]
+
 ## Experimental Results
 
 | Metric | Value |
