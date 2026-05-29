@@ -1,0 +1,215 @@
+{
+  "schema_version": "v0.4.1",
+  "run_id": "section_6_3_v04_20260528_184542",
+  "timestamp": "20260528_184542",
+  "dry_run": false,
+  "section": "6.3",
+  "grid": {
+    "task": "trans_nl_code",
+    "model": "claude",
+    "conditions": [
+      "no_strategy",
+      "shuffled",
+      "correct"
+    ],
+    "budgets": [
+      2000,
+      1000,
+      500,
+      250,
+      125
+    ],
+    "reps_per_cell": 10,
+    "note": "Single-model outcome-lossless. Strategies reused from \u00a76.4 Phase 2 manifest to ensure cross-section consistency.",
+    "section_64_manifest": "manifests/section_6_4_v04_20260528_155940.json"
+  },
+  "strategy_selections": {
+    "correct": {
+      "trans_nl_code@1000": {
+        "strategy_kappa": "sha256:c6945d63ee48fdf620ca663980ceb1e3b057628c871b299198aa7f36dbc76631",
+        "source": "reused from \u00a76.4 manifest"
+      },
+      "trans_nl_code@250": {
+        "strategy_kappa": "sha256:45f76ef36f0ec1b4980c6f2e33e583f1d4e51ec74b0296852f7114f46c379964",
+        "source": "reused from \u00a76.4 manifest"
+      },
+      "trans_nl_code@500": {
+        "strategy_kappa": "sha256:c2173cc76f096dd3eb586c727606767f1ec32ba812d26d70a550c779c3de86a4",
+        "source": "reused from \u00a76.4 manifest"
+      },
+      "trans_nl_code@2000": {
+        "strategy_kappa": "sha256:2c486342d8ab1bac1d3a80fe1086ebe82c0d7cc5d451fe99f4540bcb80f887d5",
+        "source": "reused from \u00a76.4 manifest"
+      },
+      "trans_nl_code@125": {
+        "strategy_kappa": "sha256:855f00bb62e44352a0808a9be693b2cf7bf8645cadf4bdd233d094a3665f779c",
+        "source": "reused from \u00a76.4 manifest"
+      }
+    },
+    "shuffled": {
+      "2000": {
+        "strategy_kappa": "sha256:7d58086a12d3cbba67765dcbfd47a9fd5434a5338a6ca8ef8556167f8be50b5b",
+        "source": "reused from \u00a76.4 manifest"
+      },
+      "1000": {
+        "strategy_kappa": "sha256:0cf0d35ccb0b35127ff05c3a8bb60ba74ec0aeeed9e19f82009589cf5b669721",
+        "source": "reused from \u00a76.4 manifest"
+      },
+      "500": {
+        "strategy_kappa": "sha256:185584b8f61d1cbbd5bdff7e667e2d38440fbd705454268cd0ee39c8c732693e",
+        "source": "reused from \u00a76.4 manifest"
+      },
+      "250": {
+        "strategy_kappa": "sha256:eddb312926cc84bee8dc5ad0a9ae07d2c4eab0a0b9e39222aa698828dc12eb6d",
+        "source": "reused from \u00a76.4 manifest"
+      },
+      "125": {
+        "strategy_kappa": "sha256:cda44b29bc8c2ec7c0beb9fedf6bb08ff9ed73f179d80405c6bebd1a363a55d2",
+        "source": "reused from \u00a76.4 manifest"
+      }
+    }
+  },
+  "cost_ceiling": 15.0,
+  "results": [
+    {
+      "cell_index": 0,
+      "replication": 0,
+      "task_id": "trans_nl_code",
+      "model": "claude",
+      "condition": "no_strategy",
+      "budget": 2000,
+      "strategy_kappa": null,
+      "trace_kappa": "sha256:07f65b2a6386788701731b6164afdf32c7e3385a120e17e7e07a0ea69f45f652",
+      "score": 1.0,
+      "success": true,
+      "status": "ok",
+      "est_cost": 0.0315
+    },
+    {
+      "cell_index": 0,
+      "replication": 1,
+      "task_id": "trans_nl_code",
+      "model": "claude",
+      "condition": "no_strategy",
+      "budget": 2000,
+      "strategy_kappa": null,
+      "trace_kappa": "sha256:5b07986e2078f0ffed8a840a7a2bb5ec24d9f2868588b8cbb3332f7b728cd751",
+      "score": 1.0,
+      "success": true,
+      "status": "ok",
+      "est_cost": 0.0315
+    },
+    {
+      "cell_index": 0,
+      "replication": 2,
+      "task_id": "trans_nl_code",
+      "model": "claude",
+      "condition": "no_strategy",
+      "budget": 2000,
+      "strategy_kappa": null,
+      "trace_kappa": "sha256:afd4be533597a48a19d0e59844b078b157397436f724f2d39714c524115d457d",
+      "score": 1.0,
+      "success": true,
+      "status": "ok",
+      "est_cost": 0.0315
+    },
+    {
+      "cell_index": 0,
+      "replication": 3,
+      "task_id": "trans_nl_code",
+      "model": "claude",
+      "condition": "no_strategy",
+      "budget": 2000,
+      "strategy_kappa": null,
+      "trace_kappa": "sha256:b1f44f32507a570b5a43be6491fd88141115bfcdedbdeb61cee8d66f7504b4e7",
+      "score": 1.0,
+      "success": true,
+      "status": "ok",
+      "est_cost": 0.0315
+    },
+    {
+      "cell_index": 0,
+      "replication": 4,
+      "task_id": "trans_nl_code",
+      "model": "claude",
+      "condition": "no_strategy",
+      "budget": 2000,
+      "strategy_kappa": null,
+      "trace_kappa": "sha256:c8ba3a97d2b7cb2a4050d51b294de24c714fca627fcc899cee1b5797ca49ac46",
+      "score": 1.0,
+      "success": true,
+      "status": "ok",
+      "est_cost": 0.0315
+    },
+    {
+      "cell_index": 0,
+      "replication": 5,
+      "task_id": "trans_nl_code",
+      "model": "claude",
+      "condition": "no_strategy",
+      "budget": 2000,
+      "strategy_kappa": null,
+      "trace_kappa": "sha256:e206943633cbaef7ac0623acff255adff2b100c599abb511103b3f1ea1be7219",
+      "score": 1.0,
+      "success": true,
+      "status": "ok",
+      "est_cost": 0.0315
+    },
+    {
+      "cell_index": 0,
+      "replication": 6,
+      "task_id": "trans_nl_code",
+      "model": "claude",
+      "condition": "no_strategy",
+      "budget": 2000,
+      "strategy_kappa": null,
+      "trace_kappa": "sha256:ac210561ca7b9cc0b648d65b8eb5b247ba8158bcb605d3713939ecead8bc8534",
+      "score": 1.0,
+      "success": true,
+      "status": "ok",
+      "est_cost": 0.0315
+    },
+    {
+      "cell_index": 0,
+      "replication": 7,
+      "task_id": "trans_nl_code",
+      "model": "claude",
+      "condition": "no_strategy",
+      "budget": 2000,
+      "strategy_kappa": null,
+      "trace_kappa": "sha256:de101f85d54bd91bab1e10b9e91fbcb99a1b46d8abf33dfdadd7f063d7a98dc7",
+      "score": 1.0,
+      "success": true,
+      "status": "ok",
+      "est_cost": 0.0315
+    },
+    {
+      "cell_index": 0,
+      "replication": 8,
+      "task_id": "trans_nl_code",
+      "model": "claude",
+      "condition": "no_strategy",
+      "budget": 2000,
+      "strategy_kappa": null,
+      "trace_kappa": "sha256:32534d7e238e97a6e2b42a46812f360f12e4fc1e4b4e93834e9b99e80ad58848",
+      "score": 1.0,
+      "success": true,
+      "status": "ok",
+      "est_cost": 0.0315
+    },
+    {
+      "cell_index": 0,
+      "replication": 9,
+      "task_id": "trans_nl_code",
+      "model": "claude",
+      "condition": "no_strategy",
+      "budget": 2000,
+      "strategy_kappa": null,
+      "trace_kappa": "sha256:21085d5982531fc076c43c2644858b93856fcdf15a5c743bfcb9b6432394e75c",
+      "score": 1.0,
+      "success": true,
+      "status": "ok",
+      "est_cost": 0.0315
+    }
+  ]
+}
