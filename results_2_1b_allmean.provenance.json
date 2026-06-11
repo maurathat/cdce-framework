@@ -1,0 +1,439 @@
+{
+  "control_variable": "generated_token_count",
+  "created_utc": "2026-05-27T06:31:53.953186+00:00",
+  "environment": {
+    "argv": [
+      "test_2_1b_activation_grounding.py",
+      "--device",
+      "mps",
+      "--layer-mode",
+      "allmean",
+      "--out",
+      "results_2_1b_allmean.csv"
+    ],
+    "libraries": {
+      "accelerate": "1.13.0",
+      "numpy": "2.4.3",
+      "pandas": "3.0.2",
+      "scipy": "1.17.1",
+      "sklearn": "1.8.0",
+      "torch": "2.12.0",
+      "transformers": "5.9.0"
+    },
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "python": "3.13.3"
+  },
+  "experiment": "Test 2.1b — activation grounding (operator text-count vs activation effective-dim)",
+  "extra": {
+    "notes": "primary control = generated token_count; PR <= n_tokens ceiling acknowledged"
+  },
+  "model": {
+    "layer_mode": "allmean",
+    "max_new_tokens": 256,
+    "name": "google/gemma-2-2b-it"
+  },
+  "operator_parser": {
+    "is_fallback": false,
+    "module": "__main__",
+    "name": "parse_operator_count",
+    "qualname": "parse_operator_count",
+    "source_sha256": "a46b16648b8e48ae3aadd5e26cf3892ac80d32c246f7640404a699e536c45ecb"
+  },
+  "per_row_inputs": {
+    "columns": [
+      "prompt_id",
+      "n_text",
+      "d_act",
+      "token_count",
+      "prompt_token_count",
+      "total_token_count"
+    ],
+    "n_rows": 45,
+    "rows": [
+      {
+        "d_act": 21.391495,
+        "n_text": 2,
+        "prompt_id": 0,
+        "prompt_token_count": 90,
+        "token_count": 103,
+        "total_token_count": 193
+      },
+      {
+        "d_act": 27.424593,
+        "n_text": 1,
+        "prompt_id": 1,
+        "prompt_token_count": 71,
+        "token_count": 121,
+        "total_token_count": 192
+      },
+      {
+        "d_act": 32.140411,
+        "n_text": 4,
+        "prompt_id": 2,
+        "prompt_token_count": 110,
+        "token_count": 251,
+        "total_token_count": 361
+      },
+      {
+        "d_act": 33.858036,
+        "n_text": 2,
+        "prompt_id": 3,
+        "prompt_token_count": 49,
+        "token_count": 256,
+        "total_token_count": 305
+      },
+      {
+        "d_act": 22.456764,
+        "n_text": 1,
+        "prompt_id": 4,
+        "prompt_token_count": 63,
+        "token_count": 78,
+        "total_token_count": 141
+      },
+      {
+        "d_act": 26.406883,
+        "n_text": 2,
+        "prompt_id": 5,
+        "prompt_token_count": 55,
+        "token_count": 97,
+        "total_token_count": 152
+      },
+      {
+        "d_act": 28.731974,
+        "n_text": 2,
+        "prompt_id": 6,
+        "prompt_token_count": 84,
+        "token_count": 157,
+        "total_token_count": 241
+      },
+      {
+        "d_act": 34.866535,
+        "n_text": 2,
+        "prompt_id": 7,
+        "prompt_token_count": 49,
+        "token_count": 247,
+        "total_token_count": 296
+      },
+      {
+        "d_act": 32.741455,
+        "n_text": 3,
+        "prompt_id": 8,
+        "prompt_token_count": 50,
+        "token_count": 198,
+        "total_token_count": 248
+      },
+      {
+        "d_act": 36.132965,
+        "n_text": 3,
+        "prompt_id": 9,
+        "prompt_token_count": 57,
+        "token_count": 256,
+        "total_token_count": 313
+      },
+      {
+        "d_act": 25.70982,
+        "n_text": 4,
+        "prompt_id": 10,
+        "prompt_token_count": 51,
+        "token_count": 203,
+        "total_token_count": 254
+      },
+      {
+        "d_act": 31.09959,
+        "n_text": 4,
+        "prompt_id": 11,
+        "prompt_token_count": 57,
+        "token_count": 188,
+        "total_token_count": 245
+      },
+      {
+        "d_act": 27.130363,
+        "n_text": 6,
+        "prompt_id": 12,
+        "prompt_token_count": 55,
+        "token_count": 182,
+        "total_token_count": 237
+      },
+      {
+        "d_act": 35.049221,
+        "n_text": 5,
+        "prompt_id": 13,
+        "prompt_token_count": 66,
+        "token_count": 217,
+        "total_token_count": 283
+      },
+      {
+        "d_act": 23.590015,
+        "n_text": 1,
+        "prompt_id": 14,
+        "prompt_token_count": 49,
+        "token_count": 104,
+        "total_token_count": 153
+      },
+      {
+        "d_act": 22.368437,
+        "n_text": 1,
+        "prompt_id": 15,
+        "prompt_token_count": 39,
+        "token_count": 78,
+        "total_token_count": 117
+      },
+      {
+        "d_act": 26.808033,
+        "n_text": 3,
+        "prompt_id": 16,
+        "prompt_token_count": 49,
+        "token_count": 97,
+        "total_token_count": 146
+      },
+      {
+        "d_act": 26.006552,
+        "n_text": 2,
+        "prompt_id": 17,
+        "prompt_token_count": 60,
+        "token_count": 131,
+        "total_token_count": 191
+      },
+      {
+        "d_act": 25.067772,
+        "n_text": 2,
+        "prompt_id": 18,
+        "prompt_token_count": 44,
+        "token_count": 112,
+        "total_token_count": 156
+      },
+      {
+        "d_act": 24.437838,
+        "n_text": 1,
+        "prompt_id": 19,
+        "prompt_token_count": 44,
+        "token_count": 94,
+        "total_token_count": 138
+      },
+      {
+        "d_act": 31.949471,
+        "n_text": 2,
+        "prompt_id": 20,
+        "prompt_token_count": 115,
+        "token_count": 256,
+        "total_token_count": 371
+      },
+      {
+        "d_act": 24.508936,
+        "n_text": 1,
+        "prompt_id": 21,
+        "prompt_token_count": 55,
+        "token_count": 122,
+        "total_token_count": 177
+      },
+      {
+        "d_act": 28.074884,
+        "n_text": 2,
+        "prompt_id": 22,
+        "prompt_token_count": 46,
+        "token_count": 130,
+        "total_token_count": 176
+      },
+      {
+        "d_act": 29.986677,
+        "n_text": 2,
+        "prompt_id": 23,
+        "prompt_token_count": 52,
+        "token_count": 148,
+        "total_token_count": 200
+      },
+      {
+        "d_act": 28.691992,
+        "n_text": 1,
+        "prompt_id": 24,
+        "prompt_token_count": 88,
+        "token_count": 159,
+        "total_token_count": 247
+      },
+      {
+        "d_act": 30.332344,
+        "n_text": 2,
+        "prompt_id": 25,
+        "prompt_token_count": 81,
+        "token_count": 256,
+        "total_token_count": 337
+      },
+      {
+        "d_act": 31.889505,
+        "n_text": 2,
+        "prompt_id": 26,
+        "prompt_token_count": 74,
+        "token_count": 187,
+        "total_token_count": 261
+      },
+      {
+        "d_act": 26.215054,
+        "n_text": 3,
+        "prompt_id": 27,
+        "prompt_token_count": 68,
+        "token_count": 127,
+        "total_token_count": 195
+      },
+      {
+        "d_act": 33.139858,
+        "n_text": 2,
+        "prompt_id": 28,
+        "prompt_token_count": 89,
+        "token_count": 210,
+        "total_token_count": 299
+      },
+      {
+        "d_act": 25.599829,
+        "n_text": 1,
+        "prompt_id": 29,
+        "prompt_token_count": 68,
+        "token_count": 113,
+        "total_token_count": 181
+      },
+      {
+        "d_act": 31.019018,
+        "n_text": 1,
+        "prompt_id": 30,
+        "prompt_token_count": 50,
+        "token_count": 161,
+        "total_token_count": 211
+      },
+      {
+        "d_act": 24.792681,
+        "n_text": 1,
+        "prompt_id": 31,
+        "prompt_token_count": 62,
+        "token_count": 103,
+        "total_token_count": 165
+      },
+      {
+        "d_act": 32.990211,
+        "n_text": 2,
+        "prompt_id": 32,
+        "prompt_token_count": 72,
+        "token_count": 204,
+        "total_token_count": 276
+      },
+      {
+        "d_act": 26.227076,
+        "n_text": 3,
+        "prompt_id": 33,
+        "prompt_token_count": 82,
+        "token_count": 133,
+        "total_token_count": 215
+      },
+      {
+        "d_act": 27.218094,
+        "n_text": 2,
+        "prompt_id": 34,
+        "prompt_token_count": 107,
+        "token_count": 104,
+        "total_token_count": 211
+      },
+      {
+        "d_act": 30.256252,
+        "n_text": 4,
+        "prompt_id": 35,
+        "prompt_token_count": 79,
+        "token_count": 193,
+        "total_token_count": 272
+      },
+      {
+        "d_act": 29.028334,
+        "n_text": 2,
+        "prompt_id": 36,
+        "prompt_token_count": 62,
+        "token_count": 138,
+        "total_token_count": 200
+      },
+      {
+        "d_act": 28.077963,
+        "n_text": 1,
+        "prompt_id": 37,
+        "prompt_token_count": 48,
+        "token_count": 111,
+        "total_token_count": 159
+      },
+      {
+        "d_act": 30.419619,
+        "n_text": 3,
+        "prompt_id": 38,
+        "prompt_token_count": 47,
+        "token_count": 141,
+        "total_token_count": 188
+      },
+      {
+        "d_act": 26.084347,
+        "n_text": 4,
+        "prompt_id": 39,
+        "prompt_token_count": 57,
+        "token_count": 225,
+        "total_token_count": 282
+      },
+      {
+        "d_act": 39.366047,
+        "n_text": 7,
+        "prompt_id": 40,
+        "prompt_token_count": 46,
+        "token_count": 256,
+        "total_token_count": 302
+      },
+      {
+        "d_act": 21.80822,
+        "n_text": 2,
+        "prompt_id": 41,
+        "prompt_token_count": 66,
+        "token_count": 97,
+        "total_token_count": 163
+      },
+      {
+        "d_act": 30.528345,
+        "n_text": 2,
+        "prompt_id": 42,
+        "prompt_token_count": 72,
+        "token_count": 138,
+        "total_token_count": 210
+      },
+      {
+        "d_act": 25.59692,
+        "n_text": 2,
+        "prompt_id": 43,
+        "prompt_token_count": 44,
+        "token_count": 101,
+        "total_token_count": 145
+      },
+      {
+        "d_act": 26.152676,
+        "n_text": 1,
+        "prompt_id": 44,
+        "prompt_token_count": 47,
+        "token_count": 112,
+        "total_token_count": 159
+      }
+    ]
+  },
+  "prompt_set": {
+    "path": "/Users/mauraclark/cdce-harness/data/prompts_2_1b.txt",
+    "sha256": "d511de2184dede18c93c29b7a46e1d26877893b6f4c8a586b9e6b5912a2295f0",
+    "size_bytes": 10010
+  },
+  "results_csv": {
+    "path": "/Users/mauraclark/cdce-harness/results_2_1b_allmean.csv",
+    "sha256": "eb7516152f5e05d1b19adeb342334ab8b46dd4525b3104f93dd9750c301488ae",
+    "size_bytes": 10255
+  },
+  "schema": "cdce.test_2_1b.provenance/v1",
+  "scope_note": "Sourcing-half probe only. Does NOT validate the operator metric against human judgment (validity half, still requires annotation). Does NOT address any JEPA question (Gemma is an LLM). Provenance only; does not affect the computed statistic.",
+  "seed": 42,
+  "self_sha256": "5162dd1763f764251fafeaf861cf48040d01d45f32157054095fd449fdeae34e",
+  "stats_summary": {
+    "partial_pearson_p": 0.7439174383206366,
+    "partial_pearson_r": 0.05007567196163376,
+    "partial_spearman_p": 0.8662509359720206,
+    "partial_spearman_r": -0.025829615007662246,
+    "raw_pearson_p": 0.0012710947886981868,
+    "raw_pearson_r": 0.4655234601480709,
+    "raw_spearman_p": 0.0027230641781233094,
+    "raw_spearman_r": 0.43646198146966797
+  }
+}
